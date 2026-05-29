@@ -58,7 +58,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 6px;
+      gap: 12px;
       z-index: 9;
     }
 
@@ -76,6 +76,7 @@
       text-align: center;
       max-width: 92vw;
       overflow: visible;
+      overflow-wrap: break-word;
       z-index: 8;
       cursor: pointer;
       transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
@@ -141,15 +142,19 @@
     .word {
       position: absolute;
       top: -60px;
-      min-width: clamp(70px, 22vw, 120px);
-      max-width: clamp(110px, 30vw, 160px);
-      padding: clamp(6px, 2vw, 10px) clamp(8px, 2.5vw, 14px);
+      width: clamp(80px, 26vw, 140px);
+      padding: clamp(8px, 2vw, 12px) clamp(6px, 2vw, 10px);
       text-align: center;
       background: white;
       border-radius: 10px;
       font-size: clamp(13px, 4vw, 22px);
       font-weight: bold;
-      white-space: nowrap;
+      white-space: normal;
+      word-break: normal;
+      line-height: 1.3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       transition: transform 0.2s, background-color 0.2s;
       user-select: none;
@@ -681,10 +686,6 @@
       const word = document.createElement("div");
       word.className = "word";
       word.textContent = text;
-      // Shrink font for long words
-      const len = text.length;
-      if (len > 10) word.style.fontSize = "clamp(10px, 3vw, 15px)";
-      else if (len > 7) word.style.fontSize = "clamp(12px, 3.5vw, 18px)";
       const wordW = Math.min(120, Math.max(70, window.innerWidth * 0.22));
       const step = window.innerWidth / (total + 1);
       word.style.left = (step * (i + 1) - wordW / 2) + "px";
@@ -798,7 +799,49 @@
       if (questionEl.scrollWidth > window.innerWidth * 0.92) {
         questionEl.style.whiteSpace = "normal";
       }
-      currentQuestion.options.forEach((opt, i) => createWord(opt, i, currentQuestion.options.length));
+      // Shuffle options so correct answer isn't always in same position
+      const shuffled = [...currentQuestion.options].sort(() => Math.random() - 0.5);
+      shuffled.forEach((opt, i) => createWord(opt, i, shuffled.length));
+      // Equalize height and font size across all word blocks
+      requestAnimationFrame(() => {
+        const words = document.querySelectorAll(".word");
+
+        // Reset to default font size first
+        words.forEach(w => { w.style.fontSize = ""; w.style.whiteSpace = "normal"; });
+
+        // Check if any word overflows its block (too close to edges)
+        // Use a margin of 12px on each side
+        const margin = 24;
+        let needsShrink = false;
+        words.forEach(w => {
+          if (w.scrollWidth > w.clientWidth - margin) needsShrink = true;
+        });
+
+        // If any block is tight, find the minimum font size needed and apply to ALL
+        if (needsShrink) {
+          const defaultSize = parseFloat(getComputedStyle(words[0]).fontSize);
+          let bestSize = defaultSize;
+          words.forEach(w => {
+            let size = defaultSize;
+            w.style.whiteSpace = "nowrap";
+            w.style.fontSize = size + "px";
+            while (w.scrollWidth > w.clientWidth && size > 11) {
+              size -= 0.5;
+              w.style.fontSize = size + "px";
+            }
+            if (size < bestSize) bestSize = size;
+          });
+          words.forEach(w => {
+            w.style.fontSize = bestSize + "px";
+            w.style.whiteSpace = "normal";
+          });
+        }
+
+        // Equalize height to tallest block
+        let maxH = 0;
+        words.forEach(w => { const h = w.getBoundingClientRect().height; if (h > maxH) maxH = h; });
+        words.forEach(w => w.style.height = maxH + "px");
+      });
     }
 
     /* ========== Desktop controls ========== */
