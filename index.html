@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<title>Word Catcher</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #87ceeb, #dff6ff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 60px;
+  }
+
+  .header { text-align: center; margin-bottom: 40px; }
+  .logo {
+    font-size: clamp(32px, 8vw, 56px);
+    font-weight: 900;
+    color: #1a1a2e;
+  }
+  .logo span { color: #ff4757; }
+  .tagline {
+    font-size: clamp(13px, 3vw, 16px);
+    color: rgba(0,0,0,0.45);
+    margin-top: 6px;
+  }
+
+  .section-title {
+    font-size: clamp(12px, 2.8vw, 15px);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: rgba(0,0,0,0.4);
+    margin-bottom: 18px;
+    text-align: center;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    width: 100%;
+    max-width: 720px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 10px;
+    padding: 18px 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+    font-size: clamp(18px, 5vw, 26px);
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+    transition: transform 0.15s, box-shadow 0.15s;
+    min-width: 160px;
+    user-select: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .card:hover {
+    transform: scale(1.06);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  }
+  .card:active { transform: scale(1.02); }
+
+  .card-count {
+    font-size: clamp(11px, 2.5vw, 13px);
+    font-weight: normal;
+    color: #888;
+  }
+
+  .card.soon {
+    opacity: 0.45;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  #loading {
+    color: rgba(0,0,0,0.4);
+    font-size: 15px;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo">Word<span>Catcher</span></div>
+  <div class="tagline">Catch the right word. Learn English grammar.</div>
+</div>
+
+<div class="section-title">Choose a lesson</div>
+
+<div class="grid" id="grid">
+  <div id="loading">Loading topics...</div>
+</div>
+
+<script>
+// Capitalize and prettify filename → topic name
+function formatName(filename) {
+  return filename
+    .replace(/-/g, ' ')
+    .replace(/_/g, ' ')
+    .replace(/\b\w/g, c => c.toUpperCase());
+}
+
+// Load topics from index.json manifest
+fetch('questions/index.json')
+  .then(r => r.json())
+  .then(topics => {
+    const grid = document.getElementById('grid');
+    grid.innerHTML = '';
+    topics.forEach(t => {
+      const card = document.createElement('a');
+      card.className = 'card';
+      card.href = `game.html?topic=${t.file}`;
+      card.innerHTML = `
+        <div>${formatName(t.file)}</div>
+        <div class="card-count">${t.count ? t.count + ' questions' : 'coming soon'}</div>
+      `;
+      grid.appendChild(card);
+    });
+  })
+  .catch(() => {
+    document.getElementById('loading').textContent = 'Could not load topics.';
+  });
+</script>
+</body>
+</html>

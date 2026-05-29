@@ -1,0 +1,3152 @@
+[
+  {
+    "question": "Rachel works in ___ bank.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Can I ask ___ question?",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "I don't have ___ job.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "There's ___ woman at the bus stop.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "He's got ___ camera.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "She's waiting for ___ taxi.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "It's ___ beautiful day.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Do you want ___ apple?",
+    "correct": "an",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "I'm going to buy ___ umbrella.",
+    "correct": "an",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "There was ___ interesting programme on TV.",
+    "correct": "an",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "I'll be back in ___ hour.",
+    "correct": "an",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "She studies at ___ university.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "France is ___ European country.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "I need ___ hat for the rain.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "The sun is ___ star.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "A mouse is ___ animal.",
+    "correct": "an",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Dallas is ___ city in Texas.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "I'm ___ dentist.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "He's ___ engineer.",
+    "correct": "an",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Beethoven was ___ composer.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Picasso was ___ famous painter.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Are you ___ student?",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "I need ___ new pair of jeans.",
+    "correct": "a",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "I need ___ new jeans.",
+    "correct": "some",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "She's ___ nice person.",
+    "correct": "a",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "There are ___ nice people here.",
+    "correct": "some",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "I saw ___ sheep on the farm.",
+    "correct": "some",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "He lost ___ tooth.",
+    "correct": "a",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "She has ___ children.",
+    "correct": "some",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "I need ___ scissors.",
+    "correct": "some",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "He caught ___ fish in the lake.",
+    "correct": "some",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "There's ___ mouse in the kitchen.",
+    "correct": "a",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "I've got ___ car.",
+    "correct": "a",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "We can't get in without ___ key.",
+    "correct": "a",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "I've got ___ money.",
+    "correct": "some",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "I'd like ___ water, please.",
+    "correct": "some",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "She listens to ___ music every day.",
+    "correct": "-",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "Can I have ___ piece of cheese?",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "He bought ___ bottle of water.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "She wants ___ cup of coffee.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "I need ___ bar of chocolate.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "We played ___ game of tennis.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "He had ___ bowl of rice for lunch.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "I need ___ new car.",
+    "correct": "a",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "Would you like ___ apple?",
+    "correct": "an",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "I need ___ new shoes.",
+    "correct": "some",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "Would you like ___ cheese?",
+    "correct": "some",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "I need ___ water.",
+    "correct": "some",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "Nicola bought ___ hat.",
+    "correct": "a",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "I read ___ newspaper this morning.",
+    "correct": "a",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "I need ___ paper to write a list.",
+    "correct": "some",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "Can I talk to you? I need ___ advice.",
+    "correct": "some",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "I'm going to buy ___ bread.",
+    "correct": "some",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "They've got ___ nice furniture.",
+    "correct": "some",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "Where can I get ___ information?",
+    "correct": "some",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "I've just had ___ good news.",
+    "correct": "some",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "It's ___ nice weather today.",
+    "correct": "-",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "I've got ___ new job.",
+    "correct": "a",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "This is ___ useful tool.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Is there ___ hotel near here?",
+    "correct": "a",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Can you repeat ___ question, please?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "We enjoyed our holiday. ___ hotel was very nice.",
+    "correct": "The",
+    "options": [
+      "A",
+      "The",
+      "-"
+    ]
+  },
+  {
+    "question": "Paris is ___ capital of France.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Lisa is ___ youngest student in her class.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "an"
+    ]
+  },
+  {
+    "question": "I bought ___ jacket and a shirt.",
+    "correct": "a",
+    "options": [
+      "a",
+      "the",
+      "an"
+    ]
+  },
+  {
+    "question": "___ jacket was cheap, but the shirt was expensive.",
+    "correct": "The",
+    "options": [
+      "A",
+      "The",
+      "An"
+    ]
+  },
+  {
+    "question": "Tom is in ___ kitchen.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Turn off ___ light, please.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Close ___ door when you leave.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Do you live far from ___ centre?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I'd like to speak to ___ manager.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "an"
+    ]
+  },
+  {
+    "question": "I'm going to clean ___ car tomorrow.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Lisa is ___ student at our school.",
+    "correct": "a",
+    "options": [
+      "a",
+      "the",
+      "an"
+    ]
+  },
+  {
+    "question": "Can I ask ___ question?",
+    "correct": "a",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "What is ___ name of this street?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Who is ___ best player in your team?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "an"
+    ]
+  },
+  {
+    "question": "Can you tell me ___ time, please?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "My office is on ___ first floor.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Do you live near ___ city centre?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Where is ___ nearest bank?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "We live in ___ same street.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "___ sky is blue and the sun is shining.",
+    "correct": "The",
+    "options": [
+      "A",
+      "The",
+      "-"
+    ]
+  },
+  {
+    "question": "Do you live in a town or in ___ country?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "My brother is in ___ army.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "What do you think of ___ police?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "My house is at ___ end of the street.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Paula is learning to play ___ piano.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I listen to ___ radio a lot.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "What do you use ___ internet for?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I watch ___ TV a lot.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "What did you have for ___breakfast?",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I'm not working ___ next week.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Did you have a holiday ___ last summer?",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Can you turn off ___ TV?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I'm going to ___ work now.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I finish ___ work at 5 o'clock.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "What did you learn at ___ school today?",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Helen wants to go to ___ university.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Jack had to go to ___ hospital.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Why is he in ___ prison?",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "David goes to ___ church on Sundays.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I'm tired. I'm going to ___ bed.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I'm going ___ home.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I go to ___ cinema a lot.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Are you going to ___ bank?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "The bus goes to ___ airport.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Why don't you go to ___ doctor?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I have to go to ___ dentist tomorrow.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I never go to ___ theatre.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "No, to ___ post office.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I like ___ music.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "We don't eat ___ meat very often.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I hate ___ exams.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "___ life is not possible without water.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "My favourite sport is ___ football.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Do you think ___ English is difficult?",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Tom's brother is studying ___ physics.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "___ flowers are beautiful. (in general)",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I love this garden. ___ flowers are beautiful.",
+    "correct": "The",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "I don't like ___ cold weather. (in general)",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "___ weather isn't good today.",
+    "correct": "The",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "We don't eat ___ fish very often. (in general)",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "The fish we ate last night. ___ fish was excellent.",
+    "correct": "The",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "Are you interested in ___ history? (in general)",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Do you know about ___ history of your country?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "___ France is a very large country.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Cairo is the capital of ___ Egypt.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Peru is in ___ South America.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "She lives in ___ United States.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "He's from ___ Czech Republic.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "They visited ___ Netherlands.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "We flew over ___ Alps.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "The ship crossed ___ Atlantic Ocean.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "The boat sailed down ___ Amazon.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "They built ___ Suez Canal.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Kevin lives in ___ Newton Street.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Where is ___ Highfield Road?",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "He studied at ___ Cambridge University.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "We stayed at ___ Regent Hotel.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "We visited ___ Science Museum.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Have you seen ___ National Theatre?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "She saw ___ Tower of London.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "We visited ___ Museum of Modern Art.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I've been to ___ north of Italy.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "___ Great Wall of China is amazing.",
+    "correct": "The",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "I don't have ___ watch.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "I never wear ___ hat.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "Are you looking for ___ job?",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "I'm going to ___ party tonight.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "Music is ___ wonderful thing.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "Jamaica is ___ island.",
+    "correct": "an",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "I don't need ___ key.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "Everybody needs ___ food.",
+    "correct": "-",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "I've got ___ good idea.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "Can you drive ___ car?",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "Do you want ___ cup of coffee?",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "I don't like ___ coffee without milk.",
+    "correct": "-",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "Don't go out without ___ umbrella.",
+    "correct": "an",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "It's ___ toothbrush.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "It's ___ egg.",
+    "correct": "an",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "It's ___ bucket.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "It's ___ envelope.",
+    "correct": "an",
+    "options": [
+      "a",
+      "an",
+      "-"
+    ]
+  },
+  {
+    "question": "I read ___ book.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "I listened to ___ music.",
+    "correct": "some",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "I need ___ money.",
+    "correct": "some",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "I want to buy ___ food.",
+    "correct": "some",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "We met ___ interesting people at the party.",
+    "correct": "some",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "I'm going to open ___ window.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "I need to get ___ fresh air.",
+    "correct": "some",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "Rachel didn't eat much — only ___ apple.",
+    "correct": "an",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "She also had ___ bread.",
+    "correct": "some",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "We live in ___ big house.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "There's ___ nice garden with beautiful trees.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "The garden has ___ beautiful trees.",
+    "correct": "some",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "I need ___ wood to make a table.",
+    "correct": "some",
+    "options": [
+      "a",
+      "some",
+      "-"
+    ]
+  },
+  {
+    "question": "I'm going to give you ___ advice.",
+    "correct": "some",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "I need ___ paper and a pen.",
+    "correct": "some",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "I need some paper and ___ pen.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "Would you like ___ coffee?",
+    "correct": "some",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "Would you like ___ biscuit?",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "Would you like ___ chocolate?",
+    "correct": "some",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "Would you like ___ cake?",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "some"
+    ]
+  },
+  {
+    "question": "We enjoyed our trip. ___ hotel was very nice.",
+    "correct": "The",
+    "options": [
+      "A",
+      "An",
+      "The"
+    ]
+  },
+  {
+    "question": "Can I ask ___ question?",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "You look tired. You need ___ holiday.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Where's Tom? He's in ___ garden.",
+    "correct": "the",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Eve is ___ interesting person.",
+    "correct": "an",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Can you tell me how to get to ___ city centre?",
+    "correct": "the",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Shall we go for ___ meal this evening?",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Yes, that's ___ good idea.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "It's ___ nice morning. Let's go for a walk.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "It's a nice morning. Let's go for ___ walk.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Amanda is ___ student.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "She wants to be ___ journalist.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "She lives near ___ college.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "___ apartment is small but she likes it.",
+    "correct": "The",
+    "options": [
+      "A",
+      "An",
+      "The"
+    ]
+  },
+  {
+    "question": "Peter works in ___ factory.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Mary doesn't have ___ job.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Can you open ___ door, please?",
+    "correct": "the",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "How far is it to ___ airport?",
+    "correct": "the",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Can I have ___ cup of coffee?",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "That's ___ nice picture — I like it.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Can you pass me ___ dictionary?",
+    "correct": "the",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Why are you sitting on ___ floor?",
+    "correct": "the",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Don't forget to turn off ___ light.",
+    "correct": "the",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Don't forget to send me ___ postcard.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "What is ___ name of this village?",
+    "correct": "the",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Canada is ___ very big country.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "What is ___ largest city in Canada?",
+    "correct": "the",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "I don't like ___ colour of the carpet.",
+    "correct": "the",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "I've got ___ headache.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "We live in ___ old house near the station.",
+    "correct": "an",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "What is ___ name of the director of the film?",
+    "correct": "the",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "What is ___ name of this street?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "What's on ___ TV tonight?",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Our apartment is on ___ second floor.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Which is ___ best hotel in this town?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "What time is ___ lunch?",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "We're going away at ___ end of May.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I didn't like her ___ first time I met her.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I'm going out after ___ dinner.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "It's easy to get information from ___ internet.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "My dictionary is on ___ top shelf on the right.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "We live in ___ country about ten miles from town.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "We live in ___ same street.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "We arrived at ___ same time.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "James and Sue are ___ same age.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "My shirt and jacket are ___ same colour.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I have no money and you have ___ same problem.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "___ sun is shining.",
+    "correct": "The",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "He's watching ___ television.",
+    "correct": "-",
+    "options": [
+      "the",
+      "a",
+      "-"
+    ]
+  },
+  {
+    "question": "They're swimming in ___ sea.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Tom's name is at ___ top of the list.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I don't remember ___ name of the hotel.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "___ sky is very clear tonight.",
+    "correct": "The",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "Sometimes there are good films on ___ TV late at night.",
+    "correct": "-",
+    "options": [
+      "the",
+      "a",
+      "-"
+    ]
+  },
+  {
+    "question": "Somebody called ___ police.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Tokyo is ___ capital of Japan.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I woke up in ___ middle of the night.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "He's in ___ bed.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "They're at ___ cinema.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "She's in ___ hospital.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "She's at ___ airport.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "They're at ___ work.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "He's in ___ prison.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I have to go to ___ bank.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "David goes to ___ church on Sundays.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Children go to ___ school from the age of five.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "There were people at ___ station waiting for the train.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "They weren't at ___ home.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I'm going to ___ bed. Goodnight!",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I'm going to ___ post office to get some stamps.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "If you want to catch a plane, you go to ___ airport.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "If you want to see a film, you go to ___ cinema.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "If you are tired and want to sleep, you go to ___ bed.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "If the police catch you, you go to ___ prison.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "If you have a problem with your teeth, you go to ___ dentist.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "If you want to study after school, you go to ___ university.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "If you are badly injured, you go to ___ hospital.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "We went to ___ cinema last night.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "She wasn't feeling well, so she went to ___ doctor.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "We have no money in ___ bank.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Do you live far from ___ city centre?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Where shall we meet? At ___ station.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Would you like to go to ___ theatre this evening?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "My favourite sport is ___ football.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I like this hotel. ___ rooms are very nice.",
+    "correct": "The",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "Everybody needs ___ friends.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Jane doesn't go to ___ parties very often.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I went shopping. ___ shops were very busy.",
+    "correct": "The",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "Where's ___ milk? It's in the fridge.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I don't like ___ milk. I never drink it.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Do you play ___ basketball?",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "An architect is a person who designs ___ buildings.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "We swam in the river. ___ water was very cold.",
+    "correct": "The",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "I don't like swimming in ___ cold water.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Can you pass ___ salt, please?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I like this town. I like ___ people here.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "___ vegetables are good for you.",
+    "correct": "-",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "___ houses in this street are all the same.",
+    "correct": "The",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "I can't sing this song. I don't know ___ words.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I enjoy taking ___ pictures. It's my hobby.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Do you want to see ___ pictures I took on holiday?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "___ English is used a lot in international business.",
+    "correct": "-",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "___ money doesn't always bring happiness.",
+    "correct": "-",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "___ Atlantic is between Africa and America.",
+    "correct": "The",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "___ Amazon is a river in South America.",
+    "correct": "The",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "___ Asia is the largest continent in the world.",
+    "correct": "-",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "___ Pacific is the largest ocean.",
+    "correct": "The",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "___ Rhine is a river in Europe.",
+    "correct": "The",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "___ Kenya is a country in East Africa.",
+    "correct": "-",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "___ United States is between Canada and Mexico.",
+    "correct": "The",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "___ Andes are mountains in South America.",
+    "correct": "The",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "___ Alps are mountains in central Europe.",
+    "correct": "The",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "___ Red Sea is between Saudi Arabia and Africa.",
+    "correct": "The",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "___ Jamaica is an island in the Caribbean.",
+    "correct": "-",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "___ Bahamas are a group of islands near Florida.",
+    "correct": "The",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "___ Sweden is a country in northern Europe.",
+    "correct": "-",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "___ Bangkok is the capital of Thailand.",
+    "correct": "-",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "We went to see a play at ___ National Theatre.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Have you ever been to ___ Philippines?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Have you ever been to ___ south of France?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Can you tell me where ___ Regal Cinema is?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Can you tell me where ___ Museum of Art is?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Belgium is smaller than ___ Netherlands.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Which river is longer — ___ Mississippi or the Nile?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Did you go to ___ National Gallery when you were in London?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "We stayed at ___ Park Hotel in Hudson Road.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "___ Rocky Mountains are in North America.",
+    "correct": "The",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "I hope to go to ___ United States next year.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Mary comes from ___ west of Ireland.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "___ Panama Canal joins the Atlantic and Pacific Oceans.",
+    "correct": "The",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "Who is ___ best player in your team?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I don't watch ___ TV very often.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Is there ___ bank near here?",
+    "correct": "a",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Yes, at ___ end of this street.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I can't ride ___ horse.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "___ sky is very clear tonight.",
+    "correct": "The",
+    "options": [
+      "The",
+      "A",
+      "-"
+    ]
+  },
+  {
+    "question": "Do you live here, or are you ___ tourist?",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "What did you have for ___ lunch?",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Who was ___ first President of the United States?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Who was the first President of ___ United States?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I'm not feeling well. I've got ___ headache.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "I can never remember ___ names.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "What time is ___ next train to London?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Kate doesn't often send ___ emails.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Where's Sue? She's in ___ garden.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I'm looking for ___ Majestic Hotel.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Gary was ill ___ last week.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "He didn't go to ___ work.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Everest is ___ highest mountain in the world.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Everest is the highest mountain in ___ world.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I usually listen to ___ radio while having breakfast.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I listen to the radio while having ___ breakfast.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I like ___ sport. My favourite is basketball.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "My favourite sport is ___ basketball.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Emily is ___ doctor.",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Her husband is ___ art teacher.",
+    "correct": "an",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "My apartment is on ___ second floor.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Turn left at ___ top of the stairs.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Turn left at the top of ___ stairs.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "It's on ___ right.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "After ___ dinner, we watched TV.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "We had ___ wonderful holiday in the south of France.",
+    "correct": "a",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Last year we had a wonderful holiday in ___ south of France.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Can you pass ___ sugar, please?",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "Have you got ___ car?",
+    "correct": "a",
+    "options": [
+      "a",
+      "an",
+      "the"
+    ]
+  },
+  {
+    "question": "Yes, there's some milk in ___ fridge.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "I don't feel well. I don't want to go to ___ school.",
+    "correct": "-",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  },
+  {
+    "question": "What did you do last night? I went to ___ cinema.",
+    "correct": "the",
+    "options": [
+      "a",
+      "the",
+      "-"
+    ]
+  }
+]
