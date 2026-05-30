@@ -114,6 +114,24 @@
       color: white;
     }
 
+    @keyframes whyPulse {
+      0% {
+        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.6);
+      }
+
+      50% {
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.25);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0);
+      }
+    }
+
+    #whyBtn.hint {
+      animation: whyPulse 3s ease forwards;
+    }
+
     #question.paused-style {
       background: rgba(255, 200, 0, 0.85);
       color: #222;
@@ -156,7 +174,7 @@
       align-items: center;
       justify-content: center;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s, background-color 0.2s;
+      transition: background-color 0.2s;
       user-select: none;
     }
 
@@ -448,7 +466,17 @@
     </div>
     <div id="questionWrap">
       <div id="question"></div>
-      <button id="whyBtn">🔍 Why?</button>
+      <div id="whyRow" style="display:flex;align-items:center;gap:8px;">
+        <button id="whyBtn">🔍 Why?</button>
+        <label id="autoWhyLabel"
+          style="display:flex;align-items:center;gap:4px;cursor:pointer;font-size:clamp(10px,2.5vw,13px);color:rgba(255,255,255,0.6);white-space:nowrap;user-select:none;">
+          <input type="checkbox" id="autoWhyCheck" style="cursor:pointer;accent-color:#ffeb3b;width:14px;height:14px;">
+          auto
+        </label>
+      </div>
+      <div id="clownIndicator"
+        style="display:none;font-size:clamp(22px,6vw,32px);cursor:pointer;user-select:none;line-height:1;text-align:center;">
+        🤡</div>
     </div>
     <div id="pauseOverlay">⏸</div>
     <div id="player">😀</div>
@@ -470,7 +498,9 @@
       <div id="winScore" style="font-size:clamp(16px,4vw,22px);margin:4px 0;"></div>
       <div id="winTime" style="font-size:clamp(14px,3.5vw,20px);margin:4px 0;color:#aef;"></div>
       <div id="winMistakes" style="font-size:clamp(14px,3.5vw,20px);margin:4px 0;color:#ff8a80;"></div>
-      <button onclick="location.reload()"
+      <div id="winClown" style="font-size:clamp(13px,3vw,17px);color:#f9c;margin:4px 0;display:none;">🤡 You used Clown
+        Mode!</div>
+      <button onclick="window.location.href=window.location.href"
         style="margin-top:20px;font-size:clamp(16px,4.5vw,22px);padding:14px 32px;cursor:pointer;border-radius:12px;border:none;background:#4caf50;color:white;font-weight:bold;">🔄
         Restart</button>
     </div>
@@ -479,10 +509,12 @@
       <div id="finalScore" style="font-size:clamp(18px,5vw,28px);margin:8px 0;"></div>
       <div id="finalTime" style="font-size:clamp(16px,4vw,24px);color:#aef;margin:4px 0;"></div>
       <div id="finalWhy" style="font-size:clamp(14px,3.5vw,20px);color:#ffd;margin:4px 0;"></div>
+      <div id="finalClown" style="font-size:clamp(13px,3vw,17px);color:#f9c;margin:4px 0;display:none;">🤡 You used
+        Clown Mode!</div>
       <button id="whyBtnGameOver"
         style="margin-top:12px;font-size:clamp(13px,3.5vw,17px);padding:8px 20px;cursor:pointer;border-radius:16px;border:1px solid rgba(255,255,255,0.5);background:rgba(255,255,255,0.15);color:white;">🔍
         Why that sentence?</button>
-      <button onclick="location.reload()">🔄 Restart</button>
+      <button onclick="window.location.href=window.location.href">🔄 Restart</button>
     </div>
   </div>
 
@@ -536,6 +568,82 @@
       setTimeout(() => el.classList.remove("show"), 3000);
     }
 
+
+    // ===== CLOWN MODE =====
+    let clownMode = false;
+    let clownUsed = false;
+    let clownInterval = null;
+    let clownDir = 1;
+    let lastPlayerClick = 0;
+
+    function toggleClownMode() {
+      clownMode = !clownMode;
+      const indicator = document.getElementById("clownIndicator");
+      if (clownMode) {
+        clownUsed = true;
+        player.textContent = "🤡";
+        indicator.style.display = "block";
+        startClownMove();
+      } else {
+        player.textContent = "😀";
+        indicator.style.display = "none";
+        clearInterval(clownInterval);
+        clownInterval = null;
+      }
+    }
+
+    function startClownMove() {
+      if (clownInterval) clearInterval(clownInterval);
+      // Speed: cross screen in ~4 seconds (width / (4000ms / 16ms) ≈ width/250)
+      const speed = Math.max(1.5, window.innerWidth / 250);
+      clownInterval = setInterval(() => {
+        if (paused || gameEnded) return;
+
+        // Check if correct word is close — start tracking 1 second before it reaches player
+        const pRect = player.getBoundingClientRect();
+        let tracking = false;
+        document.querySelectorAll(".word").forEach(word => {
+          if (tracking) return;
+          const wRect = word.getBoundingClientRect();
+          const isCorrect = word.textContent.trim() === (currentQuestion ? currentQuestion.correct : "");
+          if (isCorrect && wRect.bottom > 0) {
+            const gap = pRect.top - wRect.bottom;
+            // globalSpeedMultiplier * 2px/frame * 60fps = px/sec
+            const pxPerSec = globalSpeedMultiplier * 2 * 60;
+            const secsToArrival = gap / pxPerSec;
+            if (secsToArrival < 1.0) {
+              const targetX = wRect.left + wRect.width / 2;
+              const diff = targetX - playerX;
+              // Move faster as word gets closer
+              const urgency = Math.max(0.08, 1 - secsToArrival);
+              playerX += diff * urgency;
+              player.style.left = playerX + "px";
+              tracking = true;
+            }
+          }
+        });
+
+        if (!tracking) {
+          // Slow bounce left/right
+          playerX += clownDir * speed;
+          if (playerX > window.innerWidth - 40) { clownDir = -1; }
+          if (playerX < 40) { clownDir = 1; }
+          player.style.left = playerX + "px";
+        }
+      }, 16);
+    }
+
+    // Double-click/tap on player to toggle clown mode
+    function onPlayerTap() {
+      const now = Date.now();
+      if (now - lastPlayerClick < 400) {
+        toggleClownMode();
+        lastPlayerClick = 0;
+      } else {
+        lastPlayerClick = now;
+      }
+    }
+
     function updateUI() {
       speedUI.textContent = "x" + globalSpeedMultiplier.toFixed(1);
       questionEl.classList.toggle("paused-style", paused);
@@ -551,7 +659,7 @@
       flash.classList.add("flash"); txt.classList.add("show");
       setTimeout(() => {
         flash.classList.remove("flash"); txt.classList.remove("show");
-        player.textContent = "😀"; player.classList.remove("hurt");
+        player.textContent = clownMode ? "🤡" : "😀"; player.classList.remove("hurt");
       }, 500);
     }
 
@@ -564,7 +672,7 @@
       txt.textContent = emojis[idx] + " COMBO x" + n + "!";
       txt.style.color = colors[idx];
       txt.style.textShadow = "0 0 16px " + colors[idx] + ", 0 2px 8px #000";
-      player.classList.remove("combo"); void player.offsetWidth; player.classList.add("combo");
+      if (!clownMode) { player.classList.remove("combo"); void player.offsetWidth; player.classList.add("combo"); }
       txt.classList.add("show");
       setTimeout(() => { txt.classList.remove("show"); player.classList.remove("combo"); }, 2000);
     }
@@ -578,7 +686,7 @@
       flash.classList.add("flash"); txt.classList.add("show");
       setTimeout(() => {
         flash.classList.remove("flash"); txt.classList.remove("show");
-        player.textContent = "😀"; player.classList.remove("lifeup");
+        player.textContent = clownMode ? "🤡" : "😀"; player.classList.remove("lifeup");
       }, 2000);
     }
 
@@ -598,6 +706,7 @@
       document.getElementById("winScore").textContent = "🏆 Score: " + score;
       document.getElementById("winTime").textContent = "⏱ Time: " + getPlayTime();
       document.getElementById("winMistakes").textContent = mistakeCount > 0 ? "❌ Mistakes: " + mistakeCount : "✨ No mistakes!";
+      if (clownUsed) document.getElementById("winClown").style.display = "block";
       document.getElementById("winScreen").style.display = "flex";
     }
 
@@ -607,6 +716,7 @@
       document.getElementById("finalScore").textContent = "🏆 Score: " + score;
       document.getElementById("finalTime").textContent = "⏱ Time: " + getPlayTime();
       document.getElementById("finalWhy").textContent = "🔍 Why pressed: " + whyCount + " time" + (whyCount !== 1 ? "s" : "");
+      if (clownUsed) document.getElementById("finalClown").style.display = "block";
       document.getElementById("gameOver").style.display = "flex";
     }
 
@@ -639,6 +749,17 @@
         lives--; livesEl.textContent = lives; streak = 0; loseLife();
         mistakeCount++;
         praiseStreak = 0;
+        // Hint animation on Why button
+        const wb = document.getElementById("whyBtn");
+        wb.classList.remove("hint");
+        void wb.offsetWidth; // reflow to restart animation
+        wb.classList.add("hint");
+        // Auto-why: if checkbox enabled and still has lives, auto-open Google after 1 second
+        if (document.getElementById("autoWhyCheck").checked && lives > 0 && !gameEnded) {
+          setTimeout(() => { if (!gameEnded && lives > 0) openWhyGoogle(); }, 1000);
+        } else if (lives <= 0) {
+          document.getElementById("autoWhyCheck").checked = false;
+        }
         // Schedule retry after 20 questions
         if (!retryQueue.includes(currentQuestion._idx)) {
           retryQueue.push(currentQuestion._idx);
@@ -652,7 +773,7 @@
         isAnimating = false;
         if (gameEnded) return;
         if (lives <= 0) endGame(); else newQuestion();
-      }, isCorrect ? 600 : 2000);
+      }, isCorrect ? 600 : 3000);
     }
 
     /* ---------- shoot ---------- */
@@ -716,6 +837,7 @@
             lives--; livesEl.textContent = lives; streak = 0; loseLife(); updateUI();
             showAnswerInQuestion(false);
             if (lives <= 0) {
+              document.getElementById("autoWhyCheck").checked = false;
               setTimeout(() => endGame(), 2000);
               return;
             }
@@ -795,8 +917,11 @@
       lastSentence = currentQuestion.question;
       questionEl.style.whiteSpace = "nowrap";
       questionEl.textContent = currentQuestion.question;
-      // If text overflows screen width, allow wrapping
-      if (questionEl.scrollWidth > window.innerWidth * 0.92) {
+      // Force wrap if ___ is at the end or near end (last/second-to-last word)
+      const wordsInQ = currentQuestion.question.trim().split(/\s+/);
+      const blankIdx = wordsInQ.findIndex(w => w.includes("___"));
+      const isNearEnd = blankIdx >= wordsInQ.length - 2;
+      if (isNearEnd || questionEl.scrollWidth > window.innerWidth * 0.92) {
         questionEl.style.whiteSpace = "normal";
       }
       // Shuffle options so correct answer isn't always in same position
@@ -849,17 +974,60 @@
       playerX = e.clientX;
       player.style.left = playerX + "px";
     });
-    document.addEventListener("mousedown", e => { if (e.button === 0 && !e.target.closest("#whyBtn") && !e.target.closest("#whyBtnGameOver") && !e.target.closest("#question") && !e.target.closest("#menuBtn")) shoot(); });
+    document.addEventListener("mousedown", e => { if (e.button === 0 && !e.target.closest("#whyBtn") && !e.target.closest("#whyBtnGameOver") && !e.target.closest("#question") && !e.target.closest("#menuBtn") && !e.target.closest("#autoWhyLabel") && !e.target.closest("#player") && !e.target.closest("#clownIndicator")) shoot(); });
     document.addEventListener("wheel", e => {
       if (e.deltaY < 0) globalSpeedMultiplier = Math.min(globalSpeedMultiplier + 0.2, 4);
       else globalSpeedMultiplier = Math.max(globalSpeedMultiplier - 0.2, 0.3);
       updateUI();
     });
+    let arrowInterval = null;
+    let arrowDir = 0;
+
     document.addEventListener("keydown", e => {
-      if (e.code === "KeyR") { location.reload(); return; }
-      if (e.code === "Space") { e.preventDefault(); togglePause(); }
+      if (e.code === "KeyR") { window.location.href = window.location.href; return; }
+      if (e.code === "Space") { e.preventDefault(); togglePause(); return; }
+
+      // W = Why button
+      if (e.code === "KeyW") { e.preventDefault(); openWhyGoogle(); return; }
+
+      // A/S/D = select word block 1/2/3
+      if (e.code === "KeyA" || e.code === "KeyS" || e.code === "KeyD") {
+        e.preventDefault();
+        if (paused || isAnimating || gameEnded) return;
+        const words = [...document.querySelectorAll(".word")];
+        const idx = e.code === "KeyA" ? 0 : e.code === "KeyS" ? 1 : 2;
+        if (words[idx]) handleSelection(words[idx].textContent, words[idx]);
+        return;
+      }
+
+      // Arrow keys = move player continuously
+      if (e.code === "ArrowLeft") { e.preventDefault(); arrowDir = -1; startArrowMove(); }
+      if (e.code === "ArrowRight") { e.preventDefault(); arrowDir = 1; startArrowMove(); }
     });
+
+    document.addEventListener("keyup", e => {
+      if (e.code === "ArrowLeft" || e.code === "ArrowRight") {
+        arrowDir = 0;
+        clearInterval(arrowInterval);
+        arrowInterval = null;
+      }
+    });
+
+    function startArrowMove() {
+      if (arrowInterval) return;
+      arrowInterval = setInterval(() => {
+        if (arrowDir === 0) { clearInterval(arrowInterval); arrowInterval = null; return; }
+        playerX = Math.max(0, Math.min(window.innerWidth, playerX + arrowDir * 24));
+        player.style.left = playerX + "px";
+      }, 16);
+    }
     document.addEventListener("contextmenu", e => e.preventDefault());
+    player.addEventListener("click", e => { e.stopPropagation(); onPlayerTap(); });
+    player.addEventListener("touchstart", e => { e.stopPropagation(); e.preventDefault(); onPlayerTap(); }, { passive: false });
+
+    const clownInd = document.getElementById("clownIndicator");
+    clownInd.addEventListener("click", e => { e.stopPropagation(); onPlayerTap(); });
+    clownInd.addEventListener("touchstart", e => { e.stopPropagation(); e.preventDefault(); onPlayerTap(); }, { passive: false });
 
     // Question tap = pause (works on both mobile and desktop)
     questionEl.addEventListener("touchstart", e => {
@@ -879,6 +1047,8 @@
       if (e.target.closest("#gameOver")) return;
       if (e.target.closest(".word")) return;
       if (e.target.closest("#menuBtn")) return;
+      if (e.target.closest("#autoWhyLabel")) return;
+      if (e.target.closest("#clownIndicator")) return;
       e.preventDefault();
       const t = e.touches[0];
       touchStartX = t.clientX;
