@@ -1,1179 +1,893 @@
 <!DOCTYPE html>
 <html lang="uk">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>Word Catcher</title>
-  <style>
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<title>Word Catcher</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; overflow: hidden; font-family: Arial, sans-serif; background: linear-gradient(to bottom, #87ceeb, #dff6ff); touch-action: none; }
+  #game { position: relative; width: 100vw; height: 100vh; overflow: hidden; }
 
-    body {
-      margin: 0;
-      overflow: hidden;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #87ceeb, #dff6ff);
-      touch-action: none;
-    }
+  /* --- UI bar --- */
+  #ui {
+    position: absolute; top: 0; left: 0; right: 0;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+    gap: 4px; padding: 6px 10px;
+    font-size: clamp(12px, 3vw, 18px); font-weight: bold;
+    background: rgba(255,255,255,0.75); z-index: 10;
+  }
+  #ui .stat { white-space: nowrap; }
 
-    #game {
-      position: relative;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-    }
+  /* --- Question --- */
+  #questionWrap {
+    position: absolute;
+    top: clamp(44px, 10vw, 60px);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    z-index: 9;
+  }
+  #question {
+    position: relative; top: auto; left: auto; transform: none;
+    background: rgba(0,0,0,0.45); color: white;
+    padding: 8px 16px; border-radius: 10px;
+    font-size: clamp(15px, 4.5vw, 24px); white-space: nowrap; text-align: center; max-width: 92vw; overflow: visible; overflow-wrap: break-word;
+    z-index: 8; cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    user-select: none;
+  }
+  #question .answer-highlight {
+    background: #ffeb3b;
+    color: #222;
+    border-radius: 4px;
+    padding: 0 4px;
+    font-weight: bold;
+  }
 
-    /* --- UI bar --- */
-    #ui {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 4px;
-      padding: 6px 10px;
-      font-size: clamp(12px, 3vw, 18px);
-      font-weight: bold;
-      background: rgba(255, 255, 255, 0.75);
-      z-index: 10;
-    }
+  #whyBtn {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    background: rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.75);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 16px;
+    padding: 4px 16px;
+    font-size: clamp(12px, 3vw, 15px);
+    cursor: pointer;
+    z-index: 9;
+    white-space: nowrap;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s, color 0.2s;
+  }
+  #whyBtn:hover { background: rgba(255,255,255,0.28); color: white; }
 
-    #ui .stat {
-      white-space: nowrap;
-    }
+  @keyframes whyPulse {
+    0%   { box-shadow: 0 0 0 0px rgba(255,255,255,0.6); }
+    50%  { box-shadow: 0 0 0 5px rgba(255,255,255,0.25); }
+    100% { box-shadow: 0 0 0 0px rgba(255,255,255,0); }
+  }
+  #whyBtn.hint { animation: whyPulse 3s ease forwards; }
 
-    /* --- Question --- */
-    #questionWrap {
-      position: absolute;
-      top: clamp(44px, 10vw, 60px);
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      z-index: 9;
-    }
+  #question.paused-style {
+    background: rgba(255,200,0,0.85);
+    color: #222;
+    box-shadow: 0 0 0 3px #ffcc00, 0 4px 20px rgba(255,200,0,0.5);
+    transform: scale(1.04);
+  }
+  #pauseOverlay {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: clamp(48px, 14vw, 90px);
+    pointer-events: none; z-index: 7; opacity: 0;
+    transition: opacity 0.2s;
+  }
+  #pauseOverlay.show { opacity: 1; }
 
-    #question {
-      position: relative;
-      top: auto;
-      left: auto;
-      transform: none;
-      background: rgba(0, 0, 0, 0.45);
-      color: white;
-      padding: 8px 16px;
-      border-radius: 10px;
-      font-size: clamp(15px, 4.5vw, 24px);
-      white-space: nowrap;
-      text-align: center;
-      max-width: 92vw;
-      overflow: visible;
-      overflow-wrap: break-word;
-      z-index: 8;
-      cursor: pointer;
-      transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
-      user-select: none;
-    }
+  /* --- Words --- */
+  .word {
+    position: absolute; top: -60px;
+    width: clamp(80px, 26vw, 140px);
+    padding: clamp(8px, 2vw, 12px) clamp(6px, 2vw, 10px);
+    text-align: center; background: white; border-radius: 10px;
+    font-size: clamp(13px, 4vw, 22px); font-weight: bold;
+    white-space: normal; word-break: normal; line-height: 1.3;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.2s;
+    user-select: none;
+  }
+  .word-correct  { background-color: #4CAF50 !important; color: white; transform: scale(1.1); opacity: 0; transition: 0.3s; }
+  .word-incorrect{ background-color: #f44336 !important; color: white; opacity: 0; transition: 0.3s; }
 
-    #question .answer-highlight {
-      background: #ffeb3b;
-      color: #222;
-      border-radius: 4px;
-      padding: 0 4px;
-      font-weight: bold;
-    }
+  /* --- Arrow --- */
+  .arrow { position: absolute; width: 8px; height: 15px; background: #ff4757; border-radius: 4px; z-index: 4; }
 
-    #whyBtn {
-      position: relative;
-      top: auto;
-      left: auto;
-      transform: none;
-      background: rgba(255, 255, 255, 0.15);
-      color: rgba(255, 255, 255, 0.75);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      border-radius: 16px;
-      padding: 4px 16px;
-      font-size: clamp(12px, 3vw, 15px);
-      cursor: pointer;
-      z-index: 9;
-      white-space: nowrap;
-      backdrop-filter: blur(4px);
-      transition: background 0.2s, color 0.2s;
-    }
+  /* --- Player --- */
+  #player {
+    position: absolute; bottom: clamp(70px, 18vw, 90px); left: 50%;
+    transform: translateX(-50%);
+    width: clamp(50px, 12vw, 80px); height: clamp(50px, 12vw, 80px);
+    font-size: clamp(28px, 8vw, 44px);
+    display: flex; align-items: center; justify-content: center; z-index: 5;
+  }
 
-    #whyBtn:hover {
-      background: rgba(255, 255, 255, 0.28);
-      color: white;
-    }
+  /* --- Mobile controls --- */
+  .ctrl-btn {
+    flex: 1; padding: 14px 0; border: none; border-radius: 14px;
+    font-size: clamp(18px, 5vw, 26px); font-weight: bold;
+    cursor: pointer; user-select: none; -webkit-user-select: none;
+    touch-action: manipulation; active-opacity: 0.7;
+  }
+  #btnSlower  { background: #e3f2fd; color: #1565c0; }
+  #btnFaster  { background: #e8f5e9; color: #2e7d32; }
 
-    @keyframes whyPulse {
-      0% {
-        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.6);
-      }
+  /* --- Overlay effects --- */
+  #dmgFlash   { position: absolute; inset: 0; background: rgba(255,0,0,0);     pointer-events: none; z-index: 15; transition: background 0.05s; }
+  #dmgFlash.flash   { background: rgba(255,0,0,0.35); }
+  #greenFlash { position: absolute; inset: 0; background: rgba(0,230,118,0);   pointer-events: none; z-index: 15; transition: background 0.05s; }
+  #greenFlash.flash { background: rgba(0,230,118,0.28); }
 
-      50% {
-        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.25);
-      }
+  #lostLifeText { position: absolute; left: 50%; top: 45%; transform: translate(-50%,-50%); font-size: clamp(32px,10vw,52px); font-weight: bold; color: #ff2222; text-shadow: 0 0 12px #fff, 0 2px 8px #000; pointer-events: none; z-index: 16; opacity: 0; transition: opacity 0.15s; }
+  #lostLifeText.show { opacity: 1; }
+  #comboText    { position: absolute; left: 50%; top: 38%; transform: translate(-50%,-50%); font-size: clamp(28px,9vw,52px); font-weight: bold; pointer-events: none; z-index: 16; opacity: 0; transition: opacity 0.15s; white-space: nowrap; }
+  #comboText.show { opacity: 1; }
+  #lifeGainText { position: absolute; left: 50%; top: 45%; transform: translate(-50%,-50%); font-size: clamp(28px,9vw,48px); font-weight: bold; color: #00e676; text-shadow: 0 0 16px #fff, 0 2px 8px #000; pointer-events: none; z-index: 16; opacity: 0; transition: opacity 0.15s; }
+  #lifeGainText.show { opacity: 1; }
+  #praiseText {
+    position: absolute; left: 50%; top: 55%;
+    transform: translate(-50%, -50%) scale(0.7);
+    font-size: clamp(22px, 5vw, 36px);
+    font-weight: bold; font-style: italic; color: white;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+    pointer-events: none; z-index: 16;
+    opacity: 0; transition: opacity 0.6s ease, transform 0.6s ease;
+    white-space: nowrap;
+  }
+  #praiseText.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
 
-      100% {
-        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0);
-      }
-    }
+  /* --- Game Over --- */
+  #gameOver {
+    position: absolute; inset: 0; background: rgba(0,0,0,0.75); color: white;
+    display: none; align-items: center; justify-content: center; flex-direction: column;
+    font-size: clamp(28px, 8vw, 44px); z-index: 20; text-align: center; padding: 20px;
+  }
+  #gameOver button {
+    margin-top: 20px; font-size: clamp(16px,4.5vw,22px);
+    padding: 14px 32px; cursor: pointer; border-radius: 12px;
+    border: none; background: #ff4757; color: white; font-weight: bold;
+  }
 
-    #whyBtn.hint {
-      animation: whyPulse 3s ease forwards;
-    }
+  /* --- Animations --- */
+  @keyframes playerHurt {
+    0%   { transform: translateX(-50%) rotate(0deg) scale(1); }
+    20%  { transform: translateX(calc(-50% - 10px)) rotate(-15deg) scale(1.2); }
+    50%  { transform: translateX(calc(-50% + 10px)) rotate(15deg) scale(1.2); }
+    80%  { transform: translateX(calc(-50% - 6px)) rotate(-8deg) scale(1.1); }
+    100% { transform: translateX(-50%) rotate(0deg) scale(1); }
+  }
+  #player.hurt { animation: playerHurt 0.4s ease; }
+  @keyframes playerCombo {
+    0%   { transform: translateX(-50%) scale(1); }
+    30%  { transform: translateX(-50%) scale(1.4) rotate(-8deg); }
+    60%  { transform: translateX(-50%) scale(1.3) rotate(8deg); }
+    100% { transform: translateX(-50%) scale(1) rotate(0deg); }
+  }
+  #player.combo { animation: playerCombo 0.4s ease; }
+  @keyframes playerLifeUp {
+    0%   { transform: translateX(-50%) translateY(0) scale(1); }
+    40%  { transform: translateX(-50%) translateY(-18px) scale(1.35); }
+    70%  { transform: translateX(-50%) translateY(-10px) scale(1.2); }
+    100% { transform: translateX(-50%) translateY(0) scale(1); }
+  }
+  #player.lifeup { animation: playerLifeUp 0.5s ease; }
 
-    #question.paused-style {
-      background: rgba(255, 200, 0, 0.85);
-      color: #222;
-      box-shadow: 0 0 0 3px #ffcc00, 0 4px 20px rgba(255, 200, 0, 0.5);
-      transform: scale(1.04);
-    }
-
-    #pauseOverlay {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: clamp(48px, 14vw, 90px);
-      pointer-events: none;
-      z-index: 7;
-      opacity: 0;
-      transition: opacity 0.2s;
-      cursor: pointer;
-    }
-
-    #pauseOverlay.show {
-      pointer-events: all;
-    }
-
-    #pauseOverlay.show {
-      opacity: 1;
-    }
-
-    /* --- Words --- */
-    .word {
-      position: absolute;
-      top: -60px;
-      width: clamp(80px, 26vw, 140px);
-      padding: clamp(8px, 2vw, 12px) clamp(6px, 2vw, 10px);
-      text-align: center;
-      background: white;
-      border-radius: 10px;
-      font-size: clamp(13px, 4vw, 22px);
-      font-weight: bold;
-      white-space: normal;
-      word-break: normal;
-      line-height: 1.3;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.2s;
-      user-select: none;
-    }
-
-    .word-correct {
-      background-color: #4CAF50 !important;
-      color: white;
-      transform: scale(1.1);
-      opacity: 0;
-      transition: 0.3s;
-    }
-
-    .word-incorrect {
-      background-color: #f44336 !important;
-      color: white;
-      opacity: 0;
-      transition: 0.3s;
-    }
-
-    /* --- Arrow --- */
-    .arrow {
-      position: absolute;
-      width: 8px;
-      height: 15px;
-      background: #ff4757;
-      border-radius: 4px;
-      z-index: 4;
-    }
-
-    /* --- Player --- */
-    #player {
-      position: absolute;
-      bottom: clamp(70px, 18vw, 90px);
-      left: 50%;
-      transform: translateX(-50%);
-      width: clamp(50px, 12vw, 80px);
-      height: clamp(50px, 12vw, 80px);
-      font-size: clamp(28px, 8vw, 44px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 5;
-    }
-
-    /* --- Mobile controls --- */
-    .ctrl-btn {
-      flex: 1;
-      padding: 14px 0;
-      border: none;
-      border-radius: 14px;
-      font-size: clamp(18px, 5vw, 26px);
-      font-weight: bold;
-      cursor: pointer;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
-      active-opacity: 0.7;
-    }
-
-    #btnSlower {
-      background: #e3f2fd;
-      color: #1565c0;
-    }
-
-    #btnFaster {
-      background: #e8f5e9;
-      color: #2e7d32;
-    }
-
-    /* --- Overlay effects --- */
-    #dmgFlash {
-      position: absolute;
-      inset: 0;
-      background: rgba(255, 0, 0, 0);
-      pointer-events: none;
-      z-index: 15;
-      transition: background 0.05s;
-    }
-
-    #dmgFlash.flash {
-      background: rgba(255, 0, 0, 0.35);
-    }
-
-    #greenFlash {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 230, 118, 0);
-      pointer-events: none;
-      z-index: 15;
-      transition: background 0.05s;
-    }
-
-    #greenFlash.flash {
-      background: rgba(0, 230, 118, 0.28);
-    }
-
-    #lostLifeText {
-      position: absolute;
-      left: 50%;
-      top: 45%;
-      transform: translate(-50%, -50%);
-      font-size: clamp(32px, 10vw, 52px);
-      font-weight: bold;
-      color: #ff2222;
-      text-shadow: 0 0 12px #fff, 0 2px 8px #000;
-      pointer-events: none;
-      z-index: 16;
-      opacity: 0;
-      transition: opacity 0.15s;
-    }
-
-    #lostLifeText.show {
-      opacity: 1;
-    }
-
-    #comboText {
-      position: absolute;
-      left: 50%;
-      top: 38%;
-      transform: translate(-50%, -50%);
-      font-size: clamp(28px, 9vw, 52px);
-      font-weight: bold;
-      pointer-events: none;
-      z-index: 16;
-      opacity: 0;
-      transition: opacity 0.15s;
-      white-space: nowrap;
-    }
-
-    #comboText.show {
-      opacity: 1;
-    }
-
-    #lifeGainText {
-      position: absolute;
-      left: 50%;
-      top: 45%;
-      transform: translate(-50%, -50%);
-      font-size: clamp(28px, 9vw, 48px);
-      font-weight: bold;
-      color: #00e676;
-      text-shadow: 0 0 16px #fff, 0 2px 8px #000;
-      pointer-events: none;
-      z-index: 16;
-      opacity: 0;
-      transition: opacity 0.15s;
-    }
-
-    #lifeGainText.show {
-      opacity: 1;
-    }
-
-    #praiseText {
-      position: absolute;
-      left: 50%;
-      top: 55%;
-      transform: translate(-50%, -50%) scale(0.7);
-      font-size: clamp(22px, 5vw, 36px);
-      font-weight: bold;
-      font-style: italic;
-      color: white;
-      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
-      pointer-events: none;
-      z-index: 16;
-      opacity: 0;
-      transition: opacity 0.6s ease, transform 0.6s ease;
-      white-space: nowrap;
-    }
-
-    #praiseText.show {
-      opacity: 1;
-      transform: translate(-50%, -50%) scale(1);
-    }
-
-    /* --- Game Over --- */
-    #gameOver {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.75);
-      color: white;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      font-size: clamp(28px, 8vw, 44px);
-      z-index: 20;
-      text-align: center;
-      padding: 20px;
-    }
-
-    #gameOver button {
-      margin-top: 20px;
-      font-size: clamp(16px, 4.5vw, 22px);
-      padding: 14px 32px;
-      cursor: pointer;
-      border-radius: 12px;
-      border: none;
-      background: #ff4757;
-      color: white;
-      font-weight: bold;
-    }
-
-    /* --- Animations --- */
-    @keyframes playerHurt {
-      0% {
-        transform: translateX(-50%) rotate(0deg) scale(1);
-      }
-
-      20% {
-        transform: translateX(calc(-50% - 10px)) rotate(-15deg) scale(1.2);
-      }
-
-      50% {
-        transform: translateX(calc(-50% + 10px)) rotate(15deg) scale(1.2);
-      }
-
-      80% {
-        transform: translateX(calc(-50% - 6px)) rotate(-8deg) scale(1.1);
-      }
-
-      100% {
-        transform: translateX(-50%) rotate(0deg) scale(1);
-      }
-    }
-
-    #player.hurt {
-      animation: playerHurt 0.4s ease;
-    }
-
-    @keyframes playerCombo {
-      0% {
-        transform: translateX(-50%) scale(1);
-      }
-
-      30% {
-        transform: translateX(-50%) scale(1.4) rotate(-8deg);
-      }
-
-      60% {
-        transform: translateX(-50%) scale(1.3) rotate(8deg);
-      }
-
-      100% {
-        transform: translateX(-50%) scale(1) rotate(0deg);
-      }
-    }
-
-    #player.combo {
-      animation: playerCombo 0.4s ease;
-    }
-
-    @keyframes playerLifeUp {
-      0% {
-        transform: translateX(-50%) translateY(0) scale(1);
-      }
-
-      40% {
-        transform: translateX(-50%) translateY(-18px) scale(1.35);
-      }
-
-      70% {
-        transform: translateX(-50%) translateY(-10px) scale(1.2);
-      }
-
-      100% {
-        transform: translateX(-50%) translateY(0) scale(1);
-      }
-    }
-
-    #player.lifeup {
-      animation: playerLifeUp 0.5s ease;
-    }
-
-    /* Show mobile controls on touch devices */
-    }
-  </style>
+  /* Show mobile controls on touch devices */
+  }
+</style>
 </head>
-
 <body>
-  <div id="game">
-    <div id="ui">
-      <button id="menuBtn"
-        style="font-size:clamp(11px,2.5vw,15px);color:rgba(255,255,255,0.7);background:rgba(0,0,0,0.25);border:none;padding:4px 12px;border-radius:10px;white-space:nowrap;cursor:pointer;">←
-        Menu</button>
-      <span class="stat">🔍 <span id="whyCount">0</span></span>
-      <span class="stat">✅ <span id="uniqueCorrect">0</span>/<span id="totalQ">0</span></span>
-      <span class="stat">❤️ <span id="lives">3</span></span>
-      <span class="stat">⚡ <span id="speedUI">x1.0</span></span>
-      <span class="stat">⏱ <span id="timerUI">0:00</span></span>
+<div id="game">
+  <div id="ui">
+    <button id="menuBtn" style="font-size:clamp(11px,2.5vw,15px);color:rgba(255,255,255,0.7);background:rgba(0,0,0,0.25);border:none;padding:4px 12px;border-radius:10px;white-space:nowrap;cursor:pointer;">← Menu</button>
+    <span class="stat">🔍 <span id="whyCount">0</span></span>
+    <span class="stat">✅ <span id="uniqueCorrect">0</span>/<span id="totalQ">0</span></span>
+    <span class="stat">❤️ <span id="lives">3</span></span>
+    <span class="stat">⚡ <span id="speedUI">x1.0</span></span>
+    <span class="stat">⏱ <span id="timerUI">0:00</span></span>
+  </div>
+  <div id="questionWrap">
+    <div id="question"></div>
+    <div id="whyRow" style="display:flex;align-items:center;gap:8px;">
+      <button id="whyBtn">🔍 Why?</button>
+      <label id="autoWhyLabel" style="display:flex;align-items:center;gap:4px;cursor:pointer;font-size:clamp(10px,2.5vw,13px);color:rgba(255,255,255,0.6);white-space:nowrap;user-select:none;">
+        <input type="checkbox" id="autoWhyCheck" style="cursor:pointer;accent-color:#ffeb3b;width:14px;height:14px;">
+        auto
+      </label>
     </div>
-    <div id="questionWrap">
-      <div id="question"></div>
-      <div id="whyRow" style="display:flex;align-items:center;gap:8px;">
-        <button id="whyBtn">🔍 Why?</button>
-        <label id="autoWhyLabel"
-          style="display:flex;align-items:center;gap:4px;cursor:pointer;font-size:clamp(10px,2.5vw,13px);color:rgba(255,255,255,0.6);white-space:nowrap;user-select:none;">
-          <input type="checkbox" id="autoWhyCheck" style="cursor:pointer;accent-color:#ffeb3b;width:14px;height:14px;">
-          auto
-        </label>
-      </div>
-      <div id="clownIndicator"
-        style="display:none;font-size:clamp(22px,6vw,32px);cursor:pointer;user-select:none;line-height:1;text-align:center;">
-        🤡</div>
-    </div>
-    <div id="pauseOverlay">⏸</div>
-    <div id="player">😀</div>
-    <div id="dmgFlash"></div>
-    <div id="greenFlash"></div>
-    <div id="lostLifeText">-1 ❤️</div>
-    <div id="comboText"></div>
-    <div id="lifeGainText">+1 ❤️</div>
-    <div id="praiseText"></div>
+    <div id="clownIndicator" style="display:none;font-size:clamp(22px,6vw,32px);cursor:pointer;user-select:none;line-height:1;text-align:center;">🤡</div>
+  </div>
+  <div id="pauseOverlay">⏸</div>
+  <div id="player">😀</div>
+  <div id="dmgFlash"></div>
+  <div id="greenFlash"></div>
+  <div id="lostLifeText">-1 ❤️</div>
+  <div id="comboText"></div>
+  <div id="lifeGainText">+1 ❤️</div>
+  <div id="praiseText"></div>
 
-    <!-- Mobile bottom controls -->
-    <div id="mobileControls">
-
-    </div>
-
-    <div id="winScreen"
-      style="position:absolute;inset:0;background:rgba(0,0,0,0.82);color:white;display:none;align-items:center;justify-content:center;flex-direction:column;z-index:20;text-align:center;padding:20px;">
-      <div style="font-size:clamp(32px,8vw,52px);margin-bottom:8px;">🎉 Congratulations!</div>
-      <div id="winScore" style="font-size:clamp(16px,4vw,22px);margin:4px 0;"></div>
-      <div id="winTime" style="font-size:clamp(14px,3.5vw,20px);margin:4px 0;color:#aef;"></div>
-      <div id="winMistakes" style="font-size:clamp(14px,3.5vw,20px);margin:4px 0;color:#ff8a80;"></div>
-      <div id="winClown" style="font-size:clamp(13px,3vw,17px);color:#f9c;margin:4px 0;display:none;">🤡 You used Clown
-        Mode!</div>
-      <button onclick="window.location.href=window.location.href"
-        style="margin-top:20px;font-size:clamp(16px,4.5vw,22px);padding:14px 32px;cursor:pointer;border-radius:12px;border:none;background:#4caf50;color:white;font-weight:bold;">🔄
-        Restart</button>
-    </div>
-    <div id="gameOver">
-      <div>Game Over</div>
-      <div id="finalScore" style="font-size:clamp(18px,5vw,28px);margin:8px 0;"></div>
-      <div id="finalTime" style="font-size:clamp(16px,4vw,24px);color:#aef;margin:4px 0;"></div>
-      <div id="finalWhy" style="font-size:clamp(14px,3.5vw,20px);color:#ffd;margin:4px 0;"></div>
-      <div id="finalClown" style="font-size:clamp(13px,3vw,17px);color:#f9c;margin:4px 0;display:none;">🤡 You used
-        Clown Mode!</div>
-      <button id="whyBtnGameOver"
-        style="margin-top:12px;font-size:clamp(13px,3.5vw,17px);padding:8px 20px;cursor:pointer;border-radius:16px;border:1px solid rgba(255,255,255,0.5);background:rgba(255,255,255,0.15);color:white;">🔍
-        Why that sentence?</button>
-      <button onclick="window.location.href=window.location.href">🔄 Restart</button>
-    </div>
+  <!-- Mobile bottom controls -->
+  <div id="mobileControls">
+    
   </div>
 
-  <script>
-    const game = document.getElementById("game");
-    const player = document.getElementById("player");
-    const livesEl = document.getElementById("lives");
-    const speedUI = document.getElementById("speedUI");
-    const questionEl = document.getElementById("question");
+  <div id="winScreen" style="position:absolute;inset:0;background:rgba(0,0,0,0.82);color:white;display:none;align-items:center;justify-content:center;flex-direction:column;z-index:20;text-align:center;padding:20px;">
+    <div style="font-size:clamp(32px,8vw,52px);margin-bottom:8px;">🎉 Congratulations!</div>
+    <div id="winScore"  style="font-size:clamp(16px,4vw,22px);margin:4px 0;"></div>
+    <div id="winTime"   style="font-size:clamp(14px,3.5vw,20px);margin:4px 0;color:#aef;"></div>
+    <div id="winMistakes" style="font-size:clamp(14px,3.5vw,20px);margin:4px 0;color:#ff8a80;"></div>
+    <div id="winClown" style="font-size:clamp(13px,3vw,17px);color:#f9c;margin:4px 0;display:none;">🤡 You used Clown Mode!</div>
+    <button onclick="window.location.href=window.location.href" style="margin-top:20px;font-size:clamp(16px,4.5vw,22px);padding:14px 32px;cursor:pointer;border-radius:12px;border:none;background:#4caf50;color:white;font-weight:bold;">🔄 Restart</button>
+  </div>
+  <div id="gameOver">
+    <div>Game Over</div>
+    <div id="finalScore" style="font-size:clamp(18px,5vw,28px);margin:8px 0;"></div>
+    <div id="finalTime"  style="font-size:clamp(16px,4vw,24px);color:#aef;margin:4px 0;"></div>
+    <div id="finalWhy"   style="font-size:clamp(14px,3.5vw,20px);color:#ffd;margin:4px 0;"></div>
+    <div id="finalClown" style="font-size:clamp(13px,3vw,17px);color:#f9c;margin:4px 0;display:none;">🤡 You used Clown Mode!</div>
+    <button id="whyBtnGameOver" style="margin-top:12px;font-size:clamp(13px,3.5vw,17px);padding:8px 20px;cursor:pointer;border-radius:16px;border:1px solid rgba(255,255,255,0.5);background:rgba(255,255,255,0.15);color:white;">🔍 Why that sentence?</button>
+    <button onclick="window.location.href=window.location.href">🔄 Restart</button>
+  </div>
+</div>
 
-    let score = 0, lives = 3, streak = 0, globalSpeedMultiplier = 1, whyCount = 0;
-    let isAnimating = false, paused = false, gameEnded = false;
-    let gameStartTime = Date.now(), pauseStartTime = null, totalPausedMs = 0;
-    let timerInterval = null;
-    let playerX = window.innerWidth / 2;
+<script>
+const game       = document.getElementById("game");
+const player     = document.getElementById("player");
+const livesEl    = document.getElementById("lives");
+const speedUI    = document.getElementById("speedUI");
+const questionEl = document.getElementById("question");
 
-    let questions = [];
-    let currentQuestion;
-    let lastSentence = "";
-    let questionQueue = [];   // shuffled queue
-    let retryQueue = [];      // wrong answers to retry after 20 questions
-    let retryCountdown = {};  // questionIndex -> countdown
-    let correctSet = new Set(); // indices of correctly answered questions
-    let totalAnswered = 0;    // questions shown so far (for retry countdown)
-    let mistakeCount = 0;
-    let praiseStreak = 0;
-    let praiseIndex = 0;
-    const praisePhrases = [
-      "Great job!", "Well done!", "Nice work!", "Good work!", "Awesome!",
-      "Excellent!", "You did great!", "Proud of you!", "Keep it up!",
-      "That was amazing!", "You nailed it!", "Fantastic work!", "Brilliant!",
-      "Good for you!", "You crushed it!", "That's impressive!", "Way to go!",
-      "Super job!", "You're doing great!",
-      "You did a really great job!", "I'm really proud of you!",
-      "You handled that very well!", "That was seriously impressive!",
-      "You're getting better and better!", "You should be proud of yourself!",
-      "You worked really hard on this!", "That turned out really well!",
-      "You made an amazing job of it!", "I knew you could do it!",
-      "You're doing an excellent job!", "That was a smart decision!",
-      "You did much better this time!", "Your hard work is paying off!",
-      "You really did your best there!", "I can see your progress clearly!",
-      "You've improved a lot recently!", "That's exactly how it should be done!",
-      "You did that with real confidence!", "Keep going — you're doing amazing!"
-    ];
+let score = 0, lives = 3, streak = 0, globalSpeedMultiplier = 1, whyCount = 0;
+let isAnimating = false, paused = false, gameEnded = false;
+let gameStartTime = Date.now(), pauseStartTime = null, totalPausedMs = 0;
+let timerInterval = null;
+let playerX = window.innerWidth / 2;
 
-    function showPraise() {
-      const el = document.getElementById("praiseText");
-      el.textContent = praisePhrases[praiseIndex % praisePhrases.length];
-      praiseIndex++;
-      el.classList.add("show");
-      setTimeout(() => el.classList.remove("show"), 3000);
-    }
+let questions = [];
+let currentQuestion;
+let lastSentence = "";
+let questionQueue = [];   // shuffled queue
+let retryQueue = [];      // wrong answers to retry after 20 questions
+let retryCountdown = {};  // questionIndex -> countdown
+let correctSet = new Set(); // indices of correctly answered questions
+let totalAnswered = 0;    // questions shown so far (for retry countdown)
+let mistakeCount = 0;
+let praiseStreak = 0;
+let praiseIndex = 0;
+const praisePhrases = [
+  "Great job!", "Well done!", "Nice work!", "Good work!", "Awesome!",
+  "Excellent!", "You did great!", "Proud of you!", "Keep it up!",
+  "That was amazing!", "You nailed it!", "Fantastic work!", "Brilliant!",
+  "Good for you!", "You crushed it!", "That's impressive!", "Way to go!",
+  "Super job!", "You're doing great!",
+  "You did a really great job!", "I'm really proud of you!",
+  "You handled that very well!", "That was seriously impressive!",
+  "You're getting better and better!", "You should be proud of yourself!",
+  "You worked really hard on this!", "That turned out really well!",
+  "You made an amazing job of it!", "I knew you could do it!",
+  "You're doing an excellent job!", "That was a smart decision!",
+  "You did much better this time!", "Your hard work is paying off!",
+  "You really did your best there!", "I can see your progress clearly!",
+  "You've improved a lot recently!", "That's exactly how it should be done!",
+  "You did that with real confidence!", "Keep going — you're doing amazing!"
+];
+
+function showPraise() {
+  const el = document.getElementById("praiseText");
+  el.textContent = praisePhrases[praiseIndex % praisePhrases.length];
+  praiseIndex++;
+  el.classList.add("show");
+  setTimeout(() => el.classList.remove("show"), 3000);
+}
 
 
-    // ===== CLOWN MODE =====
-    let clownMode = false;
-    let clownUsed = false;
-    let clownInterval = null;
-    let clownDir = 1;
-    let lastPlayerClick = 0;
+// ===== CLOWN MODE =====
+let clownMode = false;
+let clownUsed = false;
+let clownInterval = null;
+let clownDir = 1;
+let lastPlayerClick = 0;
 
-    function toggleClownMode() {
-      clownMode = !clownMode;
-      const indicator = document.getElementById("clownIndicator");
-      if (clownMode) {
-        clownUsed = true;
-        player.textContent = "🤡";
-        indicator.style.display = "block";
-        startClownMove();
-      } else {
-        player.textContent = "😀";
-        indicator.style.display = "none";
-        clearInterval(clownInterval);
-        clownInterval = null;
-      }
-    }
+function toggleClownMode() {
+  clownMode = !clownMode;
+  const indicator = document.getElementById("clownIndicator");
+  if (clownMode) {
+    clownUsed = true;
+    player.textContent = "🤡";
+    indicator.style.display = "block";
+    startClownMove();
+  } else {
+    player.textContent = "😀";
+    indicator.style.display = "none";
+    clearInterval(clownInterval);
+    clownInterval = null;
+  }
+}
 
-    function startClownMove() {
-      if (clownInterval) clearInterval(clownInterval);
-      // Speed: cross screen in ~4 seconds (width / (4000ms / 16ms) ≈ width/250)
-      const speed = Math.max(1.5, window.innerWidth / 250);
-      clownInterval = setInterval(() => {
-        if (paused || gameEnded) return;
+function startClownMove() {
+  if (clownInterval) clearInterval(clownInterval);
+  // Speed: cross screen in ~4 seconds (width / (4000ms / 16ms) ≈ width/250)
+  const speed = Math.max(1.5, window.innerWidth / 250);
+  clownInterval = setInterval(() => {
+    if (paused || gameEnded) return;
 
-        // Check if correct word is close — start tracking 1 second before it reaches player
-        const pRect = player.getBoundingClientRect();
-        let tracking = false;
-        document.querySelectorAll(".word").forEach(word => {
-          if (tracking) return;
-          const wRect = word.getBoundingClientRect();
-          const isCorrect = word.textContent.trim() === (currentQuestion ? currentQuestion.correct : "");
-          if (isCorrect && wRect.bottom > 0) {
-            const gap = pRect.top - wRect.bottom;
-            // globalSpeedMultiplier * 2px/frame * 60fps = px/sec
-            const pxPerSec = globalSpeedMultiplier * 2 * 60;
-            const secsToArrival = gap / pxPerSec;
-            if (secsToArrival < 1.0) {
-              const targetX = wRect.left + wRect.width / 2;
-              const diff = targetX - playerX;
-              // Move faster as word gets closer
-              const urgency = Math.max(0.08, 1 - secsToArrival);
-              playerX += diff * urgency;
-              player.style.left = playerX + "px";
-              tracking = true;
-            }
-          }
-        });
-
-        if (!tracking) {
-          // Slow bounce left/right
-          playerX += clownDir * speed;
-          if (playerX > window.innerWidth - 40) { clownDir = -1; }
-          if (playerX < 40) { clownDir = 1; }
+    // Check if correct word is close — start tracking 1 second before it reaches player
+    const pRect = player.getBoundingClientRect();
+    let tracking = false;
+    document.querySelectorAll(".word").forEach(word => {
+      if (tracking) return;
+      const wRect = word.getBoundingClientRect();
+      const isCorrect = word.textContent.trim() === (currentQuestion ? currentQuestion.correct : "");
+      if (isCorrect && wRect.bottom > 0) {
+        const gap = pRect.top - wRect.bottom;
+        // globalSpeedMultiplier * 2px/frame * 60fps = px/sec
+        const pxPerSec = globalSpeedMultiplier * 2 * 60;
+        const secsToArrival = gap / pxPerSec;
+        if (secsToArrival < 1.0) {
+          const targetX = wRect.left + wRect.width / 2;
+          const diff = targetX - playerX;
+          // Move faster as word gets closer
+          const urgency = Math.max(0.08, 1 - secsToArrival);
+          playerX += diff * urgency;
           player.style.left = playerX + "px";
+          tracking = true;
         }
-      }, 16);
-    }
-
-    // Double-click/tap on player to toggle clown mode
-    function onPlayerTap() {
-      const now = Date.now();
-      if (now - lastPlayerClick < 400) {
-        toggleClownMode();
-        lastPlayerClick = 0;
-      } else {
-        lastPlayerClick = now;
       }
-    }
+    });
 
-    function updateUI() {
-      speedUI.textContent = "x" + globalSpeedMultiplier.toFixed(1);
-      questionEl.classList.toggle("paused-style", paused);
-      document.getElementById("pauseOverlay").classList.toggle("show", paused);
+    if (!tracking) {
+      // Slow bounce left/right
+      playerX += clownDir * speed;
+      if (playerX > window.innerWidth - 40) { clownDir = -1; }
+      if (playerX < 40) { clownDir = 1; }
+      player.style.left = playerX + "px";
     }
+  }, 16);
+}
 
-    /* ---------- lose life effect ---------- */
-    function loseLife() {
-      const flash = document.getElementById("dmgFlash");
-      const txt = document.getElementById("lostLifeText");
-      player.textContent = "😵";
-      player.classList.remove("hurt"); void player.offsetWidth; player.classList.add("hurt");
-      flash.classList.add("flash"); txt.classList.add("show");
-      setTimeout(() => {
-        flash.classList.remove("flash"); txt.classList.remove("show");
-        player.textContent = clownMode ? "🤡" : "😀"; player.classList.remove("hurt");
-      }, 500);
+// Double-click/tap on player to toggle clown mode
+function onPlayerTap() {
+  const now = Date.now();
+  if (now - lastPlayerClick < 400) {
+    toggleClownMode();
+    lastPlayerClick = 0;
+  } else {
+    lastPlayerClick = now;
+  }
+}
+
+function updateUI() {
+  speedUI.textContent = "x" + globalSpeedMultiplier.toFixed(1);
+  questionEl.classList.toggle("paused-style", paused);
+  document.getElementById("pauseOverlay").classList.toggle("show", paused);
+}
+
+/* ---------- lose life effect ---------- */
+function loseLife() {
+  const flash = document.getElementById("dmgFlash");
+  const txt   = document.getElementById("lostLifeText");
+  player.textContent = "😵";
+  player.classList.remove("hurt"); void player.offsetWidth; player.classList.add("hurt");
+  flash.classList.add("flash"); txt.classList.add("show");
+  setTimeout(() => {
+    flash.classList.remove("flash"); txt.classList.remove("show");
+    player.textContent = clownMode ? "🤡" : "😀"; player.classList.remove("hurt");
+  }, 500);
+}
+
+/* ---------- combo effect ---------- */
+function showCombo(n) {
+  const txt    = document.getElementById("comboText");
+  const emojis = ["🔥","⚡","💥","🌟","✨"];
+  const colors = ["#ff9800","#ffeb3b","#ff5722","#e040fb","#00e5ff"];
+  const idx = Math.min(Math.floor(n / 5) - 1, 4);
+  txt.textContent = emojis[idx] + " COMBO x" + n + "!";
+  txt.style.color = colors[idx];
+  txt.style.textShadow = "0 0 16px " + colors[idx] + ", 0 2px 8px #000";
+  if (!clownMode) { player.classList.remove("combo"); void player.offsetWidth; player.classList.add("combo"); }
+  txt.classList.add("show");
+  setTimeout(() => { txt.classList.remove("show"); player.classList.remove("combo"); }, 2000);
+}
+
+/* ---------- life gain effect ---------- */
+function showLifeGain() {
+  const flash = document.getElementById("greenFlash");
+  const txt   = document.getElementById("lifeGainText");
+  player.textContent = "😍";
+  player.classList.remove("lifeup"); void player.offsetWidth; player.classList.add("lifeup");
+  flash.classList.add("flash"); txt.classList.add("show");
+  setTimeout(() => {
+    flash.classList.remove("flash"); txt.classList.remove("show");
+    player.textContent = clownMode ? "🤡" : "😀"; player.classList.remove("lifeup");
+  }, 2000);
+}
+
+/* ---------- timer ---------- */
+function getPlayTime() {
+  const extra  = (paused && pauseStartTime) ? (Date.now() - pauseStartTime) : 0;
+  const ms     = Date.now() - gameStartTime - totalPausedMs - extra;
+  const total  = Math.floor(ms / 1000);
+  const m      = Math.floor(total / 60), s = total % 60;
+  return m > 0 ? m + " min " + s + " sec" : s + " sec";
+}
+
+/* ---------- end game ---------- */
+function winGame() {
+  if (gameEnded) return;
+  gameEnded = true;
+  document.getElementById("winScore").textContent  = "🏆 Score: " + score;
+  document.getElementById("winTime").textContent   = "⏱ Time: " + getPlayTime();
+  document.getElementById("winMistakes").textContent = mistakeCount > 0 ? "❌ Mistakes: " + mistakeCount : "✨ No mistakes!";
+  if (clownUsed) document.getElementById("winClown").style.display = "block";
+  document.getElementById("winScreen").style.display = "flex";
+}
+
+function endGame() {
+  if (gameEnded) return;
+  gameEnded = true;
+  document.getElementById("finalScore").textContent = "🏆 Score: " + score;
+  document.getElementById("finalTime").textContent  = "⏱ Time: " + getPlayTime();
+  document.getElementById("finalWhy").textContent   = "🔍 Why pressed: " + whyCount + " time" + (whyCount !== 1 ? "s" : "");
+  if (clownUsed) document.getElementById("finalClown").style.display = "block";
+  document.getElementById("gameOver").style.display = "flex";
+}
+
+/* ---------- handle answer ---------- */
+function showAnswerInQuestion(isCorrect) {
+  const correct = currentQuestion.correct;
+  const filled = currentQuestion.question.replace("___", `<span class="answer-highlight">${correct}</span>`);
+  questionEl.innerHTML = filled;
+
+}
+
+function handleSelection(text, wordElement) {
+  if (isAnimating) return;
+  if (paused) togglePause();
+  isAnimating = true;
+  const isCorrect = text === currentQuestion.correct;
+  if (isCorrect) {
+    wordElement.classList.add("word-correct");
+    score++; streak++;
+    if (streak % 5 === 0) showCombo(streak);
+    if (streak % 5 === 0) { lives++; livesEl.textContent = lives; showLifeGain(); }
+    if (!correctSet.has(currentQuestion._idx)) {
+      correctSet.add(currentQuestion._idx);
+      document.getElementById("uniqueCorrect").textContent = correctSet.size;
     }
-
-    /* ---------- combo effect ---------- */
-    function showCombo(n) {
-      const txt = document.getElementById("comboText");
-      const emojis = ["🔥", "⚡", "💥", "🌟", "✨"];
-      const colors = ["#ff9800", "#ffeb3b", "#ff5722", "#e040fb", "#00e5ff"];
-      const idx = Math.min(Math.floor(n / 5) - 1, 4);
-      txt.textContent = emojis[idx] + " COMBO x" + n + "!";
-      txt.style.color = colors[idx];
-      txt.style.textShadow = "0 0 16px " + colors[idx] + ", 0 2px 8px #000";
-      if (!clownMode) { player.classList.remove("combo"); void player.offsetWidth; player.classList.add("combo"); }
-      txt.classList.add("show");
-      setTimeout(() => { txt.classList.remove("show"); player.classList.remove("combo"); }, 2000);
+    praiseStreak++;
+    if (praiseStreak % 3 === 0) showPraise();
+  } else {
+    wordElement.classList.add("word-incorrect");
+    lives--; livesEl.textContent = lives; streak = 0; loseLife();
+    mistakeCount++;
+    praiseStreak = 0;
+    // Hint animation on Why button
+    const wb = document.getElementById("whyBtn");
+    wb.classList.remove("hint");
+    void wb.offsetWidth; // reflow to restart animation
+    wb.classList.add("hint");
+    // Auto-why: if checkbox enabled and still has lives, auto-open Google after 1 second
+    if (document.getElementById("autoWhyCheck").checked && lives > 0 && !gameEnded) {
+      setTimeout(() => { if (!gameEnded && lives > 0) openWhyGoogle(); }, 1000);
+    } else if (lives <= 0) {
+      document.getElementById("autoWhyCheck").checked = false;
     }
-
-    /* ---------- life gain effect ---------- */
-    function showLifeGain() {
-      const flash = document.getElementById("greenFlash");
-      const txt = document.getElementById("lifeGainText");
-      player.textContent = "😍";
-      player.classList.remove("lifeup"); void player.offsetWidth; player.classList.add("lifeup");
-      flash.classList.add("flash"); txt.classList.add("show");
-      setTimeout(() => {
-        flash.classList.remove("flash"); txt.classList.remove("show");
-        player.textContent = clownMode ? "🤡" : "😀"; player.classList.remove("lifeup");
-      }, 2000);
+    // Schedule retry after 20 questions
+    if (!retryQueue.includes(currentQuestion._idx)) {
+      retryQueue.push(currentQuestion._idx);
+      retryCountdown[currentQuestion._idx] = 20;
     }
+  }
+  showAnswerInQuestion(isCorrect);
+  updateUI();
+  setTimeout(() => {
+    document.querySelectorAll(".word").forEach(w => w.remove());
+    isAnimating = false;
+    if (gameEnded) return;
+    if (lives <= 0) endGame(); else newQuestion();
+  }, isCorrect ? 600 : 3000);
+}
 
-    /* ---------- timer ---------- */
-    function getPlayTime() {
-      const extra = (paused && pauseStartTime) ? (Date.now() - pauseStartTime) : 0;
-      const ms = Date.now() - gameStartTime - totalPausedMs - extra;
-      const total = Math.floor(ms / 1000);
-      const m = Math.floor(total / 60), s = total % 60;
-      return m > 0 ? m + " min " + s + " sec" : s + " sec";
+/* ---------- shoot ---------- */
+function shoot() {
+  if (gameEnded) return;
+  if (paused) togglePause();
+  const arrow = document.createElement("div");
+  arrow.className = "arrow";
+  const pRect = player.getBoundingClientRect();
+  arrow.style.left = (pRect.left + pRect.width / 2 - 4) + "px";
+  arrow.style.top  = pRect.top + "px";
+  game.appendChild(arrow);
+  function move() {
+    if (gameEnded) { arrow.remove(); return; }
+    if (paused) { requestAnimationFrame(move); return; }
+    let t = parseFloat(arrow.style.top);
+    arrow.style.top = (t - 8) + "px";
+    document.querySelectorAll(".word").forEach(word => {
+      const aR = arrow.getBoundingClientRect(), wR = word.getBoundingClientRect();
+      if (aR.top < wR.bottom && aR.left > wR.left && aR.right < wR.right) {
+        arrow.remove(); handleSelection(word.textContent, word);
+      }
+    });
+    if (t > 0) requestAnimationFrame(move); else arrow.remove();
+  }
+  move();
+}
+
+/* ---------- create word ---------- */
+function createWord(text, i, total) {
+  const word = document.createElement("div");
+  word.className = "word";
+  word.textContent = text;
+  const wordW = Math.min(120, Math.max(70, window.innerWidth * 0.22));
+  const zone  = Math.min(window.innerWidth, 600); // max spread zone
+  const offset = (window.innerWidth - zone) / 2;
+  const step  = zone / (total + 1);
+  word.style.left = (offset + step * (i + 1) - wordW / 2) + "px";
+  word.style.width = wordW + "px";
+  game.appendChild(word);
+  // Mobile: tap the word directly
+  word.addEventListener("touchstart", e => {
+    e.stopPropagation();
+    e.preventDefault();
+    handleSelection(text, word);
+  }, { passive: false });
+  word.addEventListener("click", () => handleSelection(text, word));
+  let y = -60;
+  function fall() {
+    if (gameEnded) return;
+    if (paused || isAnimating) { requestAnimationFrame(fall); return; }
+    y += 2 * globalSpeedMultiplier;
+    word.style.top = y + "px";
+    const wR = word.getBoundingClientRect(), pR = player.getBoundingClientRect();
+    if (!(wR.bottom < pR.top || wR.top > pR.bottom || wR.left > pR.right || wR.right < pR.left)) {
+      handleSelection(text, word); return;
     }
-
-    /* ---------- end game ---------- */
-    function winGame() {
+    if (word.parentElement && y < window.innerHeight) { requestAnimationFrame(fall); return; }
+    if (y >= window.innerHeight) {
+      word.remove();
       if (gameEnded) return;
-      gameEnded = true;
-      document.getElementById("winScore").textContent = "🏆 Score: " + score;
-      document.getElementById("winTime").textContent = "⏱ Time: " + getPlayTime();
-      document.getElementById("winMistakes").textContent = mistakeCount > 0 ? "❌ Mistakes: " + mistakeCount : "✨ No mistakes!";
-      if (clownUsed) document.getElementById("winClown").style.display = "block";
-      document.getElementById("winScreen").style.display = "flex";
-    }
-
-    function endGame() {
-      if (gameEnded) return;
-      gameEnded = true;
-      document.getElementById("finalScore").textContent = "🏆 Score: " + score;
-      document.getElementById("finalTime").textContent = "⏱ Time: " + getPlayTime();
-      document.getElementById("finalWhy").textContent = "🔍 Why pressed: " + whyCount + " time" + (whyCount !== 1 ? "s" : "");
-      if (clownUsed) document.getElementById("finalClown").style.display = "block";
-      document.getElementById("gameOver").style.display = "flex";
-    }
-
-    /* ---------- handle answer ---------- */
-    function showAnswerInQuestion(isCorrect) {
-      const correct = currentQuestion.correct;
-      const filled = currentQuestion.question.replace("___", `<span class="answer-highlight">${correct}</span>`);
-      questionEl.innerHTML = filled;
-
-    }
-
-    function handleSelection(text, wordElement) {
-      if (isAnimating) return;
-      if (paused) togglePause();
-      isAnimating = true;
-      const isCorrect = text === currentQuestion.correct;
-      if (isCorrect) {
-        wordElement.classList.add("word-correct");
-        score++; streak++;
-        if (streak % 5 === 0) showCombo(streak);
-        if (streak % 5 === 0) { lives++; livesEl.textContent = lives; showLifeGain(); }
-        if (!correctSet.has(currentQuestion._idx)) {
-          correctSet.add(currentQuestion._idx);
-          document.getElementById("uniqueCorrect").textContent = correctSet.size;
-        }
-        praiseStreak++;
-        if (praiseStreak % 3 === 0) showPraise();
-      } else {
-        wordElement.classList.add("word-incorrect");
-        lives--; livesEl.textContent = lives; streak = 0; loseLife();
-        mistakeCount++;
-        praiseStreak = 0;
-        // Hint animation on Why button
-        const wb = document.getElementById("whyBtn");
-        wb.classList.remove("hint");
-        void wb.offsetWidth; // reflow to restart animation
-        wb.classList.add("hint");
-        // Auto-why: if checkbox enabled and still has lives, auto-open Google after 1 second
-        if (document.getElementById("autoWhyCheck").checked && lives > 0 && !gameEnded) {
-          setTimeout(() => { if (!gameEnded && lives > 0) openWhyGoogle(); }, 1000);
-        } else if (lives <= 0) {
+      if (!isAnimating && text === currentQuestion.correct) {
+        lives--; livesEl.textContent = lives; streak = 0; loseLife(); updateUI();
+        showAnswerInQuestion(false);
+        if (lives <= 0) {
           document.getElementById("autoWhyCheck").checked = false;
-        }
-        // Schedule retry after 20 questions
-        if (!retryQueue.includes(currentQuestion._idx)) {
-          retryQueue.push(currentQuestion._idx);
-          retryCountdown[currentQuestion._idx] = 20;
+          setTimeout(() => endGame(), 2000);
+          return;
         }
       }
-      showAnswerInQuestion(isCorrect);
-      updateUI();
-      setTimeout(() => {
-        document.querySelectorAll(".word").forEach(w => w.remove());
-        isAnimating = false;
-        if (gameEnded) return;
-        if (lives <= 0) endGame(); else newQuestion();
-      }, isCorrect ? 600 : 3000);
-    }
-
-    /* ---------- shoot ---------- */
-    function shoot() {
-      if (gameEnded) return;
-      if (paused) togglePause();
-      const arrow = document.createElement("div");
-      arrow.className = "arrow";
-      const pRect = player.getBoundingClientRect();
-      arrow.style.left = (pRect.left + pRect.width / 2 - 4) + "px";
-      arrow.style.top = pRect.top + "px";
-      game.appendChild(arrow);
-      function move() {
-        if (gameEnded) { arrow.remove(); return; }
-        if (paused) { requestAnimationFrame(move); return; }
-        let t = parseFloat(arrow.style.top);
-        arrow.style.top = (t - 8) + "px";
-        document.querySelectorAll(".word").forEach(word => {
-          const aR = arrow.getBoundingClientRect(), wR = word.getBoundingClientRect();
-          if (aR.top < wR.bottom && aR.left > wR.left && aR.right < wR.right) {
-            arrow.remove(); handleSelection(word.textContent, word);
-          }
-        });
-        if (t > 0) requestAnimationFrame(move); else arrow.remove();
+      if (!gameEnded && !isAnimating && document.querySelectorAll(".word").length === 0) {
+        if (lives <= 0) { endGame(); return; }
+        setTimeout(() => {
+          if (!gameEnded) newQuestion();
+        }, document.querySelector(".answer-correct, .answer-wrong") ? 800 : 0);
       }
-      move();
     }
+  }
+  fall();
+}
 
-    /* ---------- create word ---------- */
-    function createWord(text, i, total) {
-      const word = document.createElement("div");
-      word.className = "word";
-      word.textContent = text;
-      const wordW = Math.min(120, Math.max(70, window.innerWidth * 0.22));
-      const zone = Math.min(window.innerWidth, 600); // max spread zone
-      const offset = (window.innerWidth - zone) / 2;
-      const step = zone / (total + 1);
-      word.style.left = (offset + step * (i + 1) - wordW / 2) + "px";
-      word.style.width = wordW + "px";
-      game.appendChild(word);
-      // Mobile: tap the word directly
-      word.addEventListener("touchstart", e => {
-        e.stopPropagation();
-        e.preventDefault();
-        handleSelection(text, word);
-      }, { passive: false });
-      word.addEventListener("click", () => handleSelection(text, word));
-      let y = -60;
-      function fall() {
-        if (gameEnded) return;
-        if (paused || isAnimating) { requestAnimationFrame(fall); return; }
-        y += 2 * globalSpeedMultiplier;
-        word.style.top = y + "px";
-        const wR = word.getBoundingClientRect(), pR = player.getBoundingClientRect();
-        if (!(wR.bottom < pR.top || wR.top > pR.bottom || wR.left > pR.right || wR.right < pR.left)) {
-          handleSelection(text, word); return;
+/* ---------- new question ---------- */
+function togglePause() {
+  paused = !paused;
+  if (paused) pauseStartTime = Date.now();
+  else {
+    if (pauseStartTime) { totalPausedMs += Date.now() - pauseStartTime; pauseStartTime = null; }
+    touchStartY = 0;
+  }
+  updateUI();
+}
+
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function initQueue() {
+  questionQueue = shuffle(questions.map((q, i) => i));
+  document.getElementById("totalQ").textContent = questions.length;
+}
+
+function nextFromQueue() {
+  // Check if any retry is due
+  for (let i = 0; i < retryQueue.length; i++) {
+    const idx = retryQueue[i];
+    if (retryCountdown[idx] <= 0) {
+      retryQueue.splice(i, 1);
+      return idx;
+    }
+  }
+  // Decrement retry countdowns
+  retryQueue.forEach(idx => retryCountdown[idx]--);
+
+  // Get next from main queue (skip already correctly done)
+  while (questionQueue.length > 0) {
+    const idx = questionQueue.shift();
+    if (!correctSet.has(idx)) return idx;
+  }
+
+  // Main queue empty — check if any retry still pending
+  if (retryQueue.length > 0) {
+    const idx = retryQueue.shift();
+    return idx;
+  }
+
+  return null; // all done!
+}
+
+function newQuestion() {
+  totalAnswered++;
+  const idx = nextFromQueue();
+  if (idx === null) {
+    // All questions correctly answered!
+    winGame();
+    return;
+  }
+  currentQuestion = { ...questions[idx], _idx: idx };
+  lastSentence = currentQuestion.question;
+  questionEl.style.whiteSpace = "nowrap";
+  questionEl.textContent = currentQuestion.question;
+  // Force wrap if ___ is at the end or near end (last/second-to-last word)
+  const wordsInQ = currentQuestion.question.trim().split(/\s+/);
+  const blankIdx = wordsInQ.findIndex(w => w.includes("___"));
+  const isNearEnd = blankIdx >= wordsInQ.length - 2;
+  if (isNearEnd || questionEl.scrollWidth > window.innerWidth * 0.92) {
+    questionEl.style.whiteSpace = "normal";
+  }
+  // Shuffle options so correct answer isn't always in same position
+  const shuffled = [...currentQuestion.options].sort(() => Math.random() - 0.5);
+  shuffled.forEach((opt, i) => createWord(opt, i, shuffled.length));
+  // Equalize height and font size across all word blocks
+  requestAnimationFrame(() => {
+    const words = document.querySelectorAll(".word");
+
+    // Reset to default font size first
+    words.forEach(w => { w.style.fontSize = ""; w.style.whiteSpace = "normal"; });
+
+    // Check if any word overflows its block (too close to edges)
+    // Use a margin of 12px on each side
+    const margin = 24;
+    let needsShrink = false;
+    words.forEach(w => {
+      if (w.scrollWidth > w.clientWidth - margin) needsShrink = true;
+    });
+
+    // If any block is tight, find the minimum font size needed and apply to ALL
+    if (needsShrink) {
+      const defaultSize = parseFloat(getComputedStyle(words[0]).fontSize);
+      let bestSize = defaultSize;
+      words.forEach(w => {
+        let size = defaultSize;
+        w.style.whiteSpace = "nowrap";
+        w.style.fontSize = size + "px";
+        while (w.scrollWidth > w.clientWidth && size > 11) {
+          size -= 0.5;
+          w.style.fontSize = size + "px";
         }
-        if (word.parentElement && y < window.innerHeight) { requestAnimationFrame(fall); return; }
-        if (y >= window.innerHeight) {
-          word.remove();
-          if (gameEnded) return;
-          if (!isAnimating && text === currentQuestion.correct) {
-            lives--; livesEl.textContent = lives; streak = 0; loseLife(); updateUI();
-            showAnswerInQuestion(false);
-            if (lives <= 0) {
-              document.getElementById("autoWhyCheck").checked = false;
-              setTimeout(() => endGame(), 2000);
-              return;
-            }
-          }
-          if (!gameEnded && !isAnimating && document.querySelectorAll(".word").length === 0) {
-            if (lives <= 0) { endGame(); return; }
-            setTimeout(() => {
-              if (!gameEnded) newQuestion();
-            }, document.querySelector(".answer-correct, .answer-wrong") ? 800 : 0);
-          }
-        }
-      }
-      fall();
-    }
-
-    /* ---------- new question ---------- */
-    function togglePause() {
-      paused = !paused;
-      if (paused) pauseStartTime = Date.now();
-      else {
-        if (pauseStartTime) { totalPausedMs += Date.now() - pauseStartTime; pauseStartTime = null; }
-        touchStartY = 0;
-        // Lock speed changes briefly to prevent spurious scroll after unpause
-        speedLocked = true;
-        setTimeout(() => { speedLocked = false; }, 300);
-      }
-      updateUI();
-    }
-
-    function shuffle(arr) {
-      for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-      return arr;
-    }
-
-    function initQueue() {
-      questionQueue = shuffle(questions.map((q, i) => i));
-      document.getElementById("totalQ").textContent = questions.length;
-    }
-
-    function nextFromQueue() {
-      // Check if any retry is due
-      for (let i = 0; i < retryQueue.length; i++) {
-        const idx = retryQueue[i];
-        if (retryCountdown[idx] <= 0) {
-          retryQueue.splice(i, 1);
-          return idx;
-        }
-      }
-      // Decrement retry countdowns
-      retryQueue.forEach(idx => retryCountdown[idx]--);
-
-      // Get next from main queue (skip already correctly done)
-      while (questionQueue.length > 0) {
-        const idx = questionQueue.shift();
-        if (!correctSet.has(idx)) return idx;
-      }
-
-      // Main queue empty — check if any retry still pending
-      if (retryQueue.length > 0) {
-        const idx = retryQueue.shift();
-        return idx;
-      }
-
-      return null; // all done!
-    }
-
-    function newQuestion() {
-      totalAnswered++;
-      const idx = nextFromQueue();
-      if (idx === null) {
-        // All questions correctly answered!
-        winGame();
-        return;
-      }
-      currentQuestion = { ...questions[idx], _idx: idx };
-      lastSentence = currentQuestion.question;
-      questionEl.style.whiteSpace = "nowrap";
-      questionEl.textContent = currentQuestion.question;
-      // Force wrap if ___ is at the end or near end (last/second-to-last word)
-      const wordsInQ = currentQuestion.question.trim().split(/\s+/);
-      const blankIdx = wordsInQ.findIndex(w => w.includes("___"));
-      const isNearEnd = blankIdx >= wordsInQ.length - 2;
-      if (isNearEnd || questionEl.scrollWidth > window.innerWidth * 0.92) {
-        questionEl.style.whiteSpace = "normal";
-      }
-      // Shuffle options so correct answer isn't always in same position
-      const shuffled = [...currentQuestion.options].sort(() => Math.random() - 0.5);
-      shuffled.forEach((opt, i) => createWord(opt, i, shuffled.length));
-      // Equalize height and font size across all word blocks
-      requestAnimationFrame(() => {
-        const words = document.querySelectorAll(".word");
-
-        // Reset to default font size first
-        words.forEach(w => { w.style.fontSize = ""; w.style.whiteSpace = "normal"; });
-
-        // Check if any word overflows its block (too close to edges)
-        // Use a margin of 12px on each side
-        const margin = 24;
-        let needsShrink = false;
-        words.forEach(w => {
-          if (w.scrollWidth > w.clientWidth - margin) needsShrink = true;
-        });
-
-        // If any block is tight, find the minimum font size needed and apply to ALL
-        if (needsShrink) {
-          const defaultSize = parseFloat(getComputedStyle(words[0]).fontSize);
-          let bestSize = defaultSize;
-          words.forEach(w => {
-            let size = defaultSize;
-            w.style.whiteSpace = "nowrap";
-            w.style.fontSize = size + "px";
-            while (w.scrollWidth > w.clientWidth && size > 11) {
-              size -= 0.5;
-              w.style.fontSize = size + "px";
-            }
-            if (size < bestSize) bestSize = size;
-          });
-          words.forEach(w => {
-            w.style.fontSize = bestSize + "px";
-            w.style.whiteSpace = "normal";
-          });
-        }
-
-        // Equalize height to tallest block
-        let maxH = 0;
-        words.forEach(w => { const h = w.getBoundingClientRect().height; if (h > maxH) maxH = h; });
-        words.forEach(w => w.style.height = maxH + "px");
+        if (size < bestSize) bestSize = size;
+      });
+      words.forEach(w => {
+        w.style.fontSize = bestSize + "px";
+        w.style.whiteSpace = "normal";
       });
     }
 
-    /* ========== Desktop controls ========== */
-    document.addEventListener("mousemove", e => {
-      playerX = e.clientX;
-      player.style.left = playerX + "px";
-    });
-    document.addEventListener("mousedown", e => { if (e.button === 0 && !e.target.closest("#whyBtn") && !e.target.closest("#whyBtnGameOver") && !e.target.closest("#question") && !e.target.closest("#menuBtn") && !e.target.closest("#autoWhyLabel") && !e.target.closest("#player") && !e.target.closest("#clownIndicator") && !e.target.closest("#pauseOverlay") && !e.target.closest(".word")) shoot(); });
-    document.addEventListener("wheel", e => {
-      if (speedLocked) return;
-      if (e.deltaY < 0) globalSpeedMultiplier = Math.min(globalSpeedMultiplier + 0.2, 4);
-      else globalSpeedMultiplier = Math.max(globalSpeedMultiplier - 0.2, 0.3);
+    // Equalize height to tallest block
+    let maxH = 0;
+    words.forEach(w => { const h = w.getBoundingClientRect().height; if (h > maxH) maxH = h; });
+    words.forEach(w => w.style.height = maxH + "px");
+  });
+}
+
+/* ========== Desktop controls ========== */
+document.addEventListener("mousemove", e => {
+  playerX = e.clientX;
+  player.style.left = playerX + "px";
+});
+document.addEventListener("mousedown", e => { if (e.button === 0 && !e.target.closest("#whyBtn") && !e.target.closest("#whyBtnGameOver") && !e.target.closest("#question") && !e.target.closest("#menuBtn") && !e.target.closest("#autoWhyLabel") && !e.target.closest("#player") && !e.target.closest("#clownIndicator") && !e.target.closest(".word")) shoot(); });
+document.addEventListener("wheel", e => {
+  if (e.deltaY < 0) globalSpeedMultiplier = Math.min(globalSpeedMultiplier + 0.2, 4);
+  else              globalSpeedMultiplier = Math.max(globalSpeedMultiplier - 0.2, 0.3);
+  updateUI();
+});
+let arrowInterval = null;
+let arrowDir = 0;
+
+document.addEventListener("keydown", e => {
+  if (e.code === "KeyR") { window.location.href = window.location.href; return; }
+  if (e.code === "Space") { e.preventDefault(); togglePause(); return; }
+
+  // W = Why button
+  if (e.code === "KeyW") { e.preventDefault(); openWhyGoogle(); return; }
+
+  // A/S/D = select word block 1/2/3
+  if (e.code === "KeyA" || e.code === "KeyS" || e.code === "KeyD") {
+    e.preventDefault();
+    if (paused || isAnimating || gameEnded) return;
+    const words = [...document.querySelectorAll(".word")];
+    const idx = e.code === "KeyA" ? 0 : e.code === "KeyS" ? 1 : 2;
+    if (words[idx]) handleSelection(words[idx].textContent, words[idx]);
+    return;
+  }
+
+  // Arrow keys = move player continuously
+  if (e.code === "ArrowLeft")  { e.preventDefault(); arrowDir = -1; startArrowMove(); }
+  if (e.code === "ArrowRight") { e.preventDefault(); arrowDir =  1; startArrowMove(); }
+  if (e.code === "ArrowUp")   { e.preventDefault(); globalSpeedMultiplier = Math.max(+(globalSpeedMultiplier - 0.2).toFixed(1), 0.3); updateUI(); }
+  if (e.code === "ArrowDown") { e.preventDefault(); globalSpeedMultiplier = Math.min(+(globalSpeedMultiplier + 0.2).toFixed(1), 4); updateUI(); }
+});
+
+document.addEventListener("keyup", e => {
+  if (e.code === "ArrowLeft" || e.code === "ArrowRight") {
+    arrowDir = 0;
+    clearInterval(arrowInterval);
+    arrowInterval = null;
+  }
+});
+
+function startArrowMove() {
+  if (arrowInterval) return;
+  arrowInterval = setInterval(() => {
+    if (arrowDir === 0) { clearInterval(arrowInterval); arrowInterval = null; return; }
+    playerX = Math.max(0, Math.min(window.innerWidth, playerX + arrowDir * 8));
+    player.style.left = playerX + "px";
+  }, 16);
+}
+document.addEventListener("contextmenu", e => e.preventDefault());
+player.addEventListener("click", e => { e.stopPropagation(); onPlayerTap(); });
+player.addEventListener("touchstart", e => { e.stopPropagation(); e.preventDefault(); onPlayerTap(); }, { passive: false });
+
+const clownInd = document.getElementById("clownIndicator");
+clownInd.addEventListener("click", e => { e.stopPropagation(); onPlayerTap(); });
+clownInd.addEventListener("touchstart", e => { e.stopPropagation(); e.preventDefault(); onPlayerTap(); }, { passive: false });
+
+// Question tap = pause (works on both mobile and desktop)
+questionEl.addEventListener("touchstart", e => {
+  e.preventDefault();
+  e.stopPropagation();
+  touchStartY = 0;
+  togglePause();
+}, { passive: false });
+questionEl.addEventListener("mousedown", e => {
+  e.stopPropagation();
+  touchStartY = 0;
+  togglePause();
+});
+
+/* ========== Mobile / touch controls ========== */
+let touchStartX = 0, touchStartY = 0;
+
+game.addEventListener("touchstart", e => {
+  if (e.target.closest("#gameOver")) return;
+  if (e.target.closest(".word")) return;
+  if (e.target.closest("#menuBtn")) return;
+  if (e.target.closest("#autoWhyLabel")) return;
+  if (e.target.closest("#clownIndicator")) return;
+  e.preventDefault();
+  const t = e.touches[0];
+  touchStartX = t.clientX;
+  touchStartY = t.clientY; // always reset reference on new touch
+  if (!paused) {
+    playerX = t.clientX;
+    player.style.left = playerX + "px";
+  }
+}, { passive: false });
+
+game.addEventListener("touchmove", e => {
+  if (e.target.closest(".word")) return;
+  e.preventDefault();
+  const t = e.touches[0];
+  const dy = t.clientY - touchStartY;
+  const dx = t.clientX - touchStartX;
+
+  // Horizontal drag — move player
+  playerX = t.clientX;
+  player.style.left = playerX + "px";
+
+  // Vertical swipe — change speed (every 20px threshold)
+  if (!paused && Math.abs(dy) > Math.abs(dx) + 10) {
+    const steps = Math.floor(Math.abs(dy) / 20);
+    if (steps > 0) {
+      if (dy < 0) globalSpeedMultiplier = Math.max(+(globalSpeedMultiplier - steps * 0.1).toFixed(1), 0.3);
+      else        globalSpeedMultiplier = Math.min(+(globalSpeedMultiplier + steps * 0.1).toFixed(1), 4);
+      touchStartY = t.clientY; // reset so it doesn't keep accumulating
       updateUI();
-    });
-    let arrowInterval = null;
-    let arrowDir = 0;
-    let speedLocked = false;
-
-    document.addEventListener("keydown", e => {
-      if (e.code === "KeyR") { window.location.href = window.location.href; return; }
-      if (e.code === "Space") { e.preventDefault(); togglePause(); return; }
-
-      // W = Why button
-      if (e.code === "KeyW") { e.preventDefault(); openWhyGoogle(); return; }
-
-      // A/S/D = select word block 1/2/3
-      if (e.code === "KeyA" || e.code === "KeyS" || e.code === "KeyD") {
-        e.preventDefault();
-        if (paused || isAnimating || gameEnded) return;
-        const words = [...document.querySelectorAll(".word")];
-        const idx = e.code === "KeyA" ? 0 : e.code === "KeyS" ? 1 : 2;
-        if (words[idx]) handleSelection(words[idx].textContent, words[idx]);
-        return;
-      }
-
-      // Arrow keys = move player continuously
-      if (e.code === "ArrowLeft") { e.preventDefault(); arrowDir = -1; startArrowMove(); }
-      if (e.code === "ArrowRight") { e.preventDefault(); arrowDir = 1; startArrowMove(); }
-      if (e.code === "ArrowUp") { e.preventDefault(); if (!speedLocked) { globalSpeedMultiplier = Math.max(+(globalSpeedMultiplier - 0.2).toFixed(1), 0.3); updateUI(); } }
-      if (e.code === "ArrowDown") { e.preventDefault(); if (!speedLocked) { globalSpeedMultiplier = Math.min(+(globalSpeedMultiplier + 0.2).toFixed(1), 4); updateUI(); } }
-    });
-
-    document.addEventListener("keyup", e => {
-      if (e.code === "ArrowLeft" || e.code === "ArrowRight") {
-        arrowDir = 0;
-        clearInterval(arrowInterval);
-        arrowInterval = null;
-      }
-    });
-
-    function startArrowMove() {
-      if (arrowInterval) return;
-      arrowInterval = setInterval(() => {
-        if (arrowDir === 0) { clearInterval(arrowInterval); arrowInterval = null; return; }
-        playerX = Math.max(0, Math.min(window.innerWidth, playerX + arrowDir * 8));
-        player.style.left = playerX + "px";
-      }, 16);
     }
-    document.addEventListener("contextmenu", e => e.preventDefault());
-    player.addEventListener("click", e => { e.stopPropagation(); onPlayerTap(); });
-    player.addEventListener("touchstart", e => { e.stopPropagation(); e.preventDefault(); onPlayerTap(); }, { passive: false });
-
-    const pauseOverlay = document.getElementById("pauseOverlay");
-    pauseOverlay.addEventListener("mousedown", e => { e.stopPropagation(); });
-    pauseOverlay.addEventListener("click", e => { e.stopPropagation(); touchStartY = 0; togglePause(); });
-    pauseOverlay.addEventListener("touchstart", e => { e.stopPropagation(); e.preventDefault(); touchStartY = 0; togglePause(); }, { passive: false });
-
-    const clownInd = document.getElementById("clownIndicator");
-    clownInd.addEventListener("click", e => { e.stopPropagation(); onPlayerTap(); });
-    clownInd.addEventListener("touchstart", e => { e.stopPropagation(); e.preventDefault(); onPlayerTap(); }, { passive: false });
-
-    // Question tap = pause (works on both mobile and desktop)
-    questionEl.addEventListener("touchstart", e => {
-      e.preventDefault();
-      e.stopPropagation();
-      touchStartY = 0;
-      togglePause();
-    }, { passive: false });
-    questionEl.addEventListener("mousedown", e => {
-      e.stopPropagation();
-      touchStartY = 0;
-      togglePause();
-    });
-
-    /* ========== Mobile / touch controls ========== */
-    let touchStartX = 0, touchStartY = 0;
-
-    game.addEventListener("touchstart", e => {
-      if (e.target.closest("#gameOver")) return;
-      if (e.target.closest(".word")) return;
-      if (e.target.closest("#menuBtn")) return;
-      if (e.target.closest("#autoWhyLabel")) return;
-      if (e.target.closest("#clownIndicator")) return;
-      e.preventDefault();
-      const t = e.touches[0];
-      touchStartX = t.clientX;
-      touchStartY = t.clientY; // always reset reference on new touch
-      if (!paused) {
-        playerX = t.clientX;
-        player.style.left = playerX + "px";
-      }
-    }, { passive: false });
-
-    game.addEventListener("touchmove", e => {
-      if (e.target.closest(".word")) return;
-      e.preventDefault();
-      const t = e.touches[0];
-      const dy = t.clientY - touchStartY;
-      const dx = t.clientX - touchStartX;
-
-      // Horizontal drag — move player
-      playerX = t.clientX;
-      player.style.left = playerX + "px";
-
-      // Vertical swipe — change speed (every 20px threshold)
-      if (!paused && Math.abs(dy) > Math.abs(dx) + 10) {
-        const steps = Math.floor(Math.abs(dy) / 20);
-        if (steps > 0) {
-          if (dy < 0) globalSpeedMultiplier = Math.max(+(globalSpeedMultiplier - steps * 0.1).toFixed(1), 0.3);
-          else globalSpeedMultiplier = Math.min(+(globalSpeedMultiplier + steps * 0.1).toFixed(1), 4);
-          touchStartY = t.clientY; // reset so it doesn't keep accumulating
-          updateUI();
-        }
-      }
-    }, { passive: false });
+  }
+}, { passive: false });
 
 
 
 
 
-    // Load questions from URL param ?topic=articles
-    const urlParams = new URLSearchParams(window.location.search);
-    const topic = urlParams.get("topic") || "articles";
+// Load questions from URL param ?topic=articles
+const urlParams = new URLSearchParams(window.location.search);
+const topic = urlParams.get("topic") || "articles";
 
-    fetch("questions/" + topic + ".json")
-      .then(r => r.json())
-      .then(data => {
-        questions = data;
-        initQueue();
-        updateUI();
-        newQuestion();
-        gameStartTime = Date.now();
-        startTimer();
-      })
-      .catch(() => {
-        alert("Could not load questions file: questions/" + topic + ".json");
-      });
+fetch("questions/" + topic + ".json")
+  .then(r => r.json())
+  .then(data => {
+    questions = data;
+    initQueue();
+    updateUI();
+    newQuestion();
+    gameStartTime = Date.now();
+    startTimer();
+  })
+  .catch(() => {
+    alert("Could not load questions file: questions/" + topic + ".json");
+  });
 
-    // Live timer
-    function startTimer() {
-      timerInterval = setInterval(() => {
-        if (paused || gameEnded) return;
-        const extra = 0;
-        const ms = Date.now() - gameStartTime - totalPausedMs;
-        const total = Math.floor(ms / 1000);
-        const m = Math.floor(total / 60);
-        const s = total % 60;
-        document.getElementById("timerUI").textContent = m + ":" + (s < 10 ? "0" : "") + s;
-      }, 500);
-    }
+// Live timer
+function startTimer() {
+  timerInterval = setInterval(() => {
+    if (paused || gameEnded) return;
+    const extra = 0;
+    const ms = Date.now() - gameStartTime - totalPausedMs;
+    const total = Math.floor(ms / 1000);
+    const m = Math.floor(total / 60);
+    const s = total % 60;
+    document.getElementById("timerUI").textContent = m + ":" + (s < 10 ? "0" : "") + s;
+  }, 500);
+}
 
-    function openWhyGoogle() {
-      whyCount++;
-      document.getElementById("whyCount").textContent = whyCount;
-      if (!paused) togglePause();
-      const sentence = lastSentence || "";
-      const options = currentQuestion ? currentQuestion.options.map(o => '"' + o + '"').join(", ") : "";
-      const query = encodeURIComponent(
-        'In the sentence "' + sentence + '", which of the following options is correct: ' + options + '? Please explain the grammar rule and why each option is correct or incorrect.'
-      );
-      window.open("https://www.google.com/search?q=" + query, "_blank");
-    }
+function openWhyGoogle() {
+  whyCount++;
+  document.getElementById("whyCount").textContent = whyCount;
+  if (!paused) togglePause();
+  const sentence = lastSentence || "";
+  const options = currentQuestion ? currentQuestion.options.map(o => '"' + o + '"').join(", ") : "";
+  const query = encodeURIComponent(
+    'In the sentence "' + sentence + '", which of the following options is correct: ' + options + '? Please explain the grammar rule and why each option is correct or incorrect.'
+  );
+  window.open("https://www.google.com/search?q=" + query, "_blank");
+}
 
-    document.getElementById("whyBtn").addEventListener("click", e => {
-      e.stopPropagation();
-      openWhyGoogle();
-    });
-    document.getElementById("whyBtn").addEventListener("touchstart", e => {
-      e.stopPropagation();
-      e.preventDefault();
-      openWhyGoogle();
-    }, { passive: false });
+document.getElementById("whyBtn").addEventListener("click", e => {
+  e.stopPropagation();
+  openWhyGoogle();
+});
+document.getElementById("whyBtn").addEventListener("touchstart", e => {
+  e.stopPropagation();
+  e.preventDefault();
+  openWhyGoogle();
+}, { passive: false });
 
-    document.getElementById("menuBtn").addEventListener("click", e => {
-      e.stopPropagation();
-      window.location.href = "index.html";
-    });
-    document.getElementById("menuBtn").addEventListener("touchstart", e => {
-      e.stopPropagation();
-      e.preventDefault();
-      window.location.href = "index.html";
-    }, { passive: false });
+document.getElementById("menuBtn").addEventListener("click", e => {
+  e.stopPropagation();
+  window.location.href = "index.html";
+});
+document.getElementById("menuBtn").addEventListener("touchstart", e => {
+  e.stopPropagation();
+  e.preventDefault();
+  window.location.href = "index.html";
+}, { passive: false });
 
-    document.getElementById("whyBtnGameOver").addEventListener("click", e => {
-      e.stopPropagation();
-      openWhyGoogle();
-    });
-  </script>
+document.getElementById("whyBtnGameOver").addEventListener("click", e => {
+  e.stopPropagation();
+  openWhyGoogle();
+});
+</script>
 </body>
-
 </html>
