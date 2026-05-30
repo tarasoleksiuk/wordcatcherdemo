@@ -866,8 +866,10 @@
       if (paused) pauseStartTime = Date.now();
       else {
         if (pauseStartTime) { totalPausedMs += Date.now() - pauseStartTime; pauseStartTime = null; }
-        // Reset touch reference so swipe doesn't accumulate during pause
         touchStartY = 0;
+        // Lock speed changes briefly to prevent spurious scroll after unpause
+        speedLocked = true;
+        setTimeout(() => { speedLocked = false; }, 300);
       }
       updateUI();
     }
@@ -983,12 +985,14 @@
     });
     document.addEventListener("mousedown", e => { if (e.button === 0 && !e.target.closest("#whyBtn") && !e.target.closest("#whyBtnGameOver") && !e.target.closest("#question") && !e.target.closest("#menuBtn") && !e.target.closest("#autoWhyLabel") && !e.target.closest("#player") && !e.target.closest("#clownIndicator") && !e.target.closest("#pauseOverlay")) shoot(); });
     document.addEventListener("wheel", e => {
+      if (speedLocked) return;
       if (e.deltaY < 0) globalSpeedMultiplier = Math.min(globalSpeedMultiplier + 0.2, 4);
       else globalSpeedMultiplier = Math.max(globalSpeedMultiplier - 0.2, 0.3);
       updateUI();
     });
     let arrowInterval = null;
     let arrowDir = 0;
+    let speedLocked = false;
 
     document.addEventListener("keydown", e => {
       if (e.code === "KeyR") { window.location.href = window.location.href; return; }
@@ -1010,8 +1014,8 @@
       // Arrow keys = move player continuously
       if (e.code === "ArrowLeft") { e.preventDefault(); arrowDir = -1; startArrowMove(); }
       if (e.code === "ArrowRight") { e.preventDefault(); arrowDir = 1; startArrowMove(); }
-      if (e.code === "ArrowUp") { e.preventDefault(); globalSpeedMultiplier = Math.max(+(globalSpeedMultiplier - 0.2).toFixed(1), 0.3); updateUI(); }
-      if (e.code === "ArrowDown") { e.preventDefault(); globalSpeedMultiplier = Math.min(+(globalSpeedMultiplier + 0.2).toFixed(1), 4); updateUI(); }
+      if (e.code === "ArrowUp") { e.preventDefault(); if (!speedLocked) { globalSpeedMultiplier = Math.max(+(globalSpeedMultiplier - 0.2).toFixed(1), 0.3); updateUI(); } }
+      if (e.code === "ArrowDown") { e.preventDefault(); if (!speedLocked) { globalSpeedMultiplier = Math.min(+(globalSpeedMultiplier + 0.2).toFixed(1), 4); updateUI(); } }
     });
 
     document.addEventListener("keyup", e => {
