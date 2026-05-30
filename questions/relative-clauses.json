@@ -1,1586 +1,1469 @@
 [
-    {
-        "question": "A thief is a person ___ steals things.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "A butcher is a person ___ sells meat.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "where"
-        ]
-    },
-    {
-        "question": "A musician is a person ___ plays a musical instrument.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "what"
-        ]
-    },
-    {
-        "question": "A dentist is a person ___ takes care of your teeth.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "A fool is a person ___ does stupid things.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "where"
-        ]
-    },
-    {
-        "question": "A genius is a person ___ is very intelligent.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "what"
-        ]
-    },
-    {
-        "question": "A liar is a person ___ doesn't tell the truth.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "A patient is a person ___ is ill in hospital.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "where"
-        ]
-    },
-    {
-        "question": "I met a woman ___ can speak six languages.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "Do you know anybody ___ can play the piano?",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "what"
-        ]
-    },
-    {
-        "question": "The man ___ phoned didn't give his name.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "where"
-        ]
-    },
-    {
-        "question": "The people ___ work in the office are very friendly.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "what"
-        ]
-    },
-    {
-        "question": "An airplane is a machine ___ flies.",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "where"
-        ]
-    },
-    {
-        "question": "Emma lives in a house ___ is 400 years old.",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "where"
-        ]
-    },
-    {
-        "question": "The people ___ work in the office are very friendly.",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "An airplane is a machine ___ flies. (not a machine who ...)",
-        "correct": "which",
-        "options": [
-            "which",
-            "who",
-            "that"
-        ]
-    },
-    {
-        "question": "Emma lives in a house ___ is 400 years old.",
-        "correct": "which",
-        "options": [
-            "which",
-            "who",
-            "what"
-        ]
-    },
-    {
-        "question": "Do you remember the woman ___ was playing the piano at the party?",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "Jack was wearing a hat ___ was too big for him.",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "where"
-        ]
-    },
-    {
-        "question": "Jack was wearing a hat ___ was too big for him.",
-        "correct": "which",
-        "options": [
-            "which",
-            "who",
-            "what"
-        ]
-    },
-    {
-        "question": "What's the name of the man ___ has just started work in your office?",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "What's the name of the river ___ flows through the town?",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "where"
-        ]
-    },
-    {
-        "question": "What's the name of the river ___ flows through the town?",
-        "correct": "which",
-        "options": [
-            "which",
-            "who",
-            "what"
-        ]
-    },
-    {
-        "question": "Where is the picture ___ was hanging on the wall?",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "where"
-        ]
-    },
-    {
-        "question": "Do you know anybody ___ wants to buy a car?",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "You always ask questions ___ are difficult to answer.",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "You always ask questions ___ are difficult to answer.",
-        "correct": "which",
-        "options": [
-            "which",
-            "who",
-            "what"
-        ]
-    },
-    {
-        "question": "I have a friend ___ is very good at repairing cars.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "I think everybody ___ went to the party enjoyed it very much.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "Why does he always wear clothes ___ are too small for him?",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "where"
-        ]
-    },
-    {
-        "question": "Why does he always wear clothes ___ are too small for him?",
-        "correct": "which",
-        "options": [
-            "which",
-            "who",
-            "what"
-        ]
-    },
-    {
-        "question": "A coffee maker is a machine ___ makes coffee.",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "What's happened to the money ___ was on the table?",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "I don't like people ___ never stop talking.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "I know somebody ___ can help you.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "I know somebody ___ works in that shop.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "Correct the sentences ___ are wrong.",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "My neighbour bought a car ___ cost £40,000.",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "The bag ___ he is carrying is very heavy.",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "What is Kate going to do with the money ___ she won?",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "Did you find the books ___ you wanted?",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "The people ___ we met were very friendly.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "Everything ___ I said was true.",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "The hotel we stayed ___ was near the station.",
-        "correct": "at",
-        "options": [
-            "at",
-            "in",
-            "on"
-        ]
-    },
-    {
-        "question": "These are the books I told you ___.",
-        "correct": "about",
-        "options": [
-            "about",
-            "at",
-            "on"
-        ]
-    },
-    {
-        "question": "Do you know the man Eve is talking ___?",
-        "correct": "to",
-        "options": [
-            "to",
-            "about",
-            "at"
-        ]
-    },
-    {
-        "question": "The hotel ___ we stayed was near the station.",
-        "correct": "where",
-        "options": [
-            "where",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "I met a woman ___ can speak six languages. (___ is the subject)",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "Jack was wearing a hat ___ was too big for him. (___ is the subject)",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "What's the name of the hotel you stayed ___?",
-        "correct": "at",
-        "options": [
-            "at",
-            "in",
-            "on"
-        ]
-    },
-    {
-        "question": "Who are the people ___ you were talking to?",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "Did you like the hotel ___ you stayed?",
-        "correct": "where",
-        "options": [
-            "where",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "What was the name of the restaurant ___ you had dinner?",
-        "correct": "where",
-        "options": [
-            "where",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "How big is the village ___ Sarah lives?",
-        "correct": "where",
-        "options": [
-            "where",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "The woman ___ lives next door is a doctor.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "what"
-        ]
-    },
-    {
-        "question": "The woman ___ lives next door is a doctor.",
-        "correct": "that",
-        "options": [
-            "that",
-            "which",
-            "what"
-        ]
-    },
-    {
-        "question": "We know a lot of people ___ live in the country.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "An architect is someone ___ designs buildings.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "What was the name of the person ___ phoned?",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "Anyone ___ wants to apply for the job must do so by Friday.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "Where is the cheese ___ was in the fridge?",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "what"
-        ]
-    },
-    {
-        "question": "Where is the cheese ___ was in the fridge?",
-        "correct": "which",
-        "options": [
-            "which",
-            "who",
-            "what"
-        ]
-    },
-    {
-        "question": "I don't like stories ___ have unhappy endings.",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "what"
-        ]
-    },
-    {
-        "question": "I don't like stories ___ have unhappy endings.",
-        "correct": "which",
-        "options": [
-            "which",
-            "who",
-            "what"
-        ]
-    },
-    {
-        "question": "Grace works for a company ___ makes furniture.",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "what"
-        ]
-    },
-    {
-        "question": "Grace works for a company ___ makes furniture.",
-        "correct": "which",
-        "options": [
-            "which",
-            "who",
-            "what"
-        ]
-    },
-    {
-        "question": "The machine ___ broke down is working again now.",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "The machine ___ broke down is working again now.",
-        "correct": "which",
-        "options": [
-            "which",
-            "who",
-            "what"
-        ]
-    },
-    {
-        "question": "Everything ___ happened was my fault.",
-        "correct": "that",
-        "options": [
-            "that",
-            "what",
-            "which"
-        ]
-    },
-    {
-        "question": "A burglar is someone ___ breaks into a house to steal things.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "A customer is someone ___ buys something from a shop.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "A shoplifter is someone ___ steals from a shop.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "A coward is someone ___ is not brave.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "An atheist is someone ___ doesn't believe in God.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "A pessimist is someone ___ expects the worst to happen.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "A tenant is someone ___ pays rent to live in a house or apartment.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "Helen works for a company ___ makes furniture.",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "what"
-        ]
-    },
-    {
-        "question": "The book is about a girl ___ runs away from home.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "A mystery is something ___ cannot be explained.",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "The police have arrested the man ___ stole my wallet.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "A dictionary is a book ___ gives you the meaning of words.",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "Alexander Bell was the man ___ invented the telephone.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "It seems that Earth is the only planet ___ can support life.",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "Where's the nearest shop ___ sells bread?",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "The driver ___ caused the accident was fined £500.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "Do you know the person ___ took these pictures?",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "We live in a world ___ is changing all the time.",
-        "correct": "that",
-        "options": [
-            "that",
-            "what",
-            "which"
-        ]
-    },
-    {
-        "question": "What was the name of the horse ___ won the race?",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "The woman ___ I wanted to see was away on holiday.",
-        "correct": "who",
-        "options": [
-            "who",
-            "that",
-            "which"
-        ]
-    },
-    {
-        "question": "Have you found the keys ___ you lost?",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "The dress ___ Lisa bought doesn't fit her very well.",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "Is there anything ___ I can do?",
-        "correct": "that",
-        "options": [
-            "that",
-            "what",
-            "which"
-        ]
-    },
-    {
-        "question": "Are these the books ___ you were looking for?",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "Are these the books ___ you were looking for?",
-        "correct": "which",
-        "options": [
-            "which",
-            "who",
-            "what"
-        ]
-    },
-    {
-        "question": "Do you know the woman ___ Tom is talking to?",
-        "correct": "who",
-        "options": [
-            "who",
-            "that",
-            "which"
-        ]
-    },
-    {
-        "question": "The bed ___ I slept in last night wasn't very comfortable.",
-        "correct": "that",
-        "options": [
-            "that",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "The man ___ I was sitting next to on the plane talked all the time.",
-        "correct": "who",
-        "options": [
-            "who",
-            "that",
-            "which"
-        ]
-    },
-    {
-        "question": "Everything ___ they said was true.",
-        "correct": "that",
-        "options": [
-            "that",
-            "what",
-            "which"
-        ]
-    },
-    {
-        "question": "I gave her all the money ___ I had.",
-        "correct": "that",
-        "options": [
-            "that",
-            "what",
-            "which"
-        ]
-    },
-    {
-        "question": "Did you hear ___ they said?",
-        "correct": "what",
-        "options": [
-            "what",
-            "that",
-            "which"
-        ]
-    },
-    {
-        "question": "They give their children everything ___ they want.",
-        "correct": "that",
-        "options": [
-            "that",
-            "what",
-            "which"
-        ]
-    },
-    {
-        "question": "Tell me ___ you want and I'll try to get it for you.",
-        "correct": "what",
-        "options": [
-            "what",
-            "that",
-            "which"
-        ]
-    },
-    {
-        "question": "Why do you blame me for everything ___ goes wrong?",
-        "correct": "that",
-        "options": [
-            "that",
-            "what",
-            "which"
-        ]
-    },
-    {
-        "question": "I'll do the best ___ I can.",
-        "correct": "that",
-        "options": [
-            "that",
-            "what",
-            "which"
-        ]
-    },
-    {
-        "question": "I don't agree with ___ you've just said.",
-        "correct": "what",
-        "options": [
-            "what",
-            "that",
-            "which"
-        ]
-    },
-    {
-        "question": "I don't believe anything ___ he says.",
-        "correct": "that",
-        "options": [
-            "that",
-            "what",
-            "which"
-        ]
-    },
-    {
-        "question": "Where is the cheese ___ was in the fridge? (subject of the clause)",
-        "correct": "that",
-        "options": [
-            "that",
-            "what",
-            "who"
-        ]
-    },
-    {
-        "question": "We helped some people ___ car had broken down.",
-        "correct": "whose",
-        "options": [
-            "whose",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "A widow is a woman ___ husband is dead.",
-        "correct": "whose",
-        "options": [
-            "whose",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "What's the name of the man ___ car you borrowed?",
-        "correct": "whose",
-        "options": [
-            "whose",
-            "who",
-            "whom"
-        ]
-    },
-    {
-        "question": "I met someone ___ brother I went to school with.",
-        "correct": "whose",
-        "options": [
-            "whose",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "I met a man ___ knows you.",
-        "correct": "who",
-        "options": [
-            "who",
-            "whose",
-            "whom"
-        ]
-    },
-    {
-        "question": "I met a man ___ sister knows you.",
-        "correct": "whose",
-        "options": [
-            "whose",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "George is a person ___ I admire very much.",
-        "correct": "whom",
-        "options": [
-            "whom",
-            "whose",
-            "which"
-        ]
-    },
-    {
-        "question": "I like the people ___ I work with.",
-        "correct": "with whom",
-        "options": [
-            "with whom",
-            "with whose",
-            "with which"
-        ]
-    },
-    {
-        "question": "The restaurant ___ we had lunch was near the airport.",
-        "correct": "where",
-        "options": [
-            "where",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "I recently went back to the town ___ I grew up.",
-        "correct": "where",
-        "options": [
-            "where",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "I would like to live in a place ___ there is plenty of sunshine.",
-        "correct": "where",
-        "options": [
-            "where",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "That's the day ___ I'm going away.",
-        "correct": "that",
-        "options": [
-            "that",
-            "when",
-            "which"
-        ]
-    },
-    {
-        "question": "The last time ___ I saw Anna, she looked great.",
-        "correct": "that",
-        "options": [
-            "that",
-            "when",
-            "which"
-        ]
-    },
-    {
-        "question": "The reason ___ I'm phoning is to ask your advice.",
-        "correct": "why",
-        "options": [
-            "why",
-            "that",
-            "which"
-        ]
-    },
-    {
-        "question": "The reason ___ I'm phoning is to ask your advice.",
-        "correct": "that",
-        "options": [
-            "that",
-            "why",
-            "which"
-        ]
-    },
-    {
-        "question": "A cemetery is a place ___ people are buried.",
-        "correct": "where",
-        "options": [
-            "where",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "A pacifist is a person ___ believes that all wars are wrong.",
-        "correct": "who",
-        "options": [
-            "who",
-            "whose",
-            "whom"
-        ]
-    },
-    {
-        "question": "An orphan is a child ___ parents are dead.",
-        "correct": "whose",
-        "options": [
-            "whose",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "What was the name of the person to ___ you spoke on the phone?",
-        "correct": "whom",
-        "options": [
-            "whom",
-            "whose",
-            "which"
-        ]
-    },
-    {
-        "question": "The place ___ we spent our holidays was really beautiful.",
-        "correct": "where",
-        "options": [
-            "where",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "This school is only for children ___ first language is not English.",
-        "correct": "whose",
-        "options": [
-            "whose",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "The woman with ___ he fell in love left him after a month.",
-        "correct": "whom",
-        "options": [
-            "whom",
-            "whose",
-            "which"
-        ]
-    },
-    {
-        "question": "My brother Ben, ___ lives in Hong Kong, is an architect.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "Anna told me about her new job, ___ she's enjoying a lot.",
-        "correct": "which",
-        "options": [
-            "which",
-            "who",
-            "that"
-        ]
-    },
-    {
-        "question": "We stayed at the Park Hotel, ___ a friend of ours recommended.",
-        "correct": "which",
-        "options": [
-            "which",
-            "who",
-            "that"
-        ]
-    },
-    {
-        "question": "Do you know anyone ___ speaks French and Italian?",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "whose"
-        ]
-    },
-    {
-        "question": "Do you know anyone ___ speaks French and Italian?",
-        "correct": "that",
-        "options": [
-            "that",
-            "which",
-            "whose"
-        ]
-    },
-    {
-        "question": "John, ___ speaks French and Italian, works as a tour guide.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "This morning I met Chris, ___ I hadn't seen for ages.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "This morning I met Chris, ___ I hadn't seen for ages.",
-        "correct": "whom",
-        "options": [
-            "whom",
-            "whose",
-            "which"
-        ]
-    },
-    {
-        "question": "We met some people ___ car had broken down.",
-        "correct": "whose",
-        "options": [
-            "whose",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "What's the name of the place ___ you went on holiday?",
-        "correct": "where",
-        "options": [
-            "where",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "Lisa, ___ car had broken down, was in a very bad mood.",
-        "correct": "whose",
-        "options": [
-            "whose",
-            "who",
-            "which"
-        ]
-    },
-    {
-        "question": "Kate has just been to Sweden, ___ her daughter lives.",
-        "correct": "where",
-        "options": [
-            "where",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "Catherine, ___ lives next door, is very friendly.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "whose"
-        ]
-    },
-    {
-        "question": "Anna told me about her new job, ___ she's enjoying very much.",
-        "correct": "which",
-        "options": [
-            "which",
-            "who",
-            "that"
-        ]
-    },
-    {
-        "question": "Mark's father, ___ used to be in the army, now works for a TV company.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "that"
-        ]
-    },
-    {
-        "question": "The sun, ___ is one of millions of stars in the universe, provides us with heat and light.",
-        "correct": "which",
-        "options": [
-            "which",
-            "who",
-            "that"
-        ]
-    },
-    {
-        "question": "I haven't seen Jack and Helen since the year ___ they got married.",
-        "correct": "that",
-        "options": [
-            "that",
-            "when",
-            "which"
-        ]
-    },
-    {
-        "question": "Mr Lee, ___ I spoke at the meeting, is very interested in our proposal.",
-        "correct": "to whom",
-        "options": [
-            "to whom",
-            "to which",
-            "to whose"
-        ]
-    },
-    {
-        "question": "Fortunately we had a good map, ___ we would have got lost.",
-        "correct": "without which",
-        "options": [
-            "without which",
-            "without whom",
-            "without that"
-        ]
-    },
-    {
-        "question": "This is my friend from Canada, ___ I was telling you about.",
-        "correct": "who",
-        "options": [
-            "who",
-            "which",
-            "whom"
-        ]
-    },
-    {
-        "question": "Yesterday we visited the City Museum, ___ I'd never been to before.",
-        "correct": "which",
-        "options": [
-            "which",
-            "who",
-            "that"
-        ]
-    },
-    {
-        "question": "Helen has three brothers, all of ___ are married.",
-        "correct": "whom",
-        "options": [
-            "whom",
-            "which",
-            "whose"
-        ]
-    },
-    {
-        "question": "They asked me a lot of questions, most of ___ I couldn't answer.",
-        "correct": "which",
-        "options": [
-            "which",
-            "whom",
-            "whose"
-        ]
-    },
-    {
-        "question": "Martin tried on three jackets, none of ___ fitted him.",
-        "correct": "which",
-        "options": [
-            "which",
-            "whom",
-            "whose"
-        ]
-    },
-    {
-        "question": "Two men, neither of ___ I had seen before, came into the office.",
-        "correct": "whom",
-        "options": [
-            "whom",
-            "which",
-            "whose"
-        ]
-    },
-    {
-        "question": "They have three cars, two of ___ they rarely use.",
-        "correct": "which",
-        "options": [
-            "which",
-            "whom",
-            "whose"
-        ]
-    },
-    {
-        "question": "Sue has a lot of friends, many of ___ she was at school with.",
-        "correct": "whom",
-        "options": [
-            "whom",
-            "which",
-            "whose"
-        ]
-    },
-    {
-        "question": "The building was destroyed in a fire, the cause of ___ was never established.",
-        "correct": "which",
-        "options": [
-            "which",
-            "whom",
-            "whose"
-        ]
-    },
-    {
-        "question": "We stayed at a beautiful hotel, the name of ___ I can't remember now.",
-        "correct": "which",
-        "options": [
-            "which",
-            "whom",
-            "whose"
-        ]
-    },
-    {
-        "question": "Joe got the job, ___ surprised everybody.",
-        "correct": "which",
-        "options": [
-            "which",
-            "what",
-            "that"
-        ]
-    },
-    {
-        "question": "Sarah couldn't meet us, ___ was a shame.",
-        "correct": "which",
-        "options": [
-            "which",
-            "what",
-            "that"
-        ]
-    },
-    {
-        "question": "The weather was good, ___ we hadn't expected.",
-        "correct": "which",
-        "options": [
-            "which",
-            "what",
-            "that"
-        ]
-    },
-    {
-        "question": "Yesterday we visited the City Museum, ___ I'd never been before.",
-        "correct": "to which",
-        "options": [
-            "to which",
-            "to whom",
-            "to whose"
-        ]
-    },
-    {
-        "question": "My brother showed us his new car, ___ he's very proud.",
-        "correct": "of which",
-        "options": [
-            "of which",
-            "of whom",
-            "of whose"
-        ]
-    },
-    {
-        "question": "This is a picture of our friends Chris and Sam, ___ we went on holiday with.",
-        "correct": "with whom",
-        "options": [
-            "with whom",
-            "with which",
-            "with whose"
-        ]
-    },
-    {
-        "question": "We were given a lot of information, most of ___ was useless.",
-        "correct": "which",
-        "options": [
-            "which",
-            "whom",
-            "whose"
-        ]
-    },
-    {
-        "question": "Ten people applied for the job, none of ___ was suitable.",
-        "correct": "whom",
-        "options": [
-            "whom",
-            "which",
-            "whose"
-        ]
-    },
-    {
-        "question": "Mike won £100,000, half of ___ he gave to his parents.",
-        "correct": "which",
-        "options": [
-            "which",
-            "whom",
-            "whose"
-        ]
-    },
-    {
-        "question": "Julia has two sisters, both of ___ are lawyers.",
-        "correct": "whom",
-        "options": [
-            "whom",
-            "which",
-            "whose"
-        ]
-    },
-    {
-        "question": "I sent Jane two emails, neither of ___ she replied to.",
-        "correct": "which",
-        "options": [
-            "which",
-            "whom",
-            "whose"
-        ]
-    },
-    {
-        "question": "Laura couldn't come to the party, ___ was a shame.",
-        "correct": "which",
-        "options": [
-            "which",
-            "what",
-            "that"
-        ]
-    },
-    {
-        "question": "Jane doesn't have a phone, ___ makes it difficult to contact her.",
-        "correct": "which",
-        "options": [
-            "which",
-            "what",
-            "that"
-        ]
-    },
-    {
-        "question": "Alex has passed his exams, ___ is good news.",
-        "correct": "which",
-        "options": [
-            "which",
-            "what",
-            "that"
-        ]
-    },
-    {
-        "question": "Our flight was delayed, ___ meant we had to wait three hours at the airport.",
-        "correct": "which",
-        "options": [
-            "which",
-            "what",
-            "that"
-        ]
-    },
-    {
-        "question": "The street I live in is very noisy at night, ___ makes it difficult to sleep sometimes.",
-        "correct": "which",
-        "options": [
-            "which",
-            "what",
-            "that"
-        ]
-    },
-    {
-        "question": "Our car has broken down, ___ means we can't go away tomorrow.",
-        "correct": "which",
-        "options": [
-            "which",
-            "what",
-            "that"
-        ]
-    },
-    {
-        "question": "Kate offered to let me stay at her house, ___ was very kind of her.",
-        "correct": "which",
-        "options": [
-            "which",
-            "what",
-            "that"
-        ]
-    }
+  {
+    "question": "A thief is a person ___ steals things.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "A butcher is a person ___ sells meat.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "where"
+    ]
+  },
+  {
+    "question": "A musician is a person ___ plays a musical instrument.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "what"
+    ]
+  },
+  {
+    "question": "A dentist is a person ___ takes care of your teeth.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "A fool is a person ___ does stupid things.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "where"
+    ]
+  },
+  {
+    "question": "A genius is a person ___ is very intelligent.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "what"
+    ]
+  },
+  {
+    "question": "A liar is a person ___ doesn't tell the truth.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "A patient is a person ___ is ill in hospital.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "where"
+    ]
+  },
+  {
+    "question": "I met a woman ___ can speak six languages.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "Do you know anybody ___ can play the piano?",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "what"
+    ]
+  },
+  {
+    "question": "The man ___ phoned didn't give his name.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "where"
+    ]
+  },
+  {
+    "question": "The people ___ work in the office are very friendly.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "what"
+    ]
+  },
+  {
+    "question": "An airplane is a machine ___ flies.",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "where"
+    ]
+  },
+  {
+    "question": "Emma lives in a house ___ is 400 years old.",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "where"
+    ]
+  },
+  {
+    "question": "An airplane is a machine ___ flies. (not a machine who ...)",
+    "correct": "which",
+    "options": [
+      "which",
+      "who",
+      "that"
+    ]
+  },
+  {
+    "question": "Do you remember the woman ___ was playing the piano at the party?",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "Jack was wearing a hat ___ was too big for him.",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "where"
+    ]
+  },
+  {
+    "question": "What's the name of the man ___ has just started work in your office?",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "What's the name of the river ___ flows through the town?",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "where"
+    ]
+  },
+  {
+    "question": "Where is the picture ___ was hanging on the wall?",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "where"
+    ]
+  },
+  {
+    "question": "Do you know anybody ___ wants to buy a car?",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "You always ask questions ___ are difficult to answer.",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "I have a friend ___ is very good at repairing cars.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "I think everybody ___ went to the party enjoyed it very much.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "Why does he always wear clothes ___ are too small for him?",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "where"
+    ]
+  },
+  {
+    "question": "A coffee maker is a machine ___ makes coffee.",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "What's happened to the money ___ was on the table?",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "I don't like people ___ never stop talking.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "I know somebody ___ can help you.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "I know somebody ___ works in that shop.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "Correct the sentences ___ are wrong.",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "My neighbour bought a car ___ cost £40,000.",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "The bag ___ he is carrying is very heavy.",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "What is Kate going to do with the money ___ she won?",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "Did you find the books ___ you wanted?",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "The people ___ we met were very friendly.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "Everything ___ I said was true.",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "The hotel we stayed ___ was near the station.",
+    "correct": "at",
+    "options": [
+      "at",
+      "in",
+      "on"
+    ]
+  },
+  {
+    "question": "These are the books I told you ___.",
+    "correct": "about",
+    "options": [
+      "about",
+      "at",
+      "on"
+    ]
+  },
+  {
+    "question": "Do you know the man Eve is talking ___?",
+    "correct": "to",
+    "options": [
+      "to",
+      "about",
+      "at"
+    ]
+  },
+  {
+    "question": "The hotel ___ we stayed was near the station.",
+    "correct": "where",
+    "options": [
+      "where",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "I met a woman ___ can speak six languages. (___ is the subject)",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "Jack was wearing a hat ___ was too big for him. (___ is the subject)",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "What's the name of the hotel you stayed ___?",
+    "correct": "at",
+    "options": [
+      "at",
+      "in",
+      "on"
+    ]
+  },
+  {
+    "question": "Who are the people ___ you were talking to?",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "Did you like the hotel ___ you stayed?",
+    "correct": "where",
+    "options": [
+      "where",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "What was the name of the restaurant ___ you had dinner?",
+    "correct": "where",
+    "options": [
+      "where",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "How big is the village ___ Sarah lives?",
+    "correct": "where",
+    "options": [
+      "where",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "The woman ___ lives next door is a doctor.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "what"
+    ]
+  },
+  {
+    "question": "We know a lot of people ___ live in the country.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "An architect is someone ___ designs buildings.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "What was the name of the person ___ phoned?",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "Anyone ___ wants to apply for the job must do so by Friday.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "Where is the cheese ___ was in the fridge?",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "what"
+    ]
+  },
+  {
+    "question": "I don't like stories ___ have unhappy endings.",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "what"
+    ]
+  },
+  {
+    "question": "Grace works for a company ___ makes furniture.",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "what"
+    ]
+  },
+  {
+    "question": "The machine ___ broke down is working again now.",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "Everything ___ happened was my fault.",
+    "correct": "that",
+    "options": [
+      "that",
+      "what",
+      "which"
+    ]
+  },
+  {
+    "question": "A burglar is someone ___ breaks into a house to steal things.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "A customer is someone ___ buys something from a shop.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "A shoplifter is someone ___ steals from a shop.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "A coward is someone ___ is not brave.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "An atheist is someone ___ doesn't believe in God.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "A pessimist is someone ___ expects the worst to happen.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "A tenant is someone ___ pays rent to live in a house or apartment.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "Helen works for a company ___ makes furniture.",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "what"
+    ]
+  },
+  {
+    "question": "The book is about a girl ___ runs away from home.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "A mystery is something ___ cannot be explained.",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "The police have arrested the man ___ stole my wallet.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "A dictionary is a book ___ gives you the meaning of words.",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "Alexander Bell was the man ___ invented the telephone.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "It seems that Earth is the only planet ___ can support life.",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "Where's the nearest shop ___ sells bread?",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "The driver ___ caused the accident was fined £500.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "Do you know the person ___ took these pictures?",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "We live in a world ___ is changing all the time.",
+    "correct": "that",
+    "options": [
+      "that",
+      "what",
+      "which"
+    ]
+  },
+  {
+    "question": "What was the name of the horse ___ won the race?",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "The woman ___ I wanted to see was away on holiday.",
+    "correct": "who",
+    "options": [
+      "who",
+      "that",
+      "which"
+    ]
+  },
+  {
+    "question": "Have you found the keys ___ you lost?",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "The dress ___ Lisa bought doesn't fit her very well.",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "Is there anything ___ I can do?",
+    "correct": "that",
+    "options": [
+      "that",
+      "what",
+      "which"
+    ]
+  },
+  {
+    "question": "Are these the books ___ you were looking for?",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "Do you know the woman ___ Tom is talking to?",
+    "correct": "who",
+    "options": [
+      "who",
+      "that",
+      "which"
+    ]
+  },
+  {
+    "question": "The bed ___ I slept in last night wasn't very comfortable.",
+    "correct": "that",
+    "options": [
+      "that",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "The man ___ I was sitting next to on the plane talked all the time.",
+    "correct": "who",
+    "options": [
+      "who",
+      "that",
+      "which"
+    ]
+  },
+  {
+    "question": "Everything ___ they said was true.",
+    "correct": "that",
+    "options": [
+      "that",
+      "what",
+      "which"
+    ]
+  },
+  {
+    "question": "I gave her all the money ___ I had.",
+    "correct": "that",
+    "options": [
+      "that",
+      "what",
+      "which"
+    ]
+  },
+  {
+    "question": "Did you hear ___ they said?",
+    "correct": "what",
+    "options": [
+      "what",
+      "that",
+      "which"
+    ]
+  },
+  {
+    "question": "They give their children everything ___ they want.",
+    "correct": "that",
+    "options": [
+      "that",
+      "what",
+      "which"
+    ]
+  },
+  {
+    "question": "Tell me ___ you want and I'll try to get it for you.",
+    "correct": "what",
+    "options": [
+      "what",
+      "that",
+      "which"
+    ]
+  },
+  {
+    "question": "Why do you blame me for everything ___ goes wrong?",
+    "correct": "that",
+    "options": [
+      "that",
+      "what",
+      "which"
+    ]
+  },
+  {
+    "question": "I'll do the best ___ I can.",
+    "correct": "that",
+    "options": [
+      "that",
+      "what",
+      "which"
+    ]
+  },
+  {
+    "question": "I don't agree with ___ you've just said.",
+    "correct": "what",
+    "options": [
+      "what",
+      "that",
+      "which"
+    ]
+  },
+  {
+    "question": "I don't believe anything ___ he says.",
+    "correct": "that",
+    "options": [
+      "that",
+      "what",
+      "which"
+    ]
+  },
+  {
+    "question": "Where is the cheese ___ was in the fridge? (subject of the clause)",
+    "correct": "that",
+    "options": [
+      "that",
+      "what",
+      "who"
+    ]
+  },
+  {
+    "question": "We helped some people ___ car had broken down.",
+    "correct": "whose",
+    "options": [
+      "whose",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "A widow is a woman ___ husband is dead.",
+    "correct": "whose",
+    "options": [
+      "whose",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "What's the name of the man ___ car you borrowed?",
+    "correct": "whose",
+    "options": [
+      "whose",
+      "who",
+      "whom"
+    ]
+  },
+  {
+    "question": "I met someone ___ brother I went to school with.",
+    "correct": "whose",
+    "options": [
+      "whose",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "I met a man ___ knows you.",
+    "correct": "who",
+    "options": [
+      "who",
+      "whose",
+      "whom"
+    ]
+  },
+  {
+    "question": "I met a man ___ sister knows you.",
+    "correct": "whose",
+    "options": [
+      "whose",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "George is a person ___ I admire very much.",
+    "correct": "whom",
+    "options": [
+      "whom",
+      "whose",
+      "which"
+    ]
+  },
+  {
+    "question": "I like the people ___ I work with.",
+    "correct": "with whom",
+    "options": [
+      "with whom",
+      "with whose",
+      "with which"
+    ]
+  },
+  {
+    "question": "The restaurant ___ we had lunch was near the airport.",
+    "correct": "where",
+    "options": [
+      "where",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "I recently went back to the town ___ I grew up.",
+    "correct": "where",
+    "options": [
+      "where",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "I would like to live in a place ___ there is plenty of sunshine.",
+    "correct": "where",
+    "options": [
+      "where",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "That's the day ___ I'm going away.",
+    "correct": "that",
+    "options": [
+      "that",
+      "when",
+      "which"
+    ]
+  },
+  {
+    "question": "The last time ___ I saw Anna, she looked great.",
+    "correct": "that",
+    "options": [
+      "that",
+      "when",
+      "which"
+    ]
+  },
+  {
+    "question": "The reason ___ I'm phoning is to ask your advice.",
+    "correct": "why",
+    "options": [
+      "why",
+      "that",
+      "which"
+    ]
+  },
+  {
+    "question": "The reason ___ I'm phoning is to ask your advice.",
+    "correct": "that",
+    "options": [
+      "that",
+      "why",
+      "which"
+    ]
+  },
+  {
+    "question": "A cemetery is a place ___ people are buried.",
+    "correct": "where",
+    "options": [
+      "where",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "A pacifist is a person ___ believes that all wars are wrong.",
+    "correct": "who",
+    "options": [
+      "who",
+      "whose",
+      "whom"
+    ]
+  },
+  {
+    "question": "An orphan is a child ___ parents are dead.",
+    "correct": "whose",
+    "options": [
+      "whose",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "What was the name of the person to ___ you spoke on the phone?",
+    "correct": "whom",
+    "options": [
+      "whom",
+      "whose",
+      "which"
+    ]
+  },
+  {
+    "question": "The place ___ we spent our holidays was really beautiful.",
+    "correct": "where",
+    "options": [
+      "where",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "This school is only for children ___ first language is not English.",
+    "correct": "whose",
+    "options": [
+      "whose",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "The woman with ___ he fell in love left him after a month.",
+    "correct": "whom",
+    "options": [
+      "whom",
+      "whose",
+      "which"
+    ]
+  },
+  {
+    "question": "My brother Ben, ___ lives in Hong Kong, is an architect.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "Anna told me about her new job, ___ she's enjoying a lot.",
+    "correct": "which",
+    "options": [
+      "which",
+      "who",
+      "that"
+    ]
+  },
+  {
+    "question": "We stayed at the Park Hotel, ___ a friend of ours recommended.",
+    "correct": "which",
+    "options": [
+      "which",
+      "who",
+      "that"
+    ]
+  },
+  {
+    "question": "Do you know anyone ___ speaks French and Italian?",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "whose"
+    ]
+  },
+  {
+    "question": "John, ___ speaks French and Italian, works as a tour guide.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "This morning I met Chris, ___ I hadn't seen for ages.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "This morning I met Chris, ___ I hadn't seen for ages.",
+    "correct": "whom",
+    "options": [
+      "whom",
+      "whose",
+      "which"
+    ]
+  },
+  {
+    "question": "We met some people ___ car had broken down.",
+    "correct": "whose",
+    "options": [
+      "whose",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "What's the name of the place ___ you went on holiday?",
+    "correct": "where",
+    "options": [
+      "where",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "Lisa, ___ car had broken down, was in a very bad mood.",
+    "correct": "whose",
+    "options": [
+      "whose",
+      "who",
+      "which"
+    ]
+  },
+  {
+    "question": "Kate has just been to Sweden, ___ her daughter lives.",
+    "correct": "where",
+    "options": [
+      "where",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "Catherine, ___ lives next door, is very friendly.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "whose"
+    ]
+  },
+  {
+    "question": "Anna told me about her new job, ___ she's enjoying very much.",
+    "correct": "which",
+    "options": [
+      "which",
+      "who",
+      "that"
+    ]
+  },
+  {
+    "question": "Mark's father, ___ used to be in the army, now works for a TV company.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "that"
+    ]
+  },
+  {
+    "question": "The sun, ___ is one of millions of stars in the universe, provides us with heat and light.",
+    "correct": "which",
+    "options": [
+      "which",
+      "who",
+      "that"
+    ]
+  },
+  {
+    "question": "I haven't seen Jack and Helen since the year ___ they got married.",
+    "correct": "that",
+    "options": [
+      "that",
+      "when",
+      "which"
+    ]
+  },
+  {
+    "question": "Mr Lee, ___ I spoke at the meeting, is very interested in our proposal.",
+    "correct": "to whom",
+    "options": [
+      "to whom",
+      "to which",
+      "to whose"
+    ]
+  },
+  {
+    "question": "Fortunately we had a good map, ___ we would have got lost.",
+    "correct": "without which",
+    "options": [
+      "without which",
+      "without whom",
+      "without that"
+    ]
+  },
+  {
+    "question": "This is my friend from Canada, ___ I was telling you about.",
+    "correct": "who",
+    "options": [
+      "who",
+      "which",
+      "whom"
+    ]
+  },
+  {
+    "question": "Yesterday we visited the City Museum, ___ I'd never been to before.",
+    "correct": "which",
+    "options": [
+      "which",
+      "who",
+      "that"
+    ]
+  },
+  {
+    "question": "Helen has three brothers, all of ___ are married.",
+    "correct": "whom",
+    "options": [
+      "whom",
+      "which",
+      "whose"
+    ]
+  },
+  {
+    "question": "They asked me a lot of questions, most of ___ I couldn't answer.",
+    "correct": "which",
+    "options": [
+      "which",
+      "whom",
+      "whose"
+    ]
+  },
+  {
+    "question": "Martin tried on three jackets, none of ___ fitted him.",
+    "correct": "which",
+    "options": [
+      "which",
+      "whom",
+      "whose"
+    ]
+  },
+  {
+    "question": "Two men, neither of ___ I had seen before, came into the office.",
+    "correct": "whom",
+    "options": [
+      "whom",
+      "which",
+      "whose"
+    ]
+  },
+  {
+    "question": "They have three cars, two of ___ they rarely use.",
+    "correct": "which",
+    "options": [
+      "which",
+      "whom",
+      "whose"
+    ]
+  },
+  {
+    "question": "Sue has a lot of friends, many of ___ she was at school with.",
+    "correct": "whom",
+    "options": [
+      "whom",
+      "which",
+      "whose"
+    ]
+  },
+  {
+    "question": "The building was destroyed in a fire, the cause of ___ was never established.",
+    "correct": "which",
+    "options": [
+      "which",
+      "whom",
+      "whose"
+    ]
+  },
+  {
+    "question": "We stayed at a beautiful hotel, the name of ___ I can't remember now.",
+    "correct": "which",
+    "options": [
+      "which",
+      "whom",
+      "whose"
+    ]
+  },
+  {
+    "question": "Joe got the job, ___ surprised everybody.",
+    "correct": "which",
+    "options": [
+      "which",
+      "what",
+      "that"
+    ]
+  },
+  {
+    "question": "Sarah couldn't meet us, ___ was a shame.",
+    "correct": "which",
+    "options": [
+      "which",
+      "what",
+      "that"
+    ]
+  },
+  {
+    "question": "The weather was good, ___ we hadn't expected.",
+    "correct": "which",
+    "options": [
+      "which",
+      "what",
+      "that"
+    ]
+  },
+  {
+    "question": "Yesterday we visited the City Museum, ___ I'd never been before.",
+    "correct": "to which",
+    "options": [
+      "to which",
+      "to whom",
+      "to whose"
+    ]
+  },
+  {
+    "question": "My brother showed us his new car, ___ he's very proud.",
+    "correct": "of which",
+    "options": [
+      "of which",
+      "of whom",
+      "of whose"
+    ]
+  },
+  {
+    "question": "This is a picture of our friends Chris and Sam, ___ we went on holiday with.",
+    "correct": "with whom",
+    "options": [
+      "with whom",
+      "with which",
+      "with whose"
+    ]
+  },
+  {
+    "question": "We were given a lot of information, most of ___ was useless.",
+    "correct": "which",
+    "options": [
+      "which",
+      "whom",
+      "whose"
+    ]
+  },
+  {
+    "question": "Ten people applied for the job, none of ___ was suitable.",
+    "correct": "whom",
+    "options": [
+      "whom",
+      "which",
+      "whose"
+    ]
+  },
+  {
+    "question": "Mike won £100,000, half of ___ he gave to his parents.",
+    "correct": "which",
+    "options": [
+      "which",
+      "whom",
+      "whose"
+    ]
+  },
+  {
+    "question": "Julia has two sisters, both of ___ are lawyers.",
+    "correct": "whom",
+    "options": [
+      "whom",
+      "which",
+      "whose"
+    ]
+  },
+  {
+    "question": "I sent Jane two emails, neither of ___ she replied to.",
+    "correct": "which",
+    "options": [
+      "which",
+      "whom",
+      "whose"
+    ]
+  },
+  {
+    "question": "Laura couldn't come to the party, ___ was a shame.",
+    "correct": "which",
+    "options": [
+      "which",
+      "what",
+      "that"
+    ]
+  },
+  {
+    "question": "Jane doesn't have a phone, ___ makes it difficult to contact her.",
+    "correct": "which",
+    "options": [
+      "which",
+      "what",
+      "that"
+    ]
+  },
+  {
+    "question": "Alex has passed his exams, ___ is good news.",
+    "correct": "which",
+    "options": [
+      "which",
+      "what",
+      "that"
+    ]
+  },
+  {
+    "question": "Our flight was delayed, ___ meant we had to wait three hours at the airport.",
+    "correct": "which",
+    "options": [
+      "which",
+      "what",
+      "that"
+    ]
+  },
+  {
+    "question": "The street I live in is very noisy at night, ___ makes it difficult to sleep sometimes.",
+    "correct": "which",
+    "options": [
+      "which",
+      "what",
+      "that"
+    ]
+  },
+  {
+    "question": "Our car has broken down, ___ means we can't go away tomorrow.",
+    "correct": "which",
+    "options": [
+      "which",
+      "what",
+      "that"
+    ]
+  },
+  {
+    "question": "Kate offered to let me stay at her house, ___ was very kind of her.",
+    "correct": "which",
+    "options": [
+      "which",
+      "what",
+      "that"
+    ]
+  }
 ]
