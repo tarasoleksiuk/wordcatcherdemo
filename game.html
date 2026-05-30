@@ -150,6 +150,11 @@
       z-index: 7;
       opacity: 0;
       transition: opacity 0.2s;
+      cursor: pointer;
+    }
+
+    #pauseOverlay.show {
+      pointer-events: all;
     }
 
     #pauseOverlay.show {
@@ -1028,6 +1033,10 @@
     document.addEventListener("contextmenu", e => e.preventDefault());
     player.addEventListener("click", e => { e.stopPropagation(); onPlayerTap(); });
     player.addEventListener("touchstart", e => { e.stopPropagation(); e.preventDefault(); onPlayerTap(); }, { passive: false });
+
+    const pauseOverlay = document.getElementById("pauseOverlay");
+    pauseOverlay.addEventListener("click", e => { e.stopPropagation(); togglePause(); });
+    pauseOverlay.addEventListener("touchstart", e => { e.stopPropagation(); e.preventDefault(); togglePause(); }, { passive: false });
 
     const clownInd = document.getElementById("clownIndicator");
     clownInd.addEventListener("click", e => { e.stopPropagation(); onPlayerTap(); });
