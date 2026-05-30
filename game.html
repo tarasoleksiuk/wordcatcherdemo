@@ -981,7 +981,7 @@
       playerX = e.clientX;
       player.style.left = playerX + "px";
     });
-    document.addEventListener("mousedown", e => { if (e.button === 0 && !e.target.closest("#whyBtn") && !e.target.closest("#whyBtnGameOver") && !e.target.closest("#question") && !e.target.closest("#menuBtn") && !e.target.closest("#autoWhyLabel") && !e.target.closest("#player") && !e.target.closest("#clownIndicator")) shoot(); });
+    document.addEventListener("mousedown", e => { if (e.button === 0 && !e.target.closest("#whyBtn") && !e.target.closest("#whyBtnGameOver") && !e.target.closest("#question") && !e.target.closest("#menuBtn") && !e.target.closest("#autoWhyLabel") && !e.target.closest("#player") && !e.target.closest("#clownIndicator") && !e.target.closest("#pauseOverlay")) shoot(); });
     document.addEventListener("wheel", e => {
       if (e.deltaY < 0) globalSpeedMultiplier = Math.min(globalSpeedMultiplier + 0.2, 4);
       else globalSpeedMultiplier = Math.max(globalSpeedMultiplier - 0.2, 0.3);
@@ -1035,8 +1035,8 @@
     player.addEventListener("touchstart", e => { e.stopPropagation(); e.preventDefault(); onPlayerTap(); }, { passive: false });
 
     const pauseOverlay = document.getElementById("pauseOverlay");
-    pauseOverlay.addEventListener("click", e => { e.stopPropagation(); togglePause(); });
-    pauseOverlay.addEventListener("touchstart", e => { e.stopPropagation(); e.preventDefault(); togglePause(); }, { passive: false });
+    pauseOverlay.addEventListener("click", e => { e.stopPropagation(); touchStartY = 0; togglePause(); });
+    pauseOverlay.addEventListener("touchstart", e => { e.stopPropagation(); e.preventDefault(); touchStartY = 0; togglePause(); }, { passive: false });
 
     const clownInd = document.getElementById("clownIndicator");
     clownInd.addEventListener("click", e => { e.stopPropagation(); onPlayerTap(); });
@@ -1046,10 +1046,12 @@
     questionEl.addEventListener("touchstart", e => {
       e.preventDefault();
       e.stopPropagation();
+      touchStartY = 0;
       togglePause();
     }, { passive: false });
     questionEl.addEventListener("mousedown", e => {
       e.stopPropagation();
+      touchStartY = 0;
       togglePause();
     });
 
