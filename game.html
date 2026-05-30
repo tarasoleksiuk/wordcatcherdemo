@@ -1035,6 +1035,7 @@
     player.addEventListener("touchstart", e => { e.stopPropagation(); e.preventDefault(); onPlayerTap(); }, { passive: false });
 
     const pauseOverlay = document.getElementById("pauseOverlay");
+    pauseOverlay.addEventListener("mousedown", e => { e.stopPropagation(); });
     pauseOverlay.addEventListener("click", e => { e.stopPropagation(); touchStartY = 0; togglePause(); });
     pauseOverlay.addEventListener("touchstart", e => { e.stopPropagation(); e.preventDefault(); touchStartY = 0; togglePause(); }, { passive: false });
 
