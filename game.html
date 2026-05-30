@@ -983,7 +983,7 @@
       playerX = e.clientX;
       player.style.left = playerX + "px";
     });
-    document.addEventListener("mousedown", e => { if (e.button === 0 && !e.target.closest("#whyBtn") && !e.target.closest("#whyBtnGameOver") && !e.target.closest("#question") && !e.target.closest("#menuBtn") && !e.target.closest("#autoWhyLabel") && !e.target.closest("#player") && !e.target.closest("#clownIndicator") && !e.target.closest("#pauseOverlay")) shoot(); });
+    document.addEventListener("mousedown", e => { if (e.button === 0 && !e.target.closest("#whyBtn") && !e.target.closest("#whyBtnGameOver") && !e.target.closest("#question") && !e.target.closest("#menuBtn") && !e.target.closest("#autoWhyLabel") && !e.target.closest("#player") && !e.target.closest("#clownIndicator") && !e.target.closest("#pauseOverlay") && !e.target.closest(".word")) shoot(); });
     document.addEventListener("wheel", e => {
       if (speedLocked) return;
       if (e.deltaY < 0) globalSpeedMultiplier = Math.min(globalSpeedMultiplier + 0.2, 4);
