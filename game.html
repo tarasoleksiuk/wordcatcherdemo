@@ -808,8 +808,10 @@
       word.className = "word";
       word.textContent = text;
       const wordW = Math.min(120, Math.max(70, window.innerWidth * 0.22));
-      const step = window.innerWidth / (total + 1);
-      word.style.left = (step * (i + 1) - wordW / 2) + "px";
+      const zone = Math.min(window.innerWidth, 600); // max spread zone
+      const offset = (window.innerWidth - zone) / 2;
+      const step = zone / (total + 1);
+      word.style.left = (offset + step * (i + 1) - wordW / 2) + "px";
       word.style.width = wordW + "px";
       game.appendChild(word);
       // Mobile: tap the word directly
@@ -1003,6 +1005,8 @@
       // Arrow keys = move player continuously
       if (e.code === "ArrowLeft") { e.preventDefault(); arrowDir = -1; startArrowMove(); }
       if (e.code === "ArrowRight") { e.preventDefault(); arrowDir = 1; startArrowMove(); }
+      if (e.code === "ArrowUp") { e.preventDefault(); globalSpeedMultiplier = Math.max(+(globalSpeedMultiplier - 0.2).toFixed(1), 0.3); updateUI(); }
+      if (e.code === "ArrowDown") { e.preventDefault(); globalSpeedMultiplier = Math.min(+(globalSpeedMultiplier + 0.2).toFixed(1), 4); updateUI(); }
     });
 
     document.addEventListener("keyup", e => {
@@ -1017,7 +1021,7 @@
       if (arrowInterval) return;
       arrowInterval = setInterval(() => {
         if (arrowDir === 0) { clearInterval(arrowInterval); arrowInterval = null; return; }
-        playerX = Math.max(0, Math.min(window.innerWidth, playerX + arrowDir * 24));
+        playerX = Math.max(0, Math.min(window.innerWidth, playerX + arrowDir * 8));
         player.style.left = playerX + "px";
       }, 16);
     }
