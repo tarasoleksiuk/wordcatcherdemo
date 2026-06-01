@@ -647,7 +647,7 @@
     function onPlayerTap() {
       const now = Date.now();
       if (now - lastPlayerClick < 400) {
-        toggleClownMode();
+        if (!clownMode) toggleClownMode(); // only activate, not deactivate
         lastPlayerClick = 0;
       } else {
         lastPlayerClick = now;
@@ -1117,8 +1117,8 @@
     player.addEventListener("touchstart", e => { e.stopPropagation(); e.preventDefault(); onPlayerTap(); }, { passive: false });
 
     const clownInd = document.getElementById("clownIndicator");
-    clownInd.addEventListener("click", e => { e.stopPropagation(); onPlayerTap(); });
-    clownInd.addEventListener("touchstart", e => { e.stopPropagation(); e.preventDefault(); onPlayerTap(); }, { passive: false });
+    clownInd.addEventListener("click", e => { e.stopPropagation(); if (clownMode) toggleClownMode(); });
+    clownInd.addEventListener("touchstart", e => { e.stopPropagation(); e.preventDefault(); if (clownMode) toggleClownMode(); }, { passive: false });
 
     // Question tap = pause (works on both mobile and desktop)
     questionEl.addEventListener("touchstart", e => {
