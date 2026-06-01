@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<title>How to Play — Word Catcher</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #87ceeb, #dff6ff);
+    min-height: 100vh;
+    padding: 20px 16px 60px;
+    color: #1a1a2e;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .logo {
+    font-size: clamp(28px, 7vw, 48px);
+    font-weight: 900;
+    color: #1a1a2e;
+  }
+  .logo span { color: #1a1a2e; }
+  .subtitle {
+    font-size: clamp(13px, 3vw, 16px);
+    color: rgba(0,0,0,0.45);
+    margin-top: 4px;
+  }
+
+  /* Back button */
+  .back-btn {
+    display: inline-block;
+    margin-bottom: 24px;
+    background: rgba(0,0,0,0.15);
+    color: #1a1a2e;
+    border: none;
+    border-radius: 10px;
+    padding: 6px 14px;
+    font-size: clamp(12px, 3vw, 15px);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  /* Sections */
+  .section {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section + .section { margin-top: 16px; }
+
+  .section-title {
+    font-size: clamp(16px, 4vw, 20px);
+    font-weight: bold;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .section p {
+    font-size: clamp(13px, 3.2vw, 15px);
+    line-height: 1.65;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  .section p:last-child { margin-bottom: 0; }
+
+  /* Key/shortcut badges */
+  kbd {
+    display: inline-block;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-bottom: 2px solid #aaa;
+    border-radius: 5px;
+    padding: 2px 8px;
+    font-size: clamp(12px, 3vw, 14px);
+    font-family: monospace;
+    font-weight: bold;
+  }
+
+  /* Controls table */
+  .controls {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: clamp(12px, 3vw, 14px);
+  }
+  .controls tr:not(:last-child) td { border-bottom: 1px solid #f0f0f0; }
+  .controls td { padding: 8px 6px; vertical-align: middle; }
+  .controls td:first-child { width: 40%; color: #555; }
+  .controls td:last-child { font-weight: 500; }
+
+  /* Stat row */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+    margin-top: 4px;
+  }
+  .stat-card {
+    background: #f7f9ff;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: clamp(12px, 3vw, 14px);
+    line-height: 1.4;
+  }
+  .stat-card .icon { font-size: 20px; margin-bottom: 4px; }
+  .stat-card .label { color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  /* Tip box */
+  .tip {
+    background: #fffde7;
+    border-left: 4px solid #ffc800;
+    border-radius: 0 8px 8px 0;
+    padding: 10px 14px;
+    font-size: clamp(12px, 3vw, 14px);
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.55;
+  }
+  .tip strong { color: #333; }
+
+  /* Highlight */
+  .hl { background: #ffeb3b; border-radius: 3px; padding: 0 3px; font-weight: bold; }
+
+  /* Secret */
+  .secret {
+    background: #1a1a2e;
+    color: white;
+    border-radius: 14px;
+    padding: 16px 20px;
+    max-width: 720px;
+    margin: 16px auto 0;
+    font-size: clamp(13px, 3.2vw, 15px);
+    line-height: 1.65;
+  }
+  .secret-title { font-size: clamp(15px, 4vw, 18px); font-weight: bold; margin-bottom: 8px; }
+</style>
+</head>
+<body>
+
+<div style="max-width:720px;margin:0 auto;">
+  <a class="back-btn" href="index.html">← Back to Menu</a>
+
+  <div class="header">
+    <div class="logo">Word 😀 <span>Catcher</span></div>
+    <div class="subtitle">How to Play</div>
+  </div>
+
+  <!-- GOAL -->
+  <div class="section">
+    <div class="section-title">🎯 Goal</div>
+    <p>Words fall from the top of the screen. Your job is to <strong>catch the correct one</strong> — move your character under it or click/tap directly on the right word to answer the question shown at the top.</p>
+    <p>Complete all questions in a topic with as few mistakes as possible!</p>
+  </div>
+
+  <!-- HOW TO ANSWER -->
+  <div class="section">
+    <div class="section-title">✅ How to Answer</div>
+    <table class="controls">
+      <tr><td>📱 Mobile</td><td>Tap directly on the correct word block</td></tr>
+      <tr><td>🖥️ Desktop — mouse</td><td>Move cursor to position character, then click anywhere to shoot</td></tr>
+      <tr><td>🖥️ Desktop — keyboard</td><td><kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> — select word 1, 2, or 3</td></tr>
+    </table>
+  </div>
+
+  <!-- MOVEMENT -->
+  <div class="section">
+    <div class="section-title">🕹️ Controls</div>
+    <table class="controls">
+      <tr><td>Move character</td><td>Mouse move <em>or</em> <kbd>←</kbd> <kbd>→</kbd> arrow keys <em>or</em> drag finger (mobile)</td></tr>
+      <tr><td>Pause / Unpause</td><td>Click on the sentence at the top <em>or</em> <kbd>Space</kbd></td></tr>
+      <tr><td>Speed up</td><td>Scroll wheel down <em>or</em> <kbd>↓</kbd> <em>or</em> swipe down (mobile)</td></tr>
+      <tr><td>Speed down</td><td>Scroll wheel up <em>or</em> <kbd>↑</kbd> <em>or</em> swipe up (mobile)</td></tr>
+      <tr><td>Sound on/off</td><td><kbd>M</kbd> <em>or</em> click 🔇/🔊 icon <em>or</em> long press screen</td></tr>
+      <tr><td>Why? (Google)</td><td>Click <strong>🔍 Why?</strong> button <em>or</em> <kbd>W</kbd></td></tr>
+      <tr><td>Restart</td><td><kbd>R</kbd></td></tr>
+    </table>
+  </div>
+
+  <!-- LIVES & SCORING -->
+  <div class="section">
+    <div class="section-title">❤️ Lives & Scoring</div>
+    <p>You start with <strong>3 lives</strong>. You lose a life when:</p>
+    <p>— You choose the <strong>wrong word</strong><br>— The <strong>correct word falls</strong> past your character without being caught</p>
+    <p>Every <strong>5 correct answers in a row</strong> earns you <strong>+1 life</strong> and triggers a combo effect 🔥</p>
+    <div class="tip"><strong>Wrong answer?</strong> The correct word is highlighted in yellow in the sentence — take a moment to read it before the next question appears.</div>
+  </div>
+
+  <!-- UI BAR -->
+  <div class="section">
+    <div class="section-title">📊 Stats Bar</div>
+    <div class="stats-grid">
+      <div class="stat-card"><div class="icon">🔍</div><div class="label">Why clicks</div>How many times you asked for explanation</div>
+      <div class="stat-card"><div class="icon">✅</div><div class="label">Progress</div>Unique questions answered correctly out of total</div>
+      <div class="stat-card"><div class="icon">❤️</div><div class="label">Lives</div>Remaining lives</div>
+      <div class="stat-card"><div class="icon">⚡</div><div class="label">Speed</div>Current falling speed multiplier</div>
+      <div class="stat-card"><div class="icon">⏱</div><div class="label">Time</div>Elapsed play time (pauses not counted)</div>
+      <div class="stat-card"><div class="icon">🔊</div><div class="label">Sound</div>Click or press M to toggle</div>
+    </div>
+  </div>
+
+  <!-- WHY BUTTON -->
+  <div class="section">
+    <div class="section-title">🔍 Why? Button</div>
+    <p>Made a mistake and don't understand why? Click <strong>🔍 Why?</strong> — the game pauses and opens a Google search with the exact question, asking for a grammar explanation.</p>
+    <p>Enable the <strong>"auto"</strong> checkbox next to Why? to automatically open the explanation after every mistake.</p>
+    <div class="tip"><strong>Tip:</strong> After a wrong answer you have <strong>3 seconds</strong> before the next question — enough time to click Why?</div>
+  </div>
+
+  <!-- WINNING -->
+  <div class="section">
+    <div class="section-title">🎉 Winning & Retry</div>
+    <p>Answer every question <strong>correctly at least once</strong> to complete the topic.</p>
+    <p>If you answer a question <strong>incorrectly</strong>, it comes back after ~20 questions so you can try again.</p>
+    <p>When all questions are done — you see your full stats: time, mistakes, average answer speed, and how many times you clicked Why?</p>
+  </div>
+
+  <!-- SECRET -->
+  <div class="secret">
+    <div class="secret-title">🤡 Secret: Clown Mode</div>
+    <p>Double-tap your character (😀) quickly — it transforms into a 🤡 that automatically moves under the correct word! A 🤡 indicator appears below the Why? button. To deactivate, double-tap the 🤡 indicator. Single taps do nothing. If you used Clown Mode, it will appear in your final stats.</p>
+  </div>
+
+</div>
+</body>
+</html>
