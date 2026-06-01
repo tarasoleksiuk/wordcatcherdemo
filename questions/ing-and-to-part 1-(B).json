@@ -1,0 +1,1604 @@
+[
+  {
+    "question": "I enjoy ___. (not I enjoy to read)",
+    "correct": "reading",
+    "options": [
+      "reading",
+      "to read",
+      "read"
+    ]
+  },
+  {
+    "question": "Would you mind ___ the door?",
+    "correct": "closing",
+    "options": [
+      "closing",
+      "to close",
+      "close"
+    ]
+  },
+  {
+    "question": "Chris suggested ___ to the cinema.",
+    "correct": "going",
+    "options": [
+      "going",
+      "to go",
+      "go"
+    ]
+  },
+  {
+    "question": "Suddenly everybody stopped ___. There was silence.",
+    "correct": "talking",
+    "options": [
+      "talking",
+      "to talk",
+      "talk"
+    ]
+  },
+  {
+    "question": "I'll do the shopping when I've finished ___ the flat.",
+    "correct": "cleaning",
+    "options": [
+      "cleaning",
+      "to clean",
+      "clean"
+    ]
+  },
+  {
+    "question": "He tried to avoid ___ my question.",
+    "correct": "answering",
+    "options": [
+      "answering",
+      "to answer",
+      "answer"
+    ]
+  },
+  {
+    "question": "I don't fancy ___ out this evening.",
+    "correct": "going",
+    "options": [
+      "going",
+      "to go",
+      "go"
+    ]
+  },
+  {
+    "question": "Have you ever considered ___ to live in another country?",
+    "correct": "going",
+    "options": [
+      "going",
+      "to go",
+      "go"
+    ]
+  },
+  {
+    "question": "They denied ___ anything wrong.",
+    "correct": "doing",
+    "options": [
+      "doing",
+      "to do",
+      "do"
+    ]
+  },
+  {
+    "question": "When I'm on holiday, I enjoy not ___ to get up early.",
+    "correct": "having",
+    "options": [
+      "having",
+      "to have",
+      "have"
+    ]
+  },
+  {
+    "question": "I've given up ___ newspapers. I think it's a waste of time.",
+    "correct": "reading",
+    "options": [
+      "reading",
+      "to read",
+      "read"
+    ]
+  },
+  {
+    "question": "Catherine wants to go on ___.",
+    "correct": "working",
+    "options": [
+      "working",
+      "to work",
+      "work"
+    ]
+  },
+  {
+    "question": "You keep ___ when I'm talking!",
+    "correct": "interrupting",
+    "options": [
+      "interrupting",
+      "to interrupt",
+      "interrupt"
+    ]
+  },
+  {
+    "question": "I can't imagine George ___ a motorbike.",
+    "correct": "riding",
+    "options": [
+      "riding",
+      "to ride",
+      "ride"
+    ]
+  },
+  {
+    "question": "You can't stop me ___ what I want.",
+    "correct": "doing",
+    "options": [
+      "doing",
+      "to do",
+      "do"
+    ]
+  },
+  {
+    "question": "I don't remember you ___ that.",
+    "correct": "saying",
+    "options": [
+      "saying",
+      "to say",
+      "say"
+    ]
+  },
+  {
+    "question": "Sorry to keep you ___ so long.",
+    "correct": "waiting",
+    "options": [
+      "waiting",
+      "to wait",
+      "wait"
+    ]
+  },
+  {
+    "question": "I don't mind being ___ waiting.",
+    "correct": "kept",
+    "options": [
+      "kept",
+      "keeping",
+      "keep"
+    ]
+  },
+  {
+    "question": "They admitted ___ the money.",
+    "correct": "stealing",
+    "options": [
+      "stealing",
+      "to steal",
+      "steal"
+    ]
+  },
+  {
+    "question": "I now regret ___ what I said.",
+    "correct": "saying",
+    "options": [
+      "saying",
+      "to say",
+      "say"
+    ]
+  },
+  {
+    "question": "They denied ___ the money.",
+    "correct": "stealing",
+    "options": [
+      "stealing",
+      "to steal",
+      "steal"
+    ]
+  },
+  {
+    "question": "Could you please stop ___ so much noise?",
+    "correct": "making",
+    "options": [
+      "making",
+      "to make",
+      "make"
+    ]
+  },
+  {
+    "question": "I enjoy ___ to music.",
+    "correct": "listening",
+    "options": [
+      "listening",
+      "to listen",
+      "listen"
+    ]
+  },
+  {
+    "question": "I considered ___ for the job, but in the end I decided against it.",
+    "correct": "applying",
+    "options": [
+      "applying",
+      "to apply",
+      "apply"
+    ]
+  },
+  {
+    "question": "Have you finished ___ the newspaper yet?",
+    "correct": "reading",
+    "options": [
+      "reading",
+      "to read",
+      "read"
+    ]
+  },
+  {
+    "question": "We can't go on ___ like this.",
+    "correct": "living",
+    "options": [
+      "living",
+      "to live",
+      "live"
+    ]
+  },
+  {
+    "question": "I don't mind you ___ my phone, but please ask me first.",
+    "correct": "using",
+    "options": [
+      "using",
+      "to use",
+      "use"
+    ]
+  },
+  {
+    "question": "My memory is getting worse. I keep ___ things.",
+    "correct": "forgetting",
+    "options": [
+      "forgetting",
+      "to forget",
+      "forget"
+    ]
+  },
+  {
+    "question": "I've put off ___ this bill so many times.",
+    "correct": "paying",
+    "options": [
+      "paying",
+      "to pay",
+      "pay"
+    ]
+  },
+  {
+    "question": "Can you imagine anybody ___ so stupid?",
+    "correct": "being",
+    "options": [
+      "being",
+      "to be",
+      "be"
+    ]
+  },
+  {
+    "question": "I've given up trying to lose weight — it's impossible.",
+    "correct": "trying",
+    "options": [
+      "trying",
+      "to try",
+      "try"
+    ]
+  },
+  {
+    "question": "If you gamble, you risk ___ your money.",
+    "correct": "losing",
+    "options": [
+      "losing",
+      "to lose",
+      "lose"
+    ]
+  },
+  {
+    "question": "It's better to avoid ___ during the rush hour.",
+    "correct": "travelling",
+    "options": [
+      "travelling",
+      "to travel",
+      "travel"
+    ]
+  },
+  {
+    "question": "Shall we postpone ___ the kitchen until next weekend?",
+    "correct": "painting",
+    "options": [
+      "painting",
+      "to paint",
+      "paint"
+    ]
+  },
+  {
+    "question": "Would you mind ___ the music down, please?",
+    "correct": "turning",
+    "options": [
+      "turning",
+      "to turn",
+      "turn"
+    ]
+  },
+  {
+    "question": "Would you mind not ___ all the time?",
+    "correct": "interrupting",
+    "options": [
+      "interrupting",
+      "to interrupt",
+      "interrupt"
+    ]
+  },
+  {
+    "question": "It was late, so we decided ___ a taxi home.",
+    "correct": "to take",
+    "options": [
+      "to take",
+      "taking",
+      "take"
+    ]
+  },
+  {
+    "question": "Simon was in a difficult situation, so I agreed ___ him.",
+    "correct": "to help",
+    "options": [
+      "to help",
+      "helping",
+      "help"
+    ]
+  },
+  {
+    "question": "I waved to Karen, but failed ___ her attention.",
+    "correct": "to attract",
+    "options": [
+      "to attract",
+      "attracting",
+      "attract"
+    ]
+  },
+  {
+    "question": "We decided not ___ out because of the weather.",
+    "correct": "to go",
+    "options": [
+      "to go",
+      "going",
+      "go"
+    ]
+  },
+  {
+    "question": "I promised not ___ late.",
+    "correct": "to be",
+    "options": [
+      "to be",
+      "being",
+      "be"
+    ]
+  },
+  {
+    "question": "Andy suggested ___ for coffee.",
+    "correct": "meeting",
+    "options": [
+      "meeting",
+      "to meet",
+      "meet"
+    ]
+  },
+  {
+    "question": "Are you thinking of ___ a car?",
+    "correct": "buying",
+    "options": [
+      "buying",
+      "to buy",
+      "buy"
+    ]
+  },
+  {
+    "question": "I wouldn't dare ___ him.",
+    "correct": "to tell",
+    "options": [
+      "to tell",
+      "telling",
+      "tell"
+    ]
+  },
+  {
+    "question": "I daren't ___ him what happened.",
+    "correct": "tell",
+    "options": [
+      "tell",
+      "to tell",
+      "telling"
+    ]
+  },
+  {
+    "question": "They seem ___ plenty of money.",
+    "correct": "to have",
+    "options": [
+      "to have",
+      "having",
+      "have"
+    ]
+  },
+  {
+    "question": "I like Dan, but I think he tends ___ too much.",
+    "correct": "to talk",
+    "options": [
+      "to talk",
+      "talking",
+      "talk"
+    ]
+  },
+  {
+    "question": "Ann pretended not ___ me when she passed me in the street.",
+    "correct": "to see",
+    "options": [
+      "to see",
+      "seeing",
+      "see"
+    ]
+  },
+  {
+    "question": "I pretended ___ the paper.",
+    "correct": "to be reading",
+    "options": [
+      "to be reading",
+      "to read",
+      "reading"
+    ]
+  },
+  {
+    "question": "You seem ___ weight.",
+    "correct": "to have lost",
+    "options": [
+      "to have lost",
+      "to lose",
+      "losing"
+    ]
+  },
+  {
+    "question": "Joe seems ___ his new job.",
+    "correct": "to be enjoying",
+    "options": [
+      "to be enjoying",
+      "to enjoy",
+      "enjoying"
+    ]
+  },
+  {
+    "question": "We asked how ___ to the station.",
+    "correct": "to get",
+    "options": [
+      "to get",
+      "getting",
+      "get"
+    ]
+  },
+  {
+    "question": "Have you decided where ___ for your holidays?",
+    "correct": "to go",
+    "options": [
+      "to go",
+      "going",
+      "go"
+    ]
+  },
+  {
+    "question": "I don't know whether ___ for the job or not.",
+    "correct": "to apply",
+    "options": [
+      "to apply",
+      "applying",
+      "apply"
+    ]
+  },
+  {
+    "question": "Can somebody show me how ___ this camera?",
+    "correct": "to use",
+    "options": [
+      "to use",
+      "using",
+      "use"
+    ]
+  },
+  {
+    "question": "Ask Jack. He'll tell you what ___.",
+    "correct": "to do",
+    "options": [
+      "to do",
+      "doing",
+      "do"
+    ]
+  },
+  {
+    "question": "They decided ___ married.",
+    "correct": "to get",
+    "options": [
+      "to get",
+      "getting",
+      "get"
+    ]
+  },
+  {
+    "question": "She agreed ___ him.",
+    "correct": "to help",
+    "options": [
+      "to help",
+      "helping",
+      "help"
+    ]
+  },
+  {
+    "question": "He offered ___ her bag.",
+    "correct": "to carry",
+    "options": [
+      "to carry",
+      "carrying",
+      "carry"
+    ]
+  },
+  {
+    "question": "They arranged ___ at 8 o'clock.",
+    "correct": "to meet",
+    "options": [
+      "to meet",
+      "meeting",
+      "meet"
+    ]
+  },
+  {
+    "question": "She refused ___ her name.",
+    "correct": "to tell",
+    "options": [
+      "to tell",
+      "telling",
+      "tell"
+    ]
+  },
+  {
+    "question": "She promised not ___ anyone.",
+    "correct": "to tell",
+    "options": [
+      "to tell",
+      "telling",
+      "tell"
+    ]
+  },
+  {
+    "question": "Don't forget ___ the door when you go out.",
+    "correct": "to lock",
+    "options": [
+      "to lock",
+      "locking",
+      "lock"
+    ]
+  },
+  {
+    "question": "There was a lot of traffic, but we managed ___ to the airport in time.",
+    "correct": "to get",
+    "options": [
+      "to get",
+      "getting",
+      "get"
+    ]
+  },
+  {
+    "question": "We couldn't afford ___ in London. It's too expensive.",
+    "correct": "to live",
+    "options": [
+      "to live",
+      "living",
+      "live"
+    ]
+  },
+  {
+    "question": "I haven't learnt ___ it yet.",
+    "correct": "to use",
+    "options": [
+      "to use",
+      "using",
+      "use"
+    ]
+  },
+  {
+    "question": "I decided not ___ him.",
+    "correct": "to tell",
+    "options": [
+      "to tell",
+      "telling",
+      "tell"
+    ]
+  },
+  {
+    "question": "Nobody dared ___ anything.",
+    "correct": "to say",
+    "options": [
+      "to say",
+      "saying",
+      "say"
+    ]
+  },
+  {
+    "question": "When I'm tired, I enjoy ___ television.",
+    "correct": "watching",
+    "options": [
+      "watching",
+      "to watch",
+      "watch"
+    ]
+  },
+  {
+    "question": "I've decided ___ for another job.",
+    "correct": "to look",
+    "options": [
+      "to look",
+      "looking",
+      "look"
+    ]
+  },
+  {
+    "question": "I don't fancy ___ home.",
+    "correct": "walking",
+    "options": [
+      "walking",
+      "to walk",
+      "walk"
+    ]
+  },
+  {
+    "question": "Tina ran in a marathon last week, but she failed ___.",
+    "correct": "to finish",
+    "options": [
+      "to finish",
+      "finishing",
+      "finish"
+    ]
+  },
+  {
+    "question": "I wish that dog would stop ___. It's driving me crazy.",
+    "correct": "barking",
+    "options": [
+      "barking",
+      "to bark",
+      "bark"
+    ]
+  },
+  {
+    "question": "Our neighbour threatened ___ the police if we didn't stop the noise.",
+    "correct": "to call",
+    "options": [
+      "to call",
+      "calling",
+      "call"
+    ]
+  },
+  {
+    "question": "We were hungry, so I suggested ___ dinner early.",
+    "correct": "having",
+    "options": [
+      "having",
+      "to have",
+      "have"
+    ]
+  },
+  {
+    "question": "Hurry up! I don't want to risk ___ the train.",
+    "correct": "missing",
+    "options": [
+      "missing",
+      "to miss",
+      "miss"
+    ]
+  },
+  {
+    "question": "They didn't know I was listening. I pretended ___ asleep.",
+    "correct": "to be",
+    "options": [
+      "to be",
+      "being",
+      "be"
+    ]
+  },
+  {
+    "question": "Tom appears ___ about something.",
+    "correct": "to be worried",
+    "options": [
+      "to be worried",
+      "worrying",
+      "to worry"
+    ]
+  },
+  {
+    "question": "You seem ___ a lot of people.",
+    "correct": "to know",
+    "options": [
+      "to know",
+      "knowing",
+      "know"
+    ]
+  },
+  {
+    "question": "David tends ___ things.",
+    "correct": "to forget",
+    "options": [
+      "to forget",
+      "forgetting",
+      "forget"
+    ]
+  },
+  {
+    "question": "They claim ___ the problem.",
+    "correct": "to have solved",
+    "options": [
+      "to have solved",
+      "to solve",
+      "solving"
+    ]
+  },
+  {
+    "question": "Would you know what ___ if there was a fire in the building?",
+    "correct": "to do",
+    "options": [
+      "to do",
+      "doing",
+      "do"
+    ]
+  },
+  {
+    "question": "You'll never forget how ___ a bicycle once you've learnt.",
+    "correct": "to ride",
+    "options": [
+      "to ride",
+      "riding",
+      "ride"
+    ]
+  },
+  {
+    "question": "I haven't decided whether ___ or not.",
+    "correct": "to go",
+    "options": [
+      "to go",
+      "going",
+      "go"
+    ]
+  },
+  {
+    "question": "I don't know where ___ all my things.",
+    "correct": "to put",
+    "options": [
+      "to put",
+      "putting",
+      "put"
+    ]
+  },
+  {
+    "question": "Can you show me how ___ the washing machine?",
+    "correct": "to use",
+    "options": [
+      "to use",
+      "using",
+      "use"
+    ]
+  },
+  {
+    "question": "How old were you when you learnt ___ drive?",
+    "correct": "to drive",
+    "options": [
+      "to drive",
+      "driving",
+      "drive"
+    ]
+  },
+  {
+    "question": "I don't mind ___ home, but I'd rather get a taxi.",
+    "correct": "walking",
+    "options": [
+      "walking",
+      "to walk",
+      "walk"
+    ]
+  },
+  {
+    "question": "I'd rather ___ a taxi.",
+    "correct": "get",
+    "options": [
+      "get",
+      "to get",
+      "getting"
+    ]
+  },
+  {
+    "question": "I can't make a decision. I keep ___ my mind.",
+    "correct": "changing",
+    "options": [
+      "changing",
+      "to change",
+      "change"
+    ]
+  },
+  {
+    "question": "He had made his decision and refused ___ his mind.",
+    "correct": "to change",
+    "options": [
+      "to change",
+      "changing",
+      "change"
+    ]
+  },
+  {
+    "question": "What made you ___ your mind?",
+    "correct": "change",
+    "options": [
+      "change",
+      "to change",
+      "changing"
+    ]
+  },
+  {
+    "question": "I really enjoyed ___ by the sea again.",
+    "correct": "being",
+    "options": [
+      "being",
+      "to be",
+      "be"
+    ]
+  },
+  {
+    "question": "I don't remember ___ that.",
+    "correct": "saying",
+    "options": [
+      "saying",
+      "to say",
+      "say"
+    ]
+  },
+  {
+    "question": "Remember ___ Tom tomorrow.",
+    "correct": "to call",
+    "options": [
+      "to call",
+      "calling",
+      "call"
+    ]
+  },
+  {
+    "question": "I'd avoid ___ it if I were you.",
+    "correct": "drinking",
+    "options": [
+      "drinking",
+      "to drink",
+      "drink"
+    ]
+  },
+  {
+    "question": "I pretended ___ interested in the conversation.",
+    "correct": "to be",
+    "options": [
+      "to be",
+      "being",
+      "be"
+    ]
+  },
+  {
+    "question": "I got up and looked out of the window ___ what the weather was like.",
+    "correct": "to see",
+    "options": [
+      "to see",
+      "seeing",
+      "see"
+    ]
+  },
+  {
+    "question": "I have a friend who claims ___ able to speak five languages.",
+    "correct": "to be",
+    "options": [
+      "to be",
+      "being",
+      "be"
+    ]
+  },
+  {
+    "question": "I like ___ carefully about things before making a decision.",
+    "correct": "thinking",
+    "options": [
+      "thinking",
+      "to think",
+      "think"
+    ]
+  },
+  {
+    "question": "I like thinking carefully about things before ___ a decision.",
+    "correct": "making",
+    "options": [
+      "making",
+      "to make",
+      "make"
+    ]
+  },
+  {
+    "question": "I didn't like ___ there, so I decided to move.",
+    "correct": "living",
+    "options": [
+      "living",
+      "to live",
+      "live"
+    ]
+  },
+  {
+    "question": "I didn't like living there, so I decided ___.",
+    "correct": "to move",
+    "options": [
+      "to move",
+      "moving",
+      "move"
+    ]
+  },
+  {
+    "question": "Steve used ___ a footballer.",
+    "correct": "to be",
+    "options": [
+      "to be",
+      "being",
+      "be"
+    ]
+  },
+  {
+    "question": "He had to stop ___ because of an injury.",
+    "correct": "playing",
+    "options": [
+      "playing",
+      "to play",
+      "play"
+    ]
+  },
+  {
+    "question": "The man admitted ___ the car.",
+    "correct": "stealing",
+    "options": [
+      "stealing",
+      "to steal",
+      "steal"
+    ]
+  },
+  {
+    "question": "The man denied ___ at 100 miles an hour.",
+    "correct": "driving",
+    "options": [
+      "driving",
+      "to drive",
+      "drive"
+    ]
+  },
+  {
+    "question": "How do you make this machine ___?",
+    "correct": "work",
+    "options": [
+      "work",
+      "to work",
+      "working"
+    ]
+  },
+  {
+    "question": "Try ___ that button and see what happens.",
+    "correct": "pressing",
+    "options": [
+      "pressing",
+      "to press",
+      "press"
+    ]
+  },
+  {
+    "question": "I seem ___ them.",
+    "correct": "to have lost",
+    "options": [
+      "to have lost",
+      "to lose",
+      "losing"
+    ]
+  },
+  {
+    "question": "It's not worth ___ a taxi.",
+    "correct": "taking",
+    "options": [
+      "taking",
+      "to take",
+      "take"
+    ]
+  },
+  {
+    "question": "I don't fancy ___ out.",
+    "correct": "going",
+    "options": [
+      "going",
+      "to go",
+      "go"
+    ]
+  },
+  {
+    "question": "He tends ___ things.",
+    "correct": "to forget",
+    "options": [
+      "to forget",
+      "forgetting",
+      "forget"
+    ]
+  },
+  {
+    "question": "Would you mind ___ me?",
+    "correct": "helping",
+    "options": [
+      "helping",
+      "to help",
+      "help"
+    ]
+  },
+  {
+    "question": "Everybody seems ___ out.",
+    "correct": "to have gone",
+    "options": [
+      "to have gone",
+      "to go",
+      "going"
+    ]
+  },
+  {
+    "question": "We're thinking of ___.",
+    "correct": "moving",
+    "options": [
+      "moving",
+      "to move",
+      "move"
+    ]
+  },
+  {
+    "question": "I was afraid ___ it.",
+    "correct": "to touch",
+    "options": [
+      "to touch",
+      "touching",
+      "touch"
+    ]
+  },
+  {
+    "question": "He's afraid of ___ robbed.",
+    "correct": "being",
+    "options": [
+      "being",
+      "to be",
+      "be"
+    ]
+  },
+  {
+    "question": "It's not worth ___.",
+    "correct": "seeing",
+    "options": [
+      "seeing",
+      "to see",
+      "see"
+    ]
+  },
+  {
+    "question": "I'm not used to ___ so far.",
+    "correct": "walking",
+    "options": [
+      "walking",
+      "to walk",
+      "walk"
+    ]
+  },
+  {
+    "question": "She seems ___ herself.",
+    "correct": "to be enjoying",
+    "options": [
+      "to be enjoying",
+      "to enjoy",
+      "enjoying"
+    ]
+  },
+  {
+    "question": "He insisted on ___ them to me.",
+    "correct": "showing",
+    "options": [
+      "showing",
+      "to show",
+      "show"
+    ]
+  },
+  {
+    "question": "I didn't expect ___ the exam.",
+    "correct": "to pass",
+    "options": [
+      "to pass",
+      "passing",
+      "pass"
+    ]
+  },
+  {
+    "question": "Did you succeed in ___ the problem?",
+    "correct": "solving",
+    "options": [
+      "solving",
+      "to solve",
+      "solve"
+    ]
+  },
+  {
+    "question": "I've given up ___ newspapers.",
+    "correct": "reading",
+    "options": [
+      "reading",
+      "to read",
+      "read"
+    ]
+  },
+  {
+    "question": "I'd rather not ___ out tonight.",
+    "correct": "go",
+    "options": [
+      "go",
+      "to go",
+      "going"
+    ]
+  },
+  {
+    "question": "He has trouble ___ at night.",
+    "correct": "sleeping",
+    "options": [
+      "sleeping",
+      "to sleep",
+      "sleep"
+    ]
+  },
+  {
+    "question": "Do you want me ___ you this evening?",
+    "correct": "to phone",
+    "options": [
+      "to phone",
+      "phoning",
+      "phone"
+    ]
+  },
+  {
+    "question": "I came in without anyone ___.",
+    "correct": "seeing me",
+    "options": [
+      "seeing me",
+      "to see me",
+      "see me"
+    ]
+  },
+  {
+    "question": "I was accused of ___ a cheat.",
+    "correct": "being",
+    "options": [
+      "being",
+      "to be",
+      "be"
+    ]
+  },
+  {
+    "question": "I'm looking forward ___ them again.",
+    "correct": "to seeing",
+    "options": [
+      "to seeing",
+      "to see",
+      "seeing"
+    ]
+  },
+  {
+    "question": "What do you advise me ___?",
+    "correct": "to do",
+    "options": [
+      "to do",
+      "doing",
+      "do"
+    ]
+  },
+  {
+    "question": "I'd like ___ gone out with you last night.",
+    "correct": "to have",
+    "options": [
+      "to have",
+      "having",
+      "have"
+    ]
+  },
+  {
+    "question": "I regret ___ your advice.",
+    "correct": "not taking",
+    "options": [
+      "not taking",
+      "not to take",
+      "not take"
+    ]
+  },
+  {
+    "question": "We expected ___ late.",
+    "correct": "to be",
+    "options": [
+      "to be",
+      "being",
+      "be"
+    ]
+  },
+  {
+    "question": "We expected Dan ___ late.",
+    "correct": "to be",
+    "options": [
+      "to be",
+      "being",
+      "be"
+    ]
+  },
+  {
+    "question": "Would you like ___ now?",
+    "correct": "to go",
+    "options": [
+      "to go",
+      "going",
+      "go"
+    ]
+  },
+  {
+    "question": "Would you like me ___ now?",
+    "correct": "to go",
+    "options": [
+      "to go",
+      "going",
+      "go"
+    ]
+  },
+  {
+    "question": "He doesn't want anybody ___.",
+    "correct": "to know",
+    "options": [
+      "to know",
+      "knowing",
+      "know"
+    ]
+  },
+  {
+    "question": "Do you want me ___ with you?",
+    "correct": "to come",
+    "options": [
+      "to come",
+      "coming",
+      "come"
+    ]
+  },
+  {
+    "question": "Can you help me ___ this table?",
+    "correct": "move",
+    "options": [
+      "move",
+      "to move",
+      "moving"
+    ]
+  },
+  {
+    "question": "Can you remind me ___ Sam tomorrow?",
+    "correct": "to call",
+    "options": [
+      "to call",
+      "calling",
+      "call"
+    ]
+  },
+  {
+    "question": "Who taught you ___?",
+    "correct": "to drive",
+    "options": [
+      "to drive",
+      "driving",
+      "drive"
+    ]
+  },
+  {
+    "question": "I got somebody ___ me.",
+    "correct": "to help",
+    "options": [
+      "to help",
+      "helping",
+      "help"
+    ]
+  },
+  {
+    "question": "Joe warned me not ___ the switch.",
+    "correct": "to touch",
+    "options": [
+      "to touch",
+      "touching",
+      "touch"
+    ]
+  },
+  {
+    "question": "I was warned not ___ the switch.",
+    "correct": "to touch",
+    "options": [
+      "to touch",
+      "touching",
+      "touch"
+    ]
+  },
+  {
+    "question": "Jane suggested that I ___ your advice.",
+    "correct": "ask",
+    "options": [
+      "ask",
+      "to ask",
+      "asking"
+    ]
+  },
+  {
+    "question": "I wouldn't advise ___ in that hotel.",
+    "correct": "staying",
+    "options": [
+      "staying",
+      "to stay",
+      "stay"
+    ]
+  },
+  {
+    "question": "I wouldn't advise anybody ___ in that hotel.",
+    "correct": "to stay",
+    "options": [
+      "to stay",
+      "staying",
+      "stay"
+    ]
+  },
+  {
+    "question": "They don't allow ___ in front of the building.",
+    "correct": "parking",
+    "options": [
+      "parking",
+      "to park",
+      "park"
+    ]
+  },
+  {
+    "question": "They don't allow people ___ in front of the building.",
+    "correct": "to park",
+    "options": [
+      "to park",
+      "parking",
+      "park"
+    ]
+  },
+  {
+    "question": "You aren't allowed ___ in front of the building.",
+    "correct": "to park",
+    "options": [
+      "to park",
+      "parking",
+      "park"
+    ]
+  },
+  {
+    "question": "I made him ___ that he wouldn't tell anybody.",
+    "correct": "promise",
+    "options": [
+      "promise",
+      "to promise",
+      "promising"
+    ]
+  },
+  {
+    "question": "Hot weather makes me ___ tired.",
+    "correct": "feel",
+    "options": [
+      "feel",
+      "to feel",
+      "feeling"
+    ]
+  },
+  {
+    "question": "Her parents wouldn't let her ___ out alone.",
+    "correct": "go",
+    "options": [
+      "go",
+      "to go",
+      "going"
+    ]
+  },
+  {
+    "question": "Let me ___ your bag for you.",
+    "correct": "carry",
+    "options": [
+      "carry",
+      "to carry",
+      "carrying"
+    ]
+  },
+  {
+    "question": "We were made ___ for two hours.",
+    "correct": "to wait",
+    "options": [
+      "to wait",
+      "wait",
+      "waiting"
+    ]
+  },
+  {
+    "question": "She told him ___ her at the station.",
+    "correct": "to meet",
+    "options": [
+      "to meet",
+      "meeting",
+      "meet"
+    ]
+  },
+  {
+    "question": "They invited him ___ and stay with them.",
+    "correct": "to come",
+    "options": [
+      "to come",
+      "coming",
+      "come"
+    ]
+  },
+  {
+    "question": "He reminded her ___ Joe.",
+    "correct": "to call",
+    "options": [
+      "to call",
+      "calling",
+      "call"
+    ]
+  },
+  {
+    "question": "She warned him ___ careful.",
+    "correct": "to be",
+    "options": [
+      "to be",
+      "being",
+      "be"
+    ]
+  },
+  {
+    "question": "He asked her ___ him a hand.",
+    "correct": "to give",
+    "options": [
+      "to give",
+      "giving",
+      "give"
+    ]
+  },
+  {
+    "question": "My father allowed me ___ his car.",
+    "correct": "to use",
+    "options": [
+      "to use",
+      "using",
+      "use"
+    ]
+  },
+  {
+    "question": "I didn't expect it ___.",
+    "correct": "to rain",
+    "options": [
+      "to rain",
+      "raining",
+      "rain"
+    ]
+  },
+  {
+    "question": "Let him ___ what he wants.",
+    "correct": "do",
+    "options": [
+      "do",
+      "to do",
+      "doing"
+    ]
+  },
+  {
+    "question": "Tim's glasses make him ___ older.",
+    "correct": "look",
+    "options": [
+      "look",
+      "to look",
+      "looking"
+    ]
+  },
+  {
+    "question": "I want ___ the truth.",
+    "correct": "to know",
+    "options": [
+      "to know",
+      "knowing",
+      "know"
+    ]
+  },
+  {
+    "question": "Sarah persuaded me ___ for the job.",
+    "correct": "to apply",
+    "options": [
+      "to apply",
+      "applying",
+      "apply"
+    ]
+  },
+  {
+    "question": "My lawyer advised me not ___ anything to the police.",
+    "correct": "to say",
+    "options": [
+      "to say",
+      "saying",
+      "say"
+    ]
+  },
+  {
+    "question": "I was warned not ___ everything he says.",
+    "correct": "to believe",
+    "options": [
+      "to believe",
+      "believing",
+      "believe"
+    ]
+  },
+  {
+    "question": "Having a car enables you ___ around more easily.",
+    "correct": "to get",
+    "options": [
+      "to get",
+      "getting",
+      "get"
+    ]
+  },
+  {
+    "question": "I'd like ___ there.",
+    "correct": "to go",
+    "options": [
+      "to go",
+      "going",
+      "go"
+    ]
+  },
+  {
+    "question": "The film was very sad. It made me ___.",
+    "correct": "cry",
+    "options": [
+      "cry",
+      "to cry",
+      "crying"
+    ]
+  },
+  {
+    "question": "Lisa's parents always encouraged her ___ hard at school.",
+    "correct": "to study",
+    "options": [
+      "to study",
+      "studying",
+      "study"
+    ]
+  },
+  {
+    "question": "I'd advise ___ early.",
+    "correct": "booking",
+    "options": [
+      "booking",
+      "to book",
+      "book"
+    ]
+  },
+  {
+    "question": "Sarah wouldn't let me ___ her car.",
+    "correct": "borrow",
+    "options": [
+      "borrow",
+      "to borrow",
+      "borrowing"
+    ]
+  },
+  {
+    "question": "You are normally not allowed ___ there.",
+    "correct": "to work",
+    "options": [
+      "to work",
+      "working",
+      "work"
+    ]
+  },
+  {
+    "question": "What makes you ___ that?",
+    "correct": "think",
+    "options": [
+      "think",
+      "to think",
+      "thinking"
+    ]
+  }
+]
