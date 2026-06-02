@@ -19,93 +19,102 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 40px 20px 60px;
+      padding: 24px 16px 40px;
     }
 
     .header {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
 
     .logo {
-      font-size: clamp(32px, 8vw, 56px);
+      font-size: clamp(28px, 7vw, 48px);
       font-weight: 900;
       color: #1a1a2e;
     }
 
-    .logo span {
-      color: #1a1a2e;
-    }
-
     .tagline {
-      font-size: clamp(13px, 3vw, 16px);
+      font-size: clamp(12px, 2.8vw, 15px);
       color: rgba(0, 0, 0, 0.45);
-      margin-top: 6px;
+      margin-top: 4px;
     }
 
     .section-title {
-      font-size: clamp(12px, 2.8vw, 15px);
+      font-size: clamp(11px, 2.5vw, 14px);
       text-transform: uppercase;
       letter-spacing: 3px;
       color: rgba(0, 0, 0, 0.4);
-      margin-bottom: 18px;
-      text-align: center;
+    }
+
+    .how-to-play {
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.4);
+      text-decoration: none;
+      border: 1px solid rgba(0, 0, 0, 0.18);
+      border-radius: 20px;
+      padding: 3px 12px;
+      background: rgba(255, 255, 255, 0.5);
+      white-space: nowrap;
     }
 
     .grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
+      gap: 10px;
       justify-content: center;
       width: 100%;
-      max-width: 720px;
+      max-width: 560px;
     }
 
     .card {
       background: white;
       border-radius: 10px;
-      padding: 18px 24px;
+      padding: 12px 16px;
       cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-      font-size: clamp(18px, 5vw, 26px);
-      font-weight: bold;
+      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.11);
       color: #222;
       text-align: center;
       transition: transform 0.15s, box-shadow 0.15s;
-      min-width: 160px;
       user-select: none;
       text-decoration: none;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 6px;
+      gap: 3px;
+      min-width: 130px;
+      flex: 1 1 130px;
+      max-width: 200px;
     }
 
     .card:hover {
-      transform: scale(1.06);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
     }
 
     .card:active {
       transform: scale(1.02);
     }
 
-    .card-count {
-      font-size: clamp(11px, 2.5vw, 13px);
-      font-weight: normal;
-      color: #888;
+    .card-title {
+      font-size: clamp(15px, 4vw, 19px);
+      font-weight: bold;
     }
 
-    .card.soon {
-      opacity: 0.45;
-      cursor: default;
-      pointer-events: none;
+    .card-subtitle {
+      font-size: clamp(10px, 2.3vw, 12px);
+      color: #999;
+      font-style: italic;
+    }
+
+    .card-count {
+      font-size: clamp(10px, 2.3vw, 12px);
+      color: #aaa;
+      margin-top: 2px;
     }
 
     #loading {
       color: rgba(0, 0, 0, 0.4);
-      font-size: 15px;
-      margin-top: 20px;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -117,25 +126,20 @@
     <div class="tagline">Catch the right word. Learn English grammar. Enjoy yourself!</div>
   </div>
 
-  <div style="text-align:center;margin-bottom:12px;"><a href="help.html"
-      style="font-size:13px;color:rgba(0,0,0,0.45);text-decoration:none;border:1px solid rgba(0,0,0,0.2);border-radius:20px;padding:4px 14px;background:rgba(255,255,255,0.5);">📖
-      How to Play</a></div>
-  <div class="section-title">Choose a lesson</div>
+  <div style="text-align:center;margin-bottom:8px;">
+    <a href="help.html" class="how-to-play">📖 How to Play</a>
+  </div>
+  <div class="section-title" style="text-align:center;margin-bottom:14px;">Choose a lesson</div>
 
   <div class="grid" id="grid">
     <div id="loading">Loading topics...</div>
   </div>
 
   <script>
-    // Capitalize and prettify filename → topic name
     function formatName(filename) {
-      return filename
-        .replace(/-/g, ' ')
-        .replace(/_/g, ' ')
-        .replace(/\b\w/g, c => c.toUpperCase());
+      return filename.replace(/-/g, ' ').replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
     }
 
-    // Load topics from index.json manifest
     fetch('questions/index.json')
       .then(r => r.json())
       .then(topics => {
@@ -146,7 +150,8 @@
           card.className = 'card';
           card.href = `game.html?topic=${t.file}`;
           card.innerHTML = `
-        <div>${formatName(t.file)}</div>
+        <div class="card-title">${formatName(t.file)}</div>
+        ${t.subtitle ? `<div class="card-subtitle">${t.subtitle}</div>` : ''}
         <div class="card-count">${t.count ? t.count + ' questions' : 'coming soon'}</div>
       `;
           grid.appendChild(card);
