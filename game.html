@@ -244,6 +244,28 @@
       transition: 0.3s;
     }
 
+    @keyframes particleFly {
+      0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translate(var(--px), var(--py)) scale(0);
+        opacity: 0;
+      }
+    }
+
+    .burst-particle {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 20;
+      animation: particleFly 0.5s ease-out forwards;
+    }
+
     .word-incorrect {
       background-color: #f44336 !important;
       color: white;
@@ -882,6 +904,26 @@
     }
 
     /* ---------- handle answer ---------- */
+    function burstWord(wordElement) {
+      const rect = wordElement.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const colors = ["#4CAF50", "#8BC34A", "#CDDC39", "#fff", "#a5d6a7"];
+      for (let i = 0; i < 10; i++) {
+        const p = document.createElement("div");
+        p.className = "burst-particle";
+        const angle = (i / 10) * Math.PI * 2;
+        const dist = 40 + Math.random() * 40;
+        p.style.setProperty("--px", Math.cos(angle) * dist + "px");
+        p.style.setProperty("--py", Math.sin(angle) * dist + "px");
+        p.style.left = (cx - 5) + "px";
+        p.style.top = (cy - 5) + "px";
+        p.style.background = colors[i % colors.length];
+        document.getElementById("game").appendChild(p);
+        setTimeout(() => p.remove(), 500);
+      }
+    }
+
     function showAnswerInQuestion(isCorrect) {
       const correct = currentQuestion.correct;
       const filled = currentQuestion.question.replace("___", `<span class="answer-highlight">${correct}</span>`);
@@ -897,6 +939,7 @@
       if (questionStartTime) { totalAnswerMs += Date.now() - questionStartTime; answeredCount++; questionStartTime = 0; }
       if (isCorrect) {
         wordElement.classList.add("word-correct");
+        burstWord(wordElement);
         soundCorrect();
         score++; streak++;
         if (streak % 5 === 0) { showCombo(streak); soundCombo(); }
@@ -1142,8 +1185,8 @@
     });
     document.addEventListener("mousedown", e => { if (e.button === 0 && !e.target.closest("#whyBtn") && !e.target.closest("#whyBtnGameOver") && !e.target.closest("#question") && !e.target.closest("#menuBtn") && !e.target.closest("#autoWhyLabel") && !e.target.closest("#player") && !e.target.closest("#clownIndicator") && !e.target.closest(".word")) shoot(); });
     document.addEventListener("wheel", e => {
-      if (e.deltaY < 0) globalSpeedMultiplier = Math.min(globalSpeedMultiplier + 0.2, 4);
-      else globalSpeedMultiplier = Math.max(globalSpeedMultiplier - 0.2, 0.3);
+      if (e.deltaY < 0) globalSpeedMultiplier = Math.max(globalSpeedMultiplier - 0.2, 0.3);
+      else globalSpeedMultiplier = Math.min(globalSpeedMultiplier + 0.2, 4);
       updateUI();
     });
     let arrowInterval = null;
