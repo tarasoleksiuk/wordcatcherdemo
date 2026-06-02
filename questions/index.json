@@ -1,26 +1,32 @@
 [
   {
     "file": "articles",
-    "count": 350
+    "count": 350,
+    "subtitle": "a, -, the, an"
   },
   {
     "file": "reflexive-pronouns",
-    "count": 88
+    "count": 88,
+    "subtitle": "themselves, each other, yourself, ourselves"
   },
   {
     "file": "relative-clauses",
-    "count": 163
+    "count": 163,
+    "subtitle": "who, which, that, where, whose"
   },
   {
     "file": "ing-and-to-(R)",
-    "count": 143
+    "count": 143,
+    "subtitle": "doing, to do, done"
   },
   {
     "file": "ing-and-to-part 1-(B)",
-    "count": 178
+    "count": 178,
+    "subtitle": "doing, to do, done"
   },
   {
     "file": "ing-and-to-part-2-(B)",
-    "count": 137
+    "count": 137,
+    "subtitle": "doing, to do, done"
   }
 ]
