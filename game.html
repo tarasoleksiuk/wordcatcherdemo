@@ -445,7 +445,7 @@ function toggleSound() {
 // Long press detection to toggle sound
 // Sound icon click
 document.getElementById("soundIcon").addEventListener("click", e => { e.stopPropagation(); toggleSound(); });
-document.getElementById("soundIcon").addEventListener("touchstart", e => { e.stopPropagation(); e.preventDefault(); toggleSound(); }, { passive: false });
+document.getElementById("soundIcon").addEventListener("touchstart", e => { e.stopPropagation(); e.preventDefault(); ignoreTouchMove = true; toggleSound(); }, { passive: false });
 
 function updateUI() {
   speedUI.textContent = "x" + globalSpeedMultiplier.toFixed(1);
@@ -885,10 +885,11 @@ game.addEventListener("touchstart", e => {
   if (e.target.closest("#menuBtn")) return;
   if (e.target.closest("#autoWhyLabel")) return;
   if (e.target.closest("#clownIndicator")) return;
+  if (e.target.closest("#ui")) return;
   e.preventDefault();
   const t = e.touches[0];
   touchStartX = t.clientX;
-  touchStartY = t.clientY; // always reset reference on new touch
+  touchStartY = t.clientY;
   if (!paused) {
     playerX = t.clientX;
     player.style.left = playerX + "px";
@@ -897,12 +898,13 @@ game.addEventListener("touchstart", e => {
 
 game.addEventListener("touchmove", e => {
   if (e.target.closest(".word")) return;
+  if (e.target.closest("#ui")) return;
   e.preventDefault();
   const t = e.touches[0];
   const dy = t.clientY - touchStartY;
   const dx = t.clientX - touchStartX;
 
-  // Horizontal drag — move player
+  // Horizontal drag — move player (only if not over UI)
   playerX = t.clientX;
   player.style.left = playerX + "px";
 
