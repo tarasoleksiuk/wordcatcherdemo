@@ -2,311 +2,559 @@
   {
     "question": "Helen has been in Ireland ___ Monday.",
     "correct": "since",
-    "options": ["since", "for", "ago"]
+    "options": [
+      "since",
+      "for",
+      "ago"
+    ]
   },
   {
     "question": "Helen has been in Ireland ___ three days.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "My aunt has lived in Australia ___ 15 years.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "Tina is in her office. She has been there ___ 7 o'clock.",
     "correct": "since",
-    "options": ["since", "for", "ago"]
+    "options": [
+      "since",
+      "for",
+      "ago"
+    ]
   },
   {
     "question": "India has been an independent country ___ 1947.",
     "correct": "since",
-    "options": ["since", "for", "ago"]
+    "options": [
+      "since",
+      "for",
+      "ago"
+    ]
   },
   {
     "question": "The bus is late. We've been waiting ___ 20 minutes.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "Nobody lives in those houses. They have been empty ___ many years.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "Michael has been ill ___ a long time.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "He has been in hospital ___ October.",
     "correct": "since",
-    "options": ["since", "for", "ago"]
+    "options": [
+      "since",
+      "for",
+      "ago"
+    ]
   },
   {
     "question": "Helen arrived in Ireland three days ___.",
     "correct": "ago",
-    "options": ["ago", "since", "before"]
+    "options": [
+      "ago",
+      "since",
+      "before"
+    ]
   },
   {
     "question": "Helen has been in Ireland ___ three days.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "Lynn and Mark have been married ___ 20 years.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "Lynn and Mark got married 20 years ___.",
     "correct": "ago",
-    "options": ["ago", "since", "before"]
+    "options": [
+      "ago",
+      "since",
+      "before"
+    ]
   },
   {
     "question": "Dan arrived an hour ___.",
     "correct": "ago",
-    "options": ["ago", "since", "before"]
+    "options": [
+      "ago",
+      "since",
+      "before"
+    ]
   },
   {
     "question": "I bought these shoes a few days ___.",
     "correct": "ago",
-    "options": ["ago", "since", "before"]
+    "options": [
+      "ago",
+      "since",
+      "before"
+    ]
   },
   {
     "question": "Silvia has been learning English ___ six months.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "Have you known Lisa ___ a long time?",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "Richard has been in Canada ___ six months.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "Richard has been in Canada ___ January.",
     "correct": "since",
-    "options": ["since", "for", "ago"]
+    "options": [
+      "since",
+      "for",
+      "ago"
+    ]
   },
   {
     "question": "We've been waiting ___ two hours.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "We've been waiting ___ 9 o'clock.",
     "correct": "since",
-    "options": ["since", "for", "ago"]
+    "options": [
+      "since",
+      "for",
+      "ago"
+    ]
   },
   {
     "question": "I've lived in London ___ a long time.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "I've lived in London ___ I was ten years old.",
     "correct": "since",
-    "options": ["since", "for", "ago"]
+    "options": [
+      "since",
+      "for",
+      "ago"
+    ]
   },
   {
     "question": "Susan started her new job three weeks ___.",
     "correct": "ago",
-    "options": ["ago", "since", "before"]
+    "options": [
+      "ago",
+      "since",
+      "before"
+    ]
   },
   {
     "question": "I had dinner an hour ___.",
     "correct": "ago",
-    "options": ["ago", "since", "before"]
+    "options": [
+      "ago",
+      "since",
+      "before"
+    ]
   },
   {
     "question": "Life was very different a hundred years ___.",
     "correct": "ago",
-    "options": ["ago", "since", "before"]
+    "options": [
+      "ago",
+      "since",
+      "before"
+    ]
   },
   {
     "question": "She arrived in Ireland three days ___.",
     "correct": "ago",
-    "options": ["ago", "since", "before"]
+    "options": [
+      "ago",
+      "since",
+      "before"
+    ]
   },
   {
     "question": "She has been in Ireland ___ three days.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "It's been raining ___ lunchtime.",
     "correct": "since",
-    "options": ["since", "for", "ago"]
+    "options": [
+      "since",
+      "for",
+      "ago"
+    ]
   },
   {
     "question": "Sarah has lived in Paris ___ 1995.",
     "correct": "since",
-    "options": ["since", "for", "ago"]
+    "options": [
+      "since",
+      "for",
+      "ago"
+    ]
   },
   {
     "question": "Paul has lived in Brazil ___ ten years.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "We've been sitting here ___ an hour.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "Kevin has been looking for a job ___ he left school.",
     "correct": "since",
-    "options": ["since", "for", "ago"]
+    "options": [
+      "since",
+      "for",
+      "ago"
+    ]
   },
   {
     "question": "I haven't been to a party ___ ages.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "I haven't seen him ___ last week.",
     "correct": "since",
-    "options": ["since", "for", "ago"]
+    "options": [
+      "since",
+      "for",
+      "ago"
+    ]
   },
   {
     "question": "Jane is away. She's been away ___ Friday.",
     "correct": "since",
-    "options": ["since", "for", "ago"]
+    "options": [
+      "since",
+      "for",
+      "ago"
+    ]
   },
   {
     "question": "The weather is dry. It hasn't rained ___ a few weeks.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "I've been waiting ___ two hours.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "I've been waiting ___ 8 o'clock.",
     "correct": "since",
-    "options": ["since", "for", "ago"]
+    "options": [
+      "since",
+      "for",
+      "ago"
+    ]
   },
   {
     "question": "Sally has been working here ___ six months.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "Sally has been working here ___ April.",
     "correct": "since",
-    "options": ["since", "for", "ago"]
+    "options": [
+      "since",
+      "for",
+      "ago"
+    ]
   },
   {
     "question": "I haven't seen Tom ___ three days.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "I haven't seen Tom ___ Monday.",
     "correct": "since",
-    "options": ["since", "for", "ago"]
+    "options": [
+      "since",
+      "for",
+      "ago"
+    ]
   },
   {
     "question": "They've been married ___ ten years.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "They haven't had a holiday ___ ten years.",
     "correct": "for",
-    "options": ["for", "since", "in"]
+    "options": [
+      "for",
+      "since",
+      "in"
+    ]
   },
   {
-    "question": "They haven't had a holiday ___ ten years. (negative sentence alternative)",
-    "correct": "in",
-    "options": ["in", "for", "since"]
+    "question": "They haven't had a holiday ___ ten years.",
+    "correct": "for",
+    "options": [
+      "in",
+      "for",
+      "since"
+    ]
   },
   {
     "question": "It started raining an hour ___ / at 1 o'clock.",
     "correct": "ago",
-    "options": ["ago", "since", "before"]
+    "options": [
+      "ago",
+      "since",
+      "before"
+    ]
   },
   {
     "question": "It's been raining ___ an hour.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "It's been raining ___ 1 o'clock.",
     "correct": "since",
-    "options": ["since", "for", "ago"]
+    "options": [
+      "since",
+      "for",
+      "ago"
+    ]
   },
   {
     "question": "They first met a long time ___.",
     "correct": "ago",
-    "options": ["ago", "since", "before"]
+    "options": [
+      "ago",
+      "since",
+      "before"
+    ]
   },
   {
     "question": "They've known each other ___ a long time.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "They've known each other ___ they were at school.",
     "correct": "since",
-    "options": ["since", "for", "ago"]
+    "options": [
+      "since",
+      "for",
+      "ago"
+    ]
   },
   {
     "question": "It's two years ___ I last saw Joe.",
     "correct": "since",
-    "options": ["since", "for", "ago"]
+    "options": [
+      "since",
+      "for",
+      "ago"
+    ]
   },
   {
     "question": "It's ages ___ we went to the cinema.",
     "correct": "since",
-    "options": ["since", "for", "ago"]
+    "options": [
+      "since",
+      "for",
+      "ago"
+    ]
   },
   {
     "question": "Mark and Sarah are married. They have been married ___ five years.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "David has been watching TV ___ 5 o'clock.",
     "correct": "since",
-    "options": ["since", "for", "ago"]
+    "options": [
+      "since",
+      "for",
+      "ago"
+    ]
   },
   {
     "question": "I haven't had a holiday ___ five years.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "Ann and Jess are friends. They've known each other ___ years.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "George has had the same job ___ 20 years.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "Some friends of ours are staying with us. They have been here ___ Monday.",
     "correct": "since",
-    "options": ["since", "for", "ago"]
+    "options": [
+      "since",
+      "for",
+      "ago"
+    ]
   },
   {
     "question": "I've been here ___ five days.",
     "correct": "for",
-    "options": ["for", "since", "ago"]
+    "options": [
+      "for",
+      "since",
+      "ago"
+    ]
   },
   {
     "question": "I've known Helen ___ we were at school together.",
     "correct": "since",
-    "options": ["since", "for", "ago"]
+    "options": [
+      "since",
+      "for",
+      "ago"
+    ]
   }
 ]
