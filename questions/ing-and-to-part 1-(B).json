@@ -433,11 +433,11 @@
   },
   {
     "question": "I pretended ___ the paper.",
-    "correct": "to be reading",
+    "correct": "to read",
     "options": [
-      "to be reading",
+      "reading",
       "to read",
-      "reading"
+      "read"
     ]
   },
   {
