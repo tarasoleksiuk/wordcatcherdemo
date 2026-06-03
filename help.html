@@ -1,415 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>How to Play — Word Catcher</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #87ceeb, #dff6ff);
-      min-height: 100vh;
-      padding: 20px 16px 60px;
-      color: #1a1a2e;
-      transition: background 0.4s, color 0.4s;
-    }
-
-    body.night {
-      background: linear-gradient(to bottom, #0d1b2a, #1b2e45);
-      color: #cde;
-    }
-
-    body.night .logo {
-      color: #cde;
-    }
-
-    body.night .subtitle {
-      color: rgba(180, 210, 240, 0.5);
-    }
-
-    body.night .back-btn {
-      background: rgba(255, 255, 255, 0.1);
-      color: #cde;
-    }
-
-    body.night .section {
-      background: #1e3a5f;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    body.night .section p {
-      color: #b0cce0;
-    }
-
-    body.night .section-title {
-      color: #e8f4ff;
-    }
-
-    body.night kbd {
-      background: #0d2137;
-      border-color: #2a4a6a;
-      color: #cde;
-    }
-
-    body.night .controls td:first-child {
-      color: #7aacc8;
-    }
-
-    body.night .controls tr:not(:last-child) td {
-      border-color: #1a3550;
-    }
-
-    body.night .stat-card {
-      background: #152d45;
-    }
-
-    body.night .stat-card .label {
-      color: #5a8aaa;
-    }
-
-    body.night .tip {
-      background: #1a2e1a;
-      border-left-color: #ffc800;
-      color: #9ab;
-    }
-
-    body.night .tip strong {
-      color: #cde;
-    }
-
-    body.night .secret {
-      background: #0a1520;
-    }
-
-    #nightToggle {
-      position: fixed;
-      top: 12px;
-      right: 14px;
-      font-size: 20px;
-      cursor: pointer;
-      user-select: none;
-      z-index: 100;
-    }
-
-    .header {
-      text-align: center;
-      margin-bottom: 28px;
-    }
-
-    .logo {
-      font-size: clamp(26px, 6vw, 44px);
-      font-weight: 900;
-      color: #1a1a2e;
-    }
-
-    .subtitle {
-      font-size: clamp(13px, 3vw, 16px);
-      color: rgba(0, 0, 0, 0.45);
-      margin-top: 4px;
-    }
-
-    .back-btn {
-      display: inline-block;
-      margin-bottom: 20px;
-      background: rgba(0, 0, 0, 0.12);
-      color: #1a1a2e;
-      border: none;
-      border-radius: 10px;
-      padding: 6px 14px;
-      font-size: clamp(12px, 3vw, 15px);
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .section {
-      background: white;
-      border-radius: 14px;
-      padding: 18px 20px;
-      margin-bottom: 14px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-      max-width: 720px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .section+.section {
-      margin-top: 14px;
-    }
-
-    .section-title {
-      font-size: clamp(15px, 3.8vw, 19px);
-      font-weight: bold;
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .section p {
-      font-size: clamp(13px, 3.2vw, 15px);
-      line-height: 1.65;
-      color: #333;
-      margin-bottom: 8px;
-    }
-
-    .section p:last-child {
-      margin-bottom: 0;
-    }
-
-    kbd {
-      display: inline-block;
-      background: #f0f0f0;
-      border: 1px solid #ccc;
-      border-bottom: 2px solid #aaa;
-      border-radius: 5px;
-      padding: 2px 8px;
-      font-size: clamp(11px, 2.8vw, 13px);
-      font-family: monospace;
-      font-weight: bold;
-    }
-
-    .controls {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: clamp(12px, 3vw, 14px);
-    }
-
-    .controls tr:not(:last-child) td {
-      border-bottom: 1px solid #f0f0f0;
-    }
-
-    .controls td {
-      padding: 7px 6px;
-      vertical-align: middle;
-    }
-
-    .controls td:first-child {
-      width: 40%;
-      color: #555;
-    }
-
-    .controls td:last-child {
-      font-weight: 500;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-      gap: 8px;
-      margin-top: 4px;
-    }
-
-    .stat-card {
-      background: #f7f9ff;
-      border-radius: 10px;
-      padding: 9px 11px;
-      font-size: clamp(11px, 2.8vw, 13px);
-      line-height: 1.4;
-    }
-
-    .stat-card .icon {
-      font-size: 18px;
-      margin-bottom: 3px;
-    }
-
-    .stat-card .label {
-      color: #888;
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .tip {
-      background: #fffde7;
-      border-left: 4px solid #ffc800;
-      border-radius: 0 8px 8px 0;
-      padding: 9px 13px;
-      font-size: clamp(12px, 3vw, 14px);
-      color: #555;
-      margin-top: 10px;
-      line-height: 1.55;
-    }
-
-    .tip strong {
-      color: #333;
-    }
-
-    .secret {
-      background: #1a1a2e;
-      color: white;
-      border-radius: 14px;
-      padding: 16px 20px;
-      max-width: 720px;
-      margin: 14px auto 0;
-      font-size: clamp(13px, 3.2vw, 15px);
-      line-height: 1.65;
-    }
-
-    .secret-title {
-      font-size: clamp(15px, 4vw, 18px);
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<title>How to Play — Word Catcher</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #87ceeb, #dff6ff);
+    min-height: 100vh; padding: 20px 16px 60px;
+    color: #1a1a2e; transition: background 0.4s, color 0.4s;
+  }
+  body.night { background: linear-gradient(to bottom, #0d1b2a, #1b2e45); color: #cde; }
+  body.night .logo { color: #cde; }
+  body.night .subtitle { color: rgba(180,210,240,0.5); }
+  body.night .back-btn { background: rgba(255,255,255,0.1); color: #cde; }
+  body.night .section { background: #1e3a5f; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+  body.night .section p { color: #b0cce0; }
+  body.night .section-title { color: #e8f4ff; }
+  body.night kbd { background: #0d2137; border-color: #2a4a6a; color: #cde; }
+  body.night .controls td:first-child { color: #7aacc8; }
+  body.night .controls tr:not(:last-child) td { border-color: #1a3550; }
+  body.night .stat-card { background: #152d45; }
+  body.night .stat-card .label { color: #5a8aaa; }
+  body.night .tip { background: #1a2e1a; border-left-color: #ffc800; color: #9ab; }
+  body.night .tip strong { color: #cde; }
+  body.night .secret { background: #0a1520; }
+  #nightToggle { position: fixed; top: 12px; right: 14px; font-size: 20px; cursor: pointer; user-select: none; z-index: 100; }
+  .header { text-align: center; margin-bottom: 28px; }
+  .logo { font-size: clamp(26px, 6vw, 44px); font-weight: 900; color: #1a1a2e; }
+  .subtitle { font-size: clamp(13px, 3vw, 16px); color: rgba(0,0,0,0.45); margin-top: 4px; }
+  .back-btn { display: inline-block; margin-bottom: 20px; background: rgba(0,0,0,0.12); color: #1a1a2e; border: none; border-radius: 10px; padding: 6px 14px; font-size: clamp(12px, 3vw, 15px); cursor: pointer; text-decoration: none; }
+  .section { background: white; border-radius: 14px; padding: 18px 20px; margin-bottom: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); max-width: 720px; margin-left: auto; margin-right: auto; }
+  .section + .section { margin-top: 14px; }
+  .section-title { font-size: clamp(15px, 3.8vw, 19px); font-weight: bold; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .section p { font-size: clamp(13px, 3.2vw, 15px); line-height: 1.65; color: #333; margin-bottom: 8px; }
+  .section p:last-child { margin-bottom: 0; }
+  kbd { display: inline-block; background: #f0f0f0; border: 1px solid #ccc; border-bottom: 2px solid #aaa; border-radius: 5px; padding: 2px 8px; font-size: clamp(11px, 2.8vw, 13px); font-family: monospace; font-weight: bold; }
+  .controls { width: 100%; border-collapse: collapse; font-size: clamp(12px, 3vw, 14px); }
+  .controls tr:not(:last-child) td { border-bottom: 1px solid #f0f0f0; }
+  .controls td { padding: 7px 6px; vertical-align: middle; }
+  .controls td:first-child { width: 40%; color: #555; }
+  .controls td:last-child { font-weight: 500; }
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 8px; margin-top: 4px; }
+  .stat-card { background: #f7f9ff; border-radius: 10px; padding: 9px 11px; font-size: clamp(11px, 2.8vw, 13px); line-height: 1.4; }
+  .stat-card .icon { font-size: 18px; margin-bottom: 3px; }
+  .stat-card .label { color: #888; font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .tip { background: #fffde7; border-left: 4px solid #ffc800; border-radius: 0 8px 8px 0; padding: 9px 13px; font-size: clamp(12px, 3vw, 14px); color: #555; margin-top: 10px; line-height: 1.55; }
+  .tip strong { color: #333; }
+  .secret { background: #1a1a2e; color: white; border-radius: 14px; padding: 16px 20px; max-width: 720px; margin: 14px auto 0; font-size: clamp(13px, 3.2vw, 15px); line-height: 1.65; }
+  .secret-title { font-size: clamp(15px, 4vw, 18px); font-weight: bold; margin-bottom: 8px; }
+</style>
 </head>
-
 <body>
 
-  <div id="nightToggle">☀️</div>
+<div id="nightToggle">☀️</div>
 
-  <div style="max-width:720px;margin:0 auto;">
-    <a class="back-btn" href="index.html">← Back to Menu</a>
+<div style="max-width:720px;margin:0 auto;">
+  <a class="back-btn" href="index.html">← Back to Menu</a>
 
-    <div class="header">
-      <div class="logo">Word 😀 <span>Catcher</span></div>
-      <div class="subtitle">How to Play</div>
-    </div>
+  <div class="header">
+    <div class="logo">Word 😀 <span>Catcher</span></div>
+    <div class="subtitle">How to Play</div>
+  </div>
 
-    <div class="section">
-      <div class="section-title">🎯 Goal</div>
-      <p>Words fall from the top of the screen. Move your character under the correct word or tap it directly to answer
-        the grammar question shown at the top. Complete all questions with as few mistakes as possible!</p>
-    </div>
+  <div class="section">
+    <div class="section-title">🎯 Goal</div>
+    <p>Words fall from the top of the screen. Move your character under the correct word or tap it directly to answer the grammar question shown at the top. Complete all questions with as few mistakes as possible!</p>
+  </div>
 
-    <div class="section">
-      <div class="section-title">✅ How to Answer</div>
-      <table class="controls">
-        <tr>
-          <td>📱 Mobile</td>
-          <td>Tap directly on the correct word block</td>
-        </tr>
-        <tr>
-          <td>🖥️ Desktop — mouse</td>
-          <td>Move cursor to position your character, then click to shoot</td>
-        </tr>
-        <tr>
-          <td>🖥️ Desktop — keyboard</td>
-          <td><kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> — select word 1, 2, or 3</td>
-        </tr>
-      </table>
-      <div class="tip"><strong>Correct answer?</strong> The word block bursts with a green particle effect 🎆 and the
-        correct word is highlighted in yellow in the sentence.</div>
-    </div>
+  <div class="section">
+    <div class="section-title">✅ How to Answer</div>
+    <table class="controls">
+      <tr><td>📱 Mobile</td><td>Tap directly on the correct word block</td></tr>
+      <tr><td>🖥️ Desktop — mouse</td><td>Move cursor to position your character, then click to shoot</td></tr>
+      <tr><td>🖥️ Desktop — keyboard</td><td><kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> — select word 1, 2, or 3</td></tr>
+    </table>
+    <div class="tip"><strong>Correct answer?</strong> The word block bursts with a green particle effect 🎆 and the correct word is highlighted in yellow in the sentence.</div>
+  </div>
 
-    <div class="section">
-      <div class="section-title">🕹️ Controls</div>
-      <table class="controls">
-        <tr>
-          <td>Move character</td>
-          <td>Mouse / <kbd>←</kbd> <kbd>→</kbd> / drag finger</td>
-        </tr>
-        <tr>
-          <td>Pause / Unpause</td>
-          <td>Tap the sentence at the top or <kbd>Space</kbd></td>
-        </tr>
-        <tr>
-          <td>Speed up</td>
-          <td>Scroll down / <kbd>↓</kbd> / swipe down (mobile)</td>
-        </tr>
-        <tr>
-          <td>Speed down</td>
-          <td>Scroll up / <kbd>↑</kbd> / swipe up (mobile)</td>
-        </tr>
-        <tr>
-          <td>Sound on/off</td>
-          <td><kbd>M</kbd> or tap 🔇/🔊 icon</td>
-        </tr>
-        <tr>
-          <td>Night mode</td>
-          <td>Tap ☀️/🌙 icon (top right corner)</td>
-        </tr>
-        <tr>
-          <td>Why? (Google)</td>
-          <td>Tap <strong>🔍 Why?</strong> button or <kbd>W</kbd></td>
-        </tr>
-        <tr>
-          <td>Restart</td>
-          <td><kbd>R</kbd></td>
-        </tr>
-      </table>
-    </div>
+  <div class="section">
+    <div class="section-title">🕹️ Controls</div>
+    <table class="controls">
+      <tr><td>Move character</td><td>Mouse / <kbd>←</kbd> <kbd>→</kbd> / drag finger</td></tr>
+      <tr><td>Pause / Unpause</td><td>Tap the sentence at the top or <kbd>Space</kbd></td></tr>
+      <tr><td>Speed up</td><td>Scroll down / <kbd>↓</kbd> / swipe down (mobile)</td></tr>
+      <tr><td>Speed down</td><td>Scroll up / <kbd>↑</kbd> / swipe up (mobile)</td></tr>
+      <tr><td>Sound on/off</td><td><kbd>M</kbd> or tap 🔇/🔊 icon</td></tr>
+      <tr><td>Night mode</td><td>Tap ☀️/🌙 icon (top right corner)</td></tr>
+      <tr><td>Slow Mode 😴</td><td>Double-tap the ⏱ timer — auto-pauses after each question</td></tr>
+      <tr><td>Why? (Google)</td><td>Tap <strong>🔍 Why?</strong> button or <kbd>W</kbd></td></tr>
+      <tr><td>Restart</td><td><kbd>R</kbd></td></tr>
+    </table>
+  </div>
 
-    <div class="section">
-      <div class="section-title">❤️ Lives & Scoring</div>
-      <p>You start with <strong>3 lives</strong>. You lose a life when you choose the wrong word or the correct word
-        falls past your character.</p>
-      <p>Every <strong>5 correct answers in a row</strong> earns <strong>+1 life</strong> and triggers a combo effect 🔥
-      </p>
-      <div class="tip"><strong>Wrong answer?</strong> The correct word is shown in yellow for 3 seconds. Click
-        <strong>🔍 Why?</strong> during those 3 seconds for a Google explanation. Enable the <strong>"auto"</strong>
-        checkbox next to Why? to open it automatically after every mistake.</div>
-    </div>
+  <div class="section">
+    <div class="section-title">❤️ Lives & Scoring</div>
+    <p>You start with <strong>3 lives</strong>. You lose a life when you choose the wrong word or the correct word falls past your character.</p>
+    <p>Every <strong>5 correct answers in a row</strong> earns <strong>+1 life</strong> and triggers a combo effect 🔥</p>
+    <div class="tip"><strong>Wrong answer?</strong> The correct word is shown in yellow for 3 seconds. Click <strong>🔍 Why?</strong> during those 3 seconds for a Google explanation. Enable the <strong>"auto"</strong> checkbox next to Why? to open it automatically after every mistake.</div>
+  </div>
 
-    <div class="section">
-      <div class="section-title">📊 Stats Bar</div>
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="icon">🔍</div>
-          <div class="label">Why clicks</div>Times you asked for explanation
-        </div>
-        <div class="stat-card">
-          <div class="icon">✅</div>
-          <div class="label">Progress</div>Unique correct answers / total
-        </div>
-        <div class="stat-card">
-          <div class="icon">❤️</div>
-          <div class="label">Lives</div>Remaining lives
-        </div>
-        <div class="stat-card">
-          <div class="icon">⚡</div>
-          <div class="label">Speed</div>Falling speed multiplier
-        </div>
-        <div class="stat-card">
-          <div class="icon">⏱</div>
-          <div class="label">Time</div>Play time (pauses excluded)
-        </div>
-        <div class="stat-card">
-          <div class="icon">🌙</div>
-          <div class="label">Night mode</div>Toggle dark / light theme
-        </div>
-        <div class="stat-card">
-          <div class="icon">🔊</div>
-          <div class="label">Sound</div>Press M or tap to toggle
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-title">🎉 Winning & Retry</div>
-      <p>Answer every question <strong>correctly at least once</strong> to complete the topic. Wrong answers come back
-        after ~20 questions so you get another chance.</p>
-      <p>Final stats include: total time, mistakes, average answer time, Why? count, and whether you used Clown Mode 🤡
-      </p>
-    </div>
-
-    <div class="secret">
-      <div class="secret-title">🤡 Secret: Clown Mode</div>
-      <p>Double-tap your character (😀) quickly — it transforms into a 🤡 that automatically moves under the correct
-        word just in time! A 🤡 indicator appears below the Why? button. To deactivate, double-tap the 🤡 indicator. If
-        you used Clown Mode, it appears in your final stats.</p>
+  <div class="section">
+    <div class="section-title">📊 Stats Bar</div>
+    <div class="stats-grid">
+      <div class="stat-card"><div class="icon">🔍</div><div class="label">Why clicks</div>Times you asked for explanation</div>
+      <div class="stat-card"><div class="icon">✅</div><div class="label">Progress</div>Unique correct answers / total</div>
+      <div class="stat-card"><div class="icon">❤️</div><div class="label">Lives</div>Remaining lives</div>
+      <div class="stat-card"><div class="icon">⚡</div><div class="label">Speed</div>Falling speed multiplier</div>
+      <div class="stat-card"><div class="icon">⏱</div><div class="label">Time</div>Play time (pauses excluded)</div>
+      <div class="stat-card"><div class="icon">🌙</div><div class="label">Night mode</div>Toggle dark / light theme</div>
+      <div class="stat-card"><div class="icon">🔊</div><div class="label">Sound</div>Press M or tap to toggle</div>
     </div>
   </div>
 
-  <script>
-    let nightMode = sessionStorage.getItem("nightMode") === "true";
-    function applyNight() {
-      document.body.classList.toggle("night", nightMode);
-      document.getElementById("nightToggle").textContent = nightMode ? "🌙" : "☀️";
-    }
-    document.getElementById("nightToggle").addEventListener("click", () => {
-      nightMode = !nightMode;
-      sessionStorage.setItem("nightMode", nightMode);
-      applyNight();
-    });
-    applyNight();
-  </script>
-</body>
+  <div class="section">
+    <div class="section-title">🎉 Winning & Retry</div>
+    <p>Answer every question <strong>correctly at least once</strong> to complete the topic. Wrong answers come back after ~20 questions so you get another chance.</p>
+    <p>Final stats include: total time, mistakes, average answer time, Why? count, and whether you used Clown Mode 🤡 or Slow Mode 😴</p>
+  </div>
 
+  <div class="section">
+    <div class="section-title">😴 Slow Mode</div>
+    <p>Double-tap the <strong>⏱ timer</strong> in the top bar to activate Slow Mode. Your character changes to 😴 and a 😴 indicator appears below the Why? button.</p>
+    <p>In this mode the game <strong>automatically pauses</strong> after each new question — once the word blocks have dropped below the 😴 indicator. Take as much time as you need to think, then unpause by tapping the sentence or pressing <kbd>Space</kbd>.</p>
+    <p>Double-tap the 😴 indicator to deactivate. Slow Mode and Clown Mode are mutually exclusive — activating one disables the other.</p>
+    <div class="tip"><strong>Tip:</strong> Great for beginners or when studying a new grammar topic for the first time.</div>
+  </div>
+
+  <div class="secret">
+    <div class="secret-title">🤡 Secret: Clown Mode</div>
+    <p>Double-tap your character (😀) quickly — it transforms into a 🤡 that automatically moves under the correct word just in time! A 🤡 indicator appears below the Why? button. To deactivate, double-tap the 🤡 indicator. If you used Clown Mode, it appears in your final stats.</p>
+  </div>
+</div>
+
+<script>
+  let nightMode = sessionStorage.getItem("nightMode") === "true";
+  function applyNight() {
+    document.body.classList.toggle("night", nightMode);
+    document.getElementById("nightToggle").textContent = nightMode ? "🌙" : "☀️";
+  }
+  document.getElementById("nightToggle").addEventListener("click", () => {
+    nightMode = !nightMode;
+    sessionStorage.setItem("nightMode", nightMode);
+    applyNight();
+  });
+  applyNight();
+</script>
+</body>
 </html>
