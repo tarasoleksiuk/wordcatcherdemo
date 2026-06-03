@@ -542,7 +542,7 @@
       <span class="stat">✅ <span id="uniqueCorrect">0</span>/<span id="totalQ">0</span></span>
       <span class="stat">❤️ <span id="lives">3</span></span>
       <span class="stat">⚡ <span id="speedUI">x1.0</span></span>
-      <span class="stat">⏱ <span id="timerUI">0:00</span></span>
+      <span class="stat" id="timerIcon" style="cursor:pointer;user-select:none;">⏱ <span id="timerUI">0:00</span></span>
       <span id="nightIcon" style="cursor:pointer;font-size:clamp(14px,3.5vw,20px);user-select:none;">☀️</span>
       <span id="soundIcon" style="cursor:pointer;font-size:clamp(14px,3.5vw,20px);user-select:none;"
         title="Hold to toggle sound">🔇</span>
@@ -560,6 +560,9 @@
       <div id="clownIndicator"
         style="display:none;font-size:clamp(22px,6vw,32px);cursor:pointer;user-select:none;line-height:1;text-align:center;">
         🤡</div>
+      <div id="slowIndicator"
+        style="display:none;font-size:clamp(22px,6vw,32px);cursor:pointer;user-select:none;line-height:1;text-align:center;">
+        😴</div>
     </div>
     <div id="pauseOverlay">⏸</div>
     <div id="player">😀</div>
@@ -585,6 +588,8 @@
       <div id="winAvgTime" style="font-size:clamp(14px,3.5vw,20px);margin:4px 0;color:#adf;"></div>
       <div id="winClown" style="font-size:clamp(13px,3vw,17px);color:#f9c;margin:4px 0;display:none;">🤡 You used Clown
         Mode!</div>
+      <div id="winSlow" style="font-size:clamp(13px,3vw,17px);color:#adf;margin:4px 0;display:none;">😴 You used Slow
+        Mode!</div>
       <button onclick="window.location.href=window.location.href"
         style="margin-top:20px;font-size:clamp(16px,4.5vw,22px);padding:14px 32px;cursor:pointer;border-radius:12px;border:none;background:#4caf50;color:white;font-weight:bold;">🔄
         Restart</button>
@@ -602,6 +607,8 @@
       <div id="finalAvgTime" style="font-size:clamp(14px,3.5vw,20px);color:#adf;margin:4px 0;"></div>
       <div id="finalClown" style="font-size:clamp(13px,3vw,17px);color:#f9c;margin:4px 0;display:none;">🤡 You used
         Clown Mode!</div>
+      <div id="finalSlow" style="font-size:clamp(13px,3vw,17px);color:#adf;margin:4px 0;display:none;">😴 You used Slow
+        Mode!</div>
       <button id="whyBtnGameOver"
         style="margin-top:12px;font-size:clamp(13px,3.5vw,17px);padding:8px 20px;cursor:pointer;border-radius:16px;border:1px solid rgba(255,255,255,0.5);background:rgba(255,255,255,0.15);color:white;">🔍
         Why that sentence?</button>
@@ -673,6 +680,11 @@
     let clownDir = 1;
     let lastPlayerClick = 0;
     let lastClownClick = 0;
+    let slowMode = false;
+    let slowUsed = false;
+    let slowTimer = null;
+    let lastSlowClick = 0;
+    let lastTimerClick = 0;
 
     function toggleClownMode() {
       clownMode = !clownMode;
@@ -680,15 +692,42 @@
       const indicator = document.getElementById("clownIndicator");
       if (clownMode) {
         clownUsed = true;
+        // Deactivate slow mode if active
+        if (slowMode) {
+          slowMode = false;
+          document.getElementById("slowIndicator").style.display = "none";
+          if (slowTimer) { clearTimeout(slowTimer); slowTimer = null; }
+        }
         player.textContent = "🤡";
         indicator.style.display = "block";
         startClownMove();
       } else {
-        player.textContent = "😀";
+        player.textContent = slowMode ? "😴" : "😀";
         indicator.style.display = "none";
         clearInterval(clownInterval);
         clownInterval = null;
         ignoreTouchMove = true;
+      }
+    }
+
+    function toggleSlowMode() {
+      slowMode = !slowMode;
+      const ind = document.getElementById("slowIndicator");
+      if (slowMode) {
+        slowUsed = true;
+        // Deactivate clown mode if active
+        if (clownMode) {
+          clownMode = false;
+          document.getElementById("clownIndicator").style.display = "none";
+          clearInterval(clownInterval);
+          clownInterval = null;
+        }
+        ind.style.display = "block";
+        player.textContent = "😴";
+      } else {
+        ind.style.display = "none";
+        if (slowTimer) { clearTimeout(slowTimer); slowTimer = null; }
+        player.textContent = clownMode ? "🤡" : "😀";
       }
     }
 
@@ -843,7 +882,7 @@
       flash.classList.add("flash"); txt.classList.add("show");
       setTimeout(() => {
         flash.classList.remove("flash"); txt.classList.remove("show");
-        player.textContent = clownMode ? "🤡" : "😀"; player.classList.remove("hurt");
+        player.textContent = clownMode ? "🤡" : (slowMode ? "😴" : "😀"); player.classList.remove("hurt");
       }, 500);
     }
 
@@ -899,6 +938,7 @@
       document.getElementById("winMistakes").textContent = mistakeCount > 0 ? "❌ Mistakes: " + mistakeCount : "✨ No mistakes!";
       document.getElementById("winAvgTime").textContent = "⏱ Avg answer: " + getAvgTime();
       if (clownUsed) document.getElementById("winClown").style.display = "block";
+      if (slowUsed) document.getElementById("winSlow").style.display = "block";
       document.getElementById("winScreen").style.display = "flex";
     }
 
@@ -911,6 +951,7 @@
       document.getElementById("finalWhy").textContent = "🔍 Why pressed: " + whyCount + " time" + (whyCount !== 1 ? "s" : "");
       document.getElementById("finalAvgTime").textContent = "⏱ Avg answer: " + getAvgTime();
       if (clownUsed) document.getElementById("finalClown").style.display = "block";
+      if (slowUsed) document.getElementById("finalSlow").style.display = "block";
       document.getElementById("gameOver").style.display = "flex";
     }
 
@@ -1143,6 +1184,10 @@
       }
       currentQuestion = { ...questions[idx], _idx: idx };
       questionStartTime = Date.now();
+      if (slowMode && !paused) {
+        if (slowTimer) clearTimeout(slowTimer);
+        slowTimer = setTimeout(() => { if (slowMode && !paused && !gameEnded) togglePause(); }, 800);
+      }
       lastSentence = currentQuestion.question;
       questionEl.style.whiteSpace = "nowrap";
       questionEl.textContent = currentQuestion.question;
@@ -1203,7 +1248,7 @@
       playerX = e.clientX;
       player.style.left = playerX + "px";
     });
-    document.addEventListener("mousedown", e => { if (e.button === 0 && !e.target.closest("#whyBtn") && !e.target.closest("#whyBtnGameOver") && !e.target.closest("#question") && !e.target.closest("#menuBtn") && !e.target.closest("#autoWhyLabel") && !e.target.closest("#player") && !e.target.closest("#clownIndicator") && !e.target.closest(".word")) shoot(); });
+    document.addEventListener("mousedown", e => { if (e.button === 0 && !e.target.closest("#whyBtn") && !e.target.closest("#whyBtnGameOver") && !e.target.closest("#question") && !e.target.closest("#menuBtn") && !e.target.closest("#autoWhyLabel") && !e.target.closest("#player") && !e.target.closest("#clownIndicator") && !e.target.closest("#slowIndicator") && !e.target.closest("#timerIcon") && !e.target.closest(".word")) shoot(); });
     document.addEventListener("wheel", e => {
       if (e.deltaY < 0) globalSpeedMultiplier = Math.max(globalSpeedMultiplier - 0.2, 0.3);
       else globalSpeedMultiplier = Math.min(globalSpeedMultiplier + 0.2, 4);
@@ -1257,6 +1302,36 @@
     player.addEventListener("click", e => { e.stopPropagation(); onPlayerTap(); });
     player.addEventListener("touchstart", e => { e.stopPropagation(); e.preventDefault(); ignoreTouchMove = true; onPlayerTap(); }, { passive: false });
 
+    // Timer double-click/tap → toggle slow mode
+    const timerIcon = document.getElementById("timerIcon");
+    timerIcon.addEventListener("click", e => {
+      e.stopPropagation();
+      const now = Date.now();
+      if (now - lastTimerClick < 400) { toggleSlowMode(); lastTimerClick = 0; }
+      else lastTimerClick = now;
+    });
+    timerIcon.addEventListener("touchstart", e => {
+      e.stopPropagation(); e.preventDefault(); ignoreTouchMove = true;
+      const now = Date.now();
+      if (now - lastTimerClick < 400) { toggleSlowMode(); lastTimerClick = 0; }
+      else lastTimerClick = now;
+    }, { passive: false });
+
+    // Slow indicator double-tap → deactivate slow mode
+    const slowInd = document.getElementById("slowIndicator");
+    slowInd.addEventListener("click", e => {
+      e.stopPropagation();
+      const now = Date.now();
+      if (slowMode && now - lastSlowClick < 400) { toggleSlowMode(); lastSlowClick = 0; }
+      else lastSlowClick = now;
+    });
+    slowInd.addEventListener("touchstart", e => {
+      e.stopPropagation(); e.preventDefault(); ignoreTouchMove = true;
+      const now = Date.now();
+      if (slowMode && now - lastSlowClick < 400) { toggleSlowMode(); lastSlowClick = 0; }
+      else lastSlowClick = now;
+    }, { passive: false });
+
     const clownInd = document.getElementById("clownIndicator");
     clownInd.addEventListener("click", e => {
       e.stopPropagation();
@@ -1297,6 +1372,8 @@
       if (e.target.closest("#menuBtn")) return;
       if (e.target.closest("#autoWhyLabel")) return;
       if (e.target.closest("#clownIndicator")) return;
+      if (e.target.closest("#slowIndicator")) return;
+      if (e.target.closest("#timerIcon")) return;
       if (e.target.closest("#ui")) return;
       e.preventDefault();
       const t = e.touches[0];
