@@ -1186,7 +1186,22 @@
       questionStartTime = Date.now();
       if (slowMode && !paused) {
         if (slowTimer) clearTimeout(slowTimer);
-        slowTimer = setTimeout(() => { if (slowMode && !paused && !gameEnded) togglePause(); }, 800);
+        slowTimer = requestAnimationFrame(function checkSlowPause() {
+          if (!slowMode || paused || gameEnded) { slowTimer = null; return; }
+          const ind = document.getElementById("slowIndicator");
+          const indBottom = ind.getBoundingClientRect().bottom;
+          const words = document.querySelectorAll(".word");
+          let allBelow = words.length > 0;
+          words.forEach(w => {
+            if (w.getBoundingClientRect().top < indBottom + 20) allBelow = false;
+          });
+          if (allBelow) {
+            slowTimer = null;
+            if (slowMode && !paused && !gameEnded) togglePause();
+          } else {
+            slowTimer = requestAnimationFrame(checkSlowPause);
+          }
+        });
       }
       lastSentence = currentQuestion.question;
       questionEl.style.whiteSpace = "nowrap";
