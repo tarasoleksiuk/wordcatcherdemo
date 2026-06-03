@@ -1,0 +1,1433 @@
+[
+  {
+    "question": "Are you interested ___ working for us?",
+    "correct": "in",
+    "options": [
+      "in",
+      "at",
+      "about"
+    ]
+  },
+  {
+    "question": "I'm not good ___ learning languages.",
+    "correct": "at",
+    "options": [
+      "at",
+      "in",
+      "for"
+    ]
+  },
+  {
+    "question": "Sue must be fed up ___ studying.",
+    "correct": "with",
+    "options": [
+      "with",
+      "of",
+      "about"
+    ]
+  },
+  {
+    "question": "What are the advantages ___ having a car?",
+    "correct": "of",
+    "options": [
+      "of",
+      "in",
+      "for"
+    ]
+  },
+  {
+    "question": "Thanks very much ___ inviting me to your party.",
+    "correct": "for",
+    "options": [
+      "for",
+      "of",
+      "about"
+    ]
+  },
+  {
+    "question": "How ___ meeting for lunch tomorrow?",
+    "correct": "about",
+    "options": [
+      "about",
+      "for",
+      "of"
+    ]
+  },
+  {
+    "question": "Why don't you go out ___ sitting at home all the time?",
+    "correct": "instead of",
+    "options": [
+      "instead of",
+      "in spite of",
+      "because of"
+    ]
+  },
+  {
+    "question": "Amy went to work ___ feeling ill.",
+    "correct": "in spite of",
+    "options": [
+      "in spite of",
+      "instead of",
+      "because of"
+    ]
+  },
+  {
+    "question": "I'm fed up with people ___ me what to do.",
+    "correct": "telling",
+    "options": [
+      "telling",
+      "to tell",
+      "tell"
+    ]
+  },
+  {
+    "question": "___ going out, I phoned Sarah.",
+    "correct": "Before",
+    "options": [
+      "Before",
+      "After",
+      "Without"
+    ]
+  },
+  {
+    "question": "What did you do ___ finishing school?",
+    "correct": "after",
+    "options": [
+      "after",
+      "before",
+      "without"
+    ]
+  },
+  {
+    "question": "The burglars got into the house ___ breaking a window and climbing in.",
+    "correct": "by",
+    "options": [
+      "by",
+      "without",
+      "after"
+    ]
+  },
+  {
+    "question": "You can improve your English ___ reading more.",
+    "correct": "by",
+    "options": [
+      "by",
+      "without",
+      "instead of"
+    ]
+  },
+  {
+    "question": "She made herself ill ___ not eating properly.",
+    "correct": "by",
+    "options": [
+      "by",
+      "without",
+      "before"
+    ]
+  },
+  {
+    "question": "Many accidents are caused ___ people driving too fast.",
+    "correct": "by",
+    "options": [
+      "by",
+      "without",
+      "with"
+    ]
+  },
+  {
+    "question": "We ran ten kilometres ___ stopping.",
+    "correct": "without",
+    "options": [
+      "without",
+      "by",
+      "before"
+    ]
+  },
+  {
+    "question": "It was a stupid thing to say. I said it ___ thinking.",
+    "correct": "without",
+    "options": [
+      "without",
+      "by",
+      "after"
+    ]
+  },
+  {
+    "question": "She needs to work ___ people disturbing her.",
+    "correct": "without",
+    "options": [
+      "without",
+      "by",
+      "instead of"
+    ]
+  },
+  {
+    "question": "I have enough problems of my own ___ having to worry about yours.",
+    "correct": "without",
+    "options": [
+      "without",
+      "by",
+      "besides"
+    ]
+  },
+  {
+    "question": "I prefer driving ___ travelling by train.",
+    "correct": "to",
+    "options": [
+      "to",
+      "than",
+      "over"
+    ]
+  },
+  {
+    "question": "Are you looking forward ___ going on holiday?",
+    "correct": "to",
+    "options": [
+      "to",
+      "for",
+      "about"
+    ]
+  },
+  {
+    "question": "I'm fed up ___ travelling by train.",
+    "correct": "with",
+    "options": [
+      "with",
+      "of",
+      "about"
+    ]
+  },
+  {
+    "question": "How ___ going away this weekend?",
+    "correct": "about",
+    "options": [
+      "about",
+      "for",
+      "of"
+    ]
+  },
+  {
+    "question": "What are the advantages of ___ a car?",
+    "correct": "having",
+    "options": [
+      "having",
+      "to have",
+      "have"
+    ]
+  },
+  {
+    "question": "He left the hotel without paying ___ his bill.",
+    "correct": "for",
+    "options": [
+      "for",
+      "of",
+      "about"
+    ]
+  },
+  {
+    "question": "It's a nice morning. How about going ___ a walk?",
+    "correct": "for",
+    "options": [
+      "for",
+      "on",
+      "to"
+    ]
+  },
+  {
+    "question": "We were able to translate the letter without ___ a dictionary.",
+    "correct": "using",
+    "options": [
+      "using",
+      "to use",
+      "use"
+    ]
+  },
+  {
+    "question": "___ going to bed, I like to have a hot drink.",
+    "correct": "Before",
+    "options": [
+      "Before",
+      "After",
+      "Without"
+    ]
+  },
+  {
+    "question": "I was very tired after ___ on a train for 36 hours.",
+    "correct": "travelling",
+    "options": [
+      "travelling",
+      "to travel",
+      "travel"
+    ]
+  },
+  {
+    "question": "The decision was made without anybody ___ me.",
+    "correct": "consulting",
+    "options": [
+      "consulting",
+      "to consult",
+      "consulted"
+    ]
+  },
+  {
+    "question": "After ___ the same job for ten years, I felt I needed a change.",
+    "correct": "doing",
+    "options": [
+      "doing",
+      "to do",
+      "done"
+    ]
+  },
+  {
+    "question": "We got lost because we went straight on instead of ___ left.",
+    "correct": "turning",
+    "options": [
+      "turning",
+      "to turn",
+      "turned"
+    ]
+  },
+  {
+    "question": "You're good at ___ pictures.",
+    "correct": "taking",
+    "options": [
+      "taking",
+      "to take",
+      "take"
+    ]
+  },
+  {
+    "question": "She wasn't used to ___ on the left.",
+    "correct": "driving",
+    "options": [
+      "driving",
+      "drive",
+      "driven"
+    ]
+  },
+  {
+    "question": "She got used to ___ on the left.",
+    "correct": "driving",
+    "options": [
+      "driving",
+      "drive",
+      "to drive"
+    ]
+  },
+  {
+    "question": "She is used to ___ on the left.",
+    "correct": "driving",
+    "options": [
+      "driving",
+      "drive",
+      "to drive"
+    ]
+  },
+  {
+    "question": "He is used to ___ alone.",
+    "correct": "living",
+    "options": [
+      "living",
+      "live",
+      "lived"
+    ]
+  },
+  {
+    "question": "Helen isn't used to ___ up so early.",
+    "correct": "getting",
+    "options": [
+      "getting",
+      "get",
+      "got"
+    ]
+  },
+  {
+    "question": "I used to ___ to work every day, but these days I usually go by bike.",
+    "correct": "drive",
+    "options": [
+      "drive",
+      "driving",
+      "drove"
+    ]
+  },
+  {
+    "question": "We used to ___ just outside the town, but now we live near the centre.",
+    "correct": "live",
+    "options": [
+      "live",
+      "living",
+      "lived"
+    ]
+  },
+  {
+    "question": "Lisa had to get used to ___ on the left.",
+    "correct": "driving",
+    "options": [
+      "driving",
+      "drive",
+      "to drive"
+    ]
+  },
+  {
+    "question": "Our neighbours apologised for ___ so much noise.",
+    "correct": "making",
+    "options": [
+      "making",
+      "to make",
+      "make"
+    ]
+  },
+  {
+    "question": "I don't feel like ___ any work.",
+    "correct": "doing",
+    "options": [
+      "doing",
+      "to do",
+      "do"
+    ]
+  },
+  {
+    "question": "Joe insisted on ___ with me.",
+    "correct": "coming",
+    "options": [
+      "coming",
+      "to come",
+      "come"
+    ]
+  },
+  {
+    "question": "Where are you thinking of ___ your holiday this year?",
+    "correct": "spending",
+    "options": [
+      "spending",
+      "to spend",
+      "spend"
+    ]
+  },
+  {
+    "question": "We have decided against ___ a car because we can't really afford it.",
+    "correct": "buying",
+    "options": [
+      "buying",
+      "to buy",
+      "buy"
+    ]
+  },
+  {
+    "question": "I'm looking forward to ___ them again.",
+    "correct": "seeing",
+    "options": [
+      "seeing",
+      "see",
+      "to see"
+    ]
+  },
+  {
+    "question": "Some parents don't approve of their children ___ a lot of TV.",
+    "correct": "watching",
+    "options": [
+      "watching",
+      "to watch",
+      "watch"
+    ]
+  },
+  {
+    "question": "We finally succeeded in ___ the problem.",
+    "correct": "solving",
+    "options": [
+      "solving",
+      "to solve",
+      "solve"
+    ]
+  },
+  {
+    "question": "I've always dreamed of ___ a small house by the sea.",
+    "correct": "having",
+    "options": [
+      "having",
+      "to have",
+      "have"
+    ]
+  },
+  {
+    "question": "Do you feel like ___ out this evening?",
+    "correct": "going",
+    "options": [
+      "going",
+      "to go",
+      "go"
+    ]
+  },
+  {
+    "question": "The driver accused me ___ causing the accident.",
+    "correct": "of",
+    "options": [
+      "of",
+      "for",
+      "about"
+    ]
+  },
+  {
+    "question": "There's a fence to stop people ___ on the grass.",
+    "correct": "walking",
+    "options": [
+      "walking",
+      "to walk",
+      "walk"
+    ]
+  },
+  {
+    "question": "Excuse me ___ interrupting you.",
+    "correct": "for",
+    "options": [
+      "for",
+      "of",
+      "about"
+    ]
+  },
+  {
+    "question": "The man is suspected ___ using a false passport.",
+    "correct": "of",
+    "options": [
+      "of",
+      "for",
+      "about"
+    ]
+  },
+  {
+    "question": "I'm thinking ___ doing something else.",
+    "correct": "about",
+    "options": [
+      "about",
+      "of",
+      "on"
+    ]
+  },
+  {
+    "question": "Dan insisted ___ telling me the story.",
+    "correct": "on",
+    "options": [
+      "on",
+      "about",
+      "for"
+    ]
+  },
+  {
+    "question": "I'm really looking forward ___ eating something.",
+    "correct": "to",
+    "options": [
+      "to",
+      "for",
+      "about"
+    ]
+  },
+  {
+    "question": "You should apologise ___ Sue for being so rude.",
+    "correct": "to",
+    "options": [
+      "to",
+      "for",
+      "about"
+    ]
+  },
+  {
+    "question": "Thank you very much ___ inviting me.",
+    "correct": "for",
+    "options": [
+      "for",
+      "of",
+      "about"
+    ]
+  },
+  {
+    "question": "They accused us ___ not telling the truth.",
+    "correct": "of",
+    "options": [
+      "of",
+      "for",
+      "about"
+    ]
+  },
+  {
+    "question": "Excuse me for not ___ to your email until now.",
+    "correct": "replying",
+    "options": [
+      "replying",
+      "reply",
+      "to reply"
+    ]
+  },
+  {
+    "question": "We were accused ___ telling lies.",
+    "correct": "of",
+    "options": [
+      "of",
+      "for",
+      "about"
+    ]
+  },
+  {
+    "question": "The general was suspected ___ being a spy.",
+    "correct": "of",
+    "options": [
+      "of",
+      "for",
+      "about"
+    ]
+  },
+  {
+    "question": "I apologised ___ them for keeping them waiting.",
+    "correct": "to",
+    "options": [
+      "to",
+      "for",
+      "of"
+    ]
+  },
+  {
+    "question": "He doesn't approve ___ swearing.",
+    "correct": "of",
+    "options": [
+      "of",
+      "about",
+      "for"
+    ]
+  },
+  {
+    "question": "We have decided ___ moving to London.",
+    "correct": "against",
+    "options": [
+      "against",
+      "about",
+      "of"
+    ]
+  },
+  {
+    "question": "I wouldn't dream ___ asking them for money.",
+    "correct": "of",
+    "options": [
+      "of",
+      "about",
+      "for"
+    ]
+  },
+  {
+    "question": "Do you feel ___ going out tonight?",
+    "correct": "like",
+    "options": [
+      "like",
+      "about",
+      "of"
+    ]
+  },
+  {
+    "question": "They insisted ___ paying for the meal.",
+    "correct": "on",
+    "options": [
+      "on",
+      "about",
+      "for"
+    ]
+  },
+  {
+    "question": "I'm looking forward ___ meeting her.",
+    "correct": "to",
+    "options": [
+      "to",
+      "for",
+      "about"
+    ]
+  },
+  {
+    "question": "Have you succeeded ___ finding a job yet?",
+    "correct": "in",
+    "options": [
+      "in",
+      "at",
+      "on"
+    ]
+  },
+  {
+    "question": "I'm thinking ___ buying a house.",
+    "correct": "about",
+    "options": [
+      "about",
+      "of",
+      "on"
+    ]
+  },
+  {
+    "question": "I don't approve ___ people killing animals for fun.",
+    "correct": "of",
+    "options": [
+      "of",
+      "about",
+      "for"
+    ]
+  },
+  {
+    "question": "We are all looking forward ___ Andy coming home.",
+    "correct": "to",
+    "options": [
+      "to",
+      "for",
+      "about"
+    ]
+  },
+  {
+    "question": "We congratulated Lisa ___ winning the first prize.",
+    "correct": "on",
+    "options": [
+      "on",
+      "for",
+      "of"
+    ]
+  },
+  {
+    "question": "Excuse me ___ phoning you so late.",
+    "correct": "for",
+    "options": [
+      "for",
+      "of",
+      "about"
+    ]
+  },
+  {
+    "question": "What prevented you ___ coming to see us?",
+    "correct": "from",
+    "options": [
+      "from",
+      "of",
+      "for"
+    ]
+  },
+  {
+    "question": "The rain didn't stop us ___ enjoying our holiday.",
+    "correct": "from",
+    "options": [
+      "from",
+      "of",
+      "for"
+    ]
+  },
+  {
+    "question": "Nobody suspected the general ___ being a spy.",
+    "correct": "of",
+    "options": [
+      "of",
+      "for",
+      "about"
+    ]
+  },
+  {
+    "question": "I forgot to thank them ___ helping me.",
+    "correct": "for",
+    "options": [
+      "for",
+      "of",
+      "about"
+    ]
+  },
+  {
+    "question": "You can't stop me ___ doing what I want.",
+    "correct": "from",
+    "options": [
+      "from",
+      "of",
+      "for"
+    ]
+  },
+  {
+    "question": "We talked ___ going to South America.",
+    "correct": "about",
+    "options": [
+      "about",
+      "of",
+      "for"
+    ]
+  },
+  {
+    "question": "You must apologise ___ not telling the truth.",
+    "correct": "for",
+    "options": [
+      "for",
+      "of",
+      "about"
+    ]
+  },
+  {
+    "question": "The burglars got into the house by ___ a window.",
+    "correct": "breaking",
+    "options": [
+      "breaking",
+      "to break",
+      "break"
+    ]
+  },
+  {
+    "question": "I was able to reach the top shelf by ___ on a chair.",
+    "correct": "standing",
+    "options": [
+      "standing",
+      "to stand",
+      "stand"
+    ]
+  },
+  {
+    "question": "You start the engine of a car by ___ a key.",
+    "correct": "turning",
+    "options": [
+      "turning",
+      "to turn",
+      "turn"
+    ]
+  },
+  {
+    "question": "Kevin got himself into financial trouble by ___ too much money.",
+    "correct": "borrowing",
+    "options": [
+      "borrowing",
+      "to borrow",
+      "borrow"
+    ]
+  },
+  {
+    "question": "You can put people's lives in danger by ___ too fast.",
+    "correct": "driving",
+    "options": [
+      "driving",
+      "to drive",
+      "drive"
+    ]
+  },
+  {
+    "question": "We made the room look nicer by ___ some pictures on the walls.",
+    "correct": "putting",
+    "options": [
+      "putting",
+      "to put",
+      "put"
+    ]
+  },
+  {
+    "question": "It's no use ___ about the situation.",
+    "correct": "worrying",
+    "options": [
+      "worrying",
+      "to worry",
+      "worry"
+    ]
+  },
+  {
+    "question": "It's no good ___ to persuade me. You won't succeed.",
+    "correct": "trying",
+    "options": [
+      "trying",
+      "to try",
+      "try"
+    ]
+  },
+  {
+    "question": "There's no point in ___ a car if you never use it.",
+    "correct": "having",
+    "options": [
+      "having",
+      "to have",
+      "have"
+    ]
+  },
+  {
+    "question": "There was no point in ___ any longer, so we left.",
+    "correct": "waiting",
+    "options": [
+      "waiting",
+      "to wait",
+      "wait"
+    ]
+  },
+  {
+    "question": "What's the point of ___ a car if you never use it?",
+    "correct": "having",
+    "options": [
+      "having",
+      "to have",
+      "have"
+    ]
+  },
+  {
+    "question": "It's not worth ___ a taxi. I live only a short walk from here.",
+    "correct": "taking",
+    "options": [
+      "taking",
+      "to take",
+      "take"
+    ]
+  },
+  {
+    "question": "Our flight was very early, so it wasn't worth ___ to bed.",
+    "correct": "going",
+    "options": [
+      "going",
+      "to go",
+      "go"
+    ]
+  },
+  {
+    "question": "Was the film worth ___?",
+    "correct": "seeing",
+    "options": [
+      "seeing",
+      "to see",
+      "see"
+    ]
+  },
+  {
+    "question": "There was nothing worth ___ in the house.",
+    "correct": "stealing",
+    "options": [
+      "stealing",
+      "to steal",
+      "steal"
+    ]
+  },
+  {
+    "question": "I had no trouble ___ a place to stay.",
+    "correct": "finding",
+    "options": [
+      "finding",
+      "to find",
+      "find"
+    ]
+  },
+  {
+    "question": "Did you have any difficulty ___ a visa?",
+    "correct": "getting",
+    "options": [
+      "getting",
+      "to get",
+      "get"
+    ]
+  },
+  {
+    "question": "People sometimes have problems ___ my writing.",
+    "correct": "reading",
+    "options": [
+      "reading",
+      "to read",
+      "read"
+    ]
+  },
+  {
+    "question": "He spent hours ___ to repair the clock.",
+    "correct": "trying",
+    "options": [
+      "trying",
+      "to try",
+      "try"
+    ]
+  },
+  {
+    "question": "I waste a lot of time ___ nothing.",
+    "correct": "doing",
+    "options": [
+      "doing",
+      "to do",
+      "do"
+    ]
+  },
+  {
+    "question": "She was too busy ___ other things to see me.",
+    "correct": "doing",
+    "options": [
+      "doing",
+      "to do",
+      "done"
+    ]
+  },
+  {
+    "question": "How often do you go ___?",
+    "correct": "swimming",
+    "options": [
+      "swimming",
+      "to swim",
+      "swim"
+    ]
+  },
+  {
+    "question": "I'd like to go ___.",
+    "correct": "skiing",
+    "options": [
+      "skiing",
+      "to ski",
+      "ski"
+    ]
+  },
+  {
+    "question": "When was the last time you went ___?",
+    "correct": "shopping",
+    "options": [
+      "shopping",
+      "to shop",
+      "shop"
+    ]
+  },
+  {
+    "question": "I've never been ___.",
+    "correct": "sailing",
+    "options": [
+      "sailing",
+      "to sail",
+      "sail"
+    ]
+  },
+  {
+    "question": "No, it isn't far. It's not worth ___ a taxi.",
+    "correct": "getting",
+    "options": [
+      "getting",
+      "to get",
+      "get"
+    ]
+  },
+  {
+    "question": "It's no use asking David. He won't be able to ___ anything.",
+    "correct": "do",
+    "options": [
+      "do",
+      "doing",
+      "to do"
+    ]
+  },
+  {
+    "question": "Well, stay at home! There's no point ___ if you don't want to.",
+    "correct": "going out",
+    "options": [
+      "going out",
+      "to go out",
+      "go out"
+    ]
+  },
+  {
+    "question": "No, it's no good ___ her now. She won't be at home.",
+    "correct": "phoning",
+    "options": [
+      "phoning",
+      "to phone",
+      "phone"
+    ]
+  },
+  {
+    "question": "I had difficulty ___ a visa.",
+    "correct": "getting",
+    "options": [
+      "getting",
+      "to get",
+      "get"
+    ]
+  },
+  {
+    "question": "I have a problem ___ people's names.",
+    "correct": "remembering",
+    "options": [
+      "remembering",
+      "to remember",
+      "remember"
+    ]
+  },
+  {
+    "question": "She had no trouble ___ a job.",
+    "correct": "finding",
+    "options": [
+      "finding",
+      "to find",
+      "find"
+    ]
+  },
+  {
+    "question": "You won't have any problem ___ a ticket for the game.",
+    "correct": "getting",
+    "options": [
+      "getting",
+      "to get",
+      "get"
+    ]
+  },
+  {
+    "question": "Do you have difficulty ___ him?",
+    "correct": "understanding",
+    "options": [
+      "understanding",
+      "to understand",
+      "understand"
+    ]
+  },
+  {
+    "question": "I waste a lot of time ___ nothing.",
+    "correct": "doing",
+    "options": [
+      "doing",
+      "to do",
+      "do"
+    ]
+  },
+  {
+    "question": "Every morning I spend an hour ___ the newspaper.",
+    "correct": "reading",
+    "options": [
+      "reading",
+      "to read",
+      "read"
+    ]
+  },
+  {
+    "question": "She's going away tomorrow, so she's busy ___.",
+    "correct": "packing",
+    "options": [
+      "packing",
+      "to pack",
+      "pack"
+    ]
+  },
+  {
+    "question": "I think you waste too much time ___ TV.",
+    "correct": "watching",
+    "options": [
+      "watching",
+      "to watch",
+      "watch"
+    ]
+  },
+  {
+    "question": "There's a beautiful view from that hill. It's worth ___ to the top.",
+    "correct": "going",
+    "options": [
+      "going",
+      "to go",
+      "go"
+    ]
+  },
+  {
+    "question": "Just stay calm. There's no point in getting ___.",
+    "correct": "angry",
+    "options": [
+      "angry",
+      "angrily",
+      "anger"
+    ]
+  },
+  {
+    "question": "Ben lives by the sea and he's got a boat, so he often goes ___.",
+    "correct": "sailing",
+    "options": [
+      "sailing",
+      "to sail",
+      "sail"
+    ]
+  },
+  {
+    "question": "It was a very hot day, so we went ___ in the lake.",
+    "correct": "swimming",
+    "options": [
+      "swimming",
+      "to swim",
+      "swim"
+    ]
+  },
+  {
+    "question": "There's plenty of snow in the mountains, so we'll be able to go ___.",
+    "correct": "skiing",
+    "options": [
+      "skiing",
+      "to ski",
+      "ski"
+    ]
+  },
+  {
+    "question": "Helen has got two horses. She goes ___ regularly.",
+    "correct": "riding",
+    "options": [
+      "riding",
+      "to ride",
+      "ride"
+    ]
+  },
+  {
+    "question": "'Where's Dan?' 'He's gone ___. There were a few things he needed to buy.'",
+    "correct": "shopping",
+    "options": [
+      "shopping",
+      "to shop",
+      "shop"
+    ]
+  },
+  {
+    "question": "I phoned the restaurant ___ a table.",
+    "correct": "to reserve",
+    "options": [
+      "to reserve",
+      "for reserving",
+      "for reserve"
+    ]
+  },
+  {
+    "question": "We shouted ___ everybody of the danger.",
+    "correct": "to warn",
+    "options": [
+      "to warn",
+      "for warning",
+      "for warn"
+    ]
+  },
+  {
+    "question": "The president has a team of bodyguards ___ him.",
+    "correct": "to protect",
+    "options": [
+      "to protect",
+      "for protecting",
+      "for protect"
+    ]
+  },
+  {
+    "question": "It's difficult to find a place ___ in the centre.",
+    "correct": "to park",
+    "options": [
+      "to park",
+      "for parking",
+      "for park"
+    ]
+  },
+  {
+    "question": "Would you like something ___?",
+    "correct": "to eat",
+    "options": [
+      "to eat",
+      "for eating",
+      "eating"
+    ]
+  },
+  {
+    "question": "Do you have much work ___?",
+    "correct": "to do",
+    "options": [
+      "to do",
+      "for doing",
+      "doing"
+    ]
+  },
+  {
+    "question": "I get lonely if there's nobody ___ to.",
+    "correct": "to talk",
+    "options": [
+      "to talk",
+      "for talking",
+      "talking"
+    ]
+  },
+  {
+    "question": "I need something ___ this bottle with.",
+    "correct": "to open",
+    "options": [
+      "to open",
+      "for opening",
+      "opening"
+    ]
+  },
+  {
+    "question": "They gave us money ___ food.",
+    "correct": "to buy",
+    "options": [
+      "to buy",
+      "for buying",
+      "buying"
+    ]
+  },
+  {
+    "question": "Do you have much opportunity ___ your English?",
+    "correct": "to practise",
+    "options": [
+      "to practise",
+      "for practising",
+      "practising"
+    ]
+  },
+  {
+    "question": "I need a few days ___ about your proposal.",
+    "correct": "to think",
+    "options": [
+      "to think",
+      "for thinking",
+      "thinking"
+    ]
+  },
+  {
+    "question": "We stopped ___ petrol.",
+    "correct": "for",
+    "options": [
+      "for",
+      "to",
+      "at"
+    ]
+  },
+  {
+    "question": "We stopped ___ get petrol.",
+    "correct": "to",
+    "options": [
+      "to",
+      "for",
+      "and"
+    ]
+  },
+  {
+    "question": "I had to run ___ the bus.",
+    "correct": "for",
+    "options": [
+      "for",
+      "to",
+      "after"
+    ]
+  },
+  {
+    "question": "I had to run ___ catch the bus.",
+    "correct": "to",
+    "options": [
+      "to",
+      "for",
+      "and"
+    ]
+  },
+  {
+    "question": "There weren't any chairs ___ us to sit on.",
+    "correct": "for",
+    "options": [
+      "for",
+      "to",
+      "of"
+    ]
+  },
+  {
+    "question": "I use this brush ___ washing the dishes.",
+    "correct": "for",
+    "options": [
+      "for",
+      "to",
+      "in"
+    ]
+  },
+  {
+    "question": "I went into the kitchen ___ wash the dishes.",
+    "correct": "to",
+    "options": [
+      "to",
+      "for",
+      "and"
+    ]
+  },
+  {
+    "question": "I hurried ___ I wouldn't be late.",
+    "correct": "so that",
+    "options": [
+      "so that",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "Eat something now ___ you won't get hungry later.",
+    "correct": "so that",
+    "options": [
+      "so that",
+      "to",
+      "because"
+    ]
+  },
+  {
+    "question": "She's learning English ___ she can study in Canada.",
+    "correct": "so that",
+    "options": [
+      "so that",
+      "to",
+      "because"
+    ]
+  },
+  {
+    "question": "We moved to London ___ we could see our friends more often.",
+    "correct": "so that",
+    "options": [
+      "so that",
+      "to",
+      "because"
+    ]
+  },
+  {
+    "question": "We stopped ___ petrol. (noun follows)",
+    "correct": "for",
+    "options": [
+      "for",
+      "to",
+      "in"
+    ]
+  },
+  {
+    "question": "You need a lot of experience ___ this job. (noun follows)",
+    "correct": "for",
+    "options": [
+      "for",
+      "to",
+      "in"
+    ]
+  },
+  {
+    "question": "You need a lot of experience ___ do this job. (verb follows)",
+    "correct": "to",
+    "options": [
+      "to",
+      "for",
+      "and"
+    ]
+  },
+  {
+    "question": "We'll need more time ___ make a decision.",
+    "correct": "to",
+    "options": [
+      "to",
+      "for",
+      "and"
+    ]
+  },
+  {
+    "question": "I went to the dentist ___ a check-up.",
+    "correct": "for",
+    "options": [
+      "for",
+      "to",
+      "at"
+    ]
+  },
+  {
+    "question": "I had to put on my glasses ___ read the paper.",
+    "correct": "to",
+    "options": [
+      "to",
+      "for",
+      "and"
+    ]
+  },
+  {
+    "question": "Do you have to wear glasses ___ reading?",
+    "correct": "for",
+    "options": [
+      "for",
+      "to",
+      "while"
+    ]
+  },
+  {
+    "question": "I wish we had a garden ___ the children ___ play in.",
+    "correct": "for",
+    "options": [
+      "for",
+      "to",
+      "and"
+    ]
+  }
+]
