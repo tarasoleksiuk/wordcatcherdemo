@@ -392,7 +392,7 @@
     "options": [
       "to tell",
       "telling",
-      "tell"
+      "not to tell"
     ]
   },
   {
@@ -400,8 +400,8 @@
     "correct": "tell",
     "options": [
       "tell",
-      "to tell",
-      "telling"
+      "telling",
+      "told"
     ]
   },
   {
@@ -435,8 +435,8 @@
     "question": "I pretended ___ the paper.",
     "correct": "to read",
     "options": [
-      "reading",
       "to read",
+      "reading",
       "read"
     ]
   },
@@ -608,7 +608,7 @@
     "options": [
       "to say",
       "saying",
-      "say"
+      "having said"
     ]
   },
   {
@@ -895,8 +895,8 @@
     "correct": "thinking",
     "options": [
       "thinking",
-      "to think",
-      "think"
+      "thought",
+      "having thought"
     ]
   },
   {
@@ -913,8 +913,8 @@
     "correct": "living",
     "options": [
       "living",
-      "to live",
-      "live"
+      "lived",
+      "having lived"
     ]
   },
   {
@@ -976,8 +976,8 @@
     "correct": "pressing",
     "options": [
       "pressing",
-      "to press",
-      "press"
+      "pressed",
+      "having pressed"
     ]
   },
   {
@@ -1048,7 +1048,7 @@
     "correct": "to touch",
     "options": [
       "to touch",
-      "touching",
+      "to touching",
       "touch"
     ]
   },
@@ -1229,7 +1229,7 @@
     "options": [
       "to go",
       "going",
-      "go"
+      "having gone"
     ]
   },
   {
@@ -1264,8 +1264,8 @@
     "correct": "move",
     "options": [
       "move",
-      "to move",
-      "moving"
+      "moving",
+      "having moved"
     ]
   },
   {
@@ -1544,7 +1544,7 @@
     "options": [
       "to go",
       "going",
-      "go"
+      "having gone"
     ]
   },
   {
