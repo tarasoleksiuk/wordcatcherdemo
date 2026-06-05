@@ -1,0 +1,839 @@
+[
+  {
+    "question": "What time do you usually go ___ work?",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "I'm going ___ China next week.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "Sophie didn't want to go ___ the concert.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "He's gone ___ bed.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "I went ___ the dentist yesterday.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "I was very tired and went ___ sleep quickly.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "We're going ___ holiday next week.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "Children often go ___ school trips.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "Workers at the airport have gone ___ strike.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "She's gone ___ a walk.",
+    "correct": "for",
+    "options": [
+      "for",
+      "in",
+      "to"
+    ]
+  },
+  {
+    "question": "Do you go ___ a run every morning?",
+    "correct": "for",
+    "options": [
+      "for",
+      "at",
+      "to"
+    ]
+  },
+  {
+    "question": "The water looks nice. I'm going ___ a swim.",
+    "correct": "for",
+    "options": [
+      "for",
+      "on",
+      "to"
+    ]
+  },
+  {
+    "question": "I met Chris in town, so we went ___ coffee.",
+    "correct": "for",
+    "options": [
+      "for",
+      "on",
+      "to"
+    ]
+  },
+  {
+    "question": "Shall we go out ___ a meal?",
+    "correct": "for",
+    "options": [
+      "for",
+      "on",
+      "to"
+    ]
+  },
+  {
+    "question": "Sue went ___ Mexico last year.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "I'm going out ___ a walk. Do you want to come?",
+    "correct": "for",
+    "options": [
+      "for",
+      "at",
+      "to"
+    ]
+  },
+  {
+    "question": "I went ___ bed very late last night.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "Mark is going ___ holiday in Italy next week.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "The river was clean, so we went ___ a swim.",
+    "correct": "for",
+    "options": [
+      "for",
+      "on",
+      "to"
+    ]
+  },
+  {
+    "question": "The taxi drivers went ___ strike.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "Let's go ___ the cinema this evening.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "Would you like to go ___ a tour of the city?",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "Shall we go out ___ dinner this evening?",
+    "correct": "for",
+    "options": [
+      "for",
+      "on",
+      "to"
+    ]
+  },
+  {
+    "question": "My parents are going ___ a cruise this summer.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "The water looks nice. Let's go ___ a swim.",
+    "correct": "for",
+    "options": [
+      "for",
+      "on",
+      "to"
+    ]
+  },
+  {
+    "question": "After leaving school, Tina went ___ university.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "I was very tired. I sat down and went ___ sleep.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "The weather is nice. Shall we go ___ a walk along the river?",
+    "correct": "for",
+    "options": [
+      "for",
+      "in",
+      "to"
+    ]
+  },
+  {
+    "question": "Are you going ___ Portugal soon?",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "We're going ___ a cruise. We've never been on one before.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "I wasn't enjoying the party, so I went ___ early.",
+    "correct": "home",
+    "options": [
+      "home",
+      "to home",
+      "on home"
+    ]
+  },
+  {
+    "question": "It's late. I have to go ___ now.",
+    "correct": "home",
+    "options": [
+      "home",
+      "to home",
+      "for home"
+    ]
+  },
+  {
+    "question": "I'm going ___ now. (leaving the house)",
+    "correct": "home",
+    "options": [
+      "home",
+      "to home",
+      "on home"
+    ]
+  },
+  {
+    "question": "We need to go ___ the supermarket before it closes.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "She went ___ school at the age of five.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "I usually go ___ the gym three times a week.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "They went ___ Paris for the weekend.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "I'm tired. I think I'll go ___ bed early tonight.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "He went ___ hospital after the accident.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "Do you want to go ___ the party on Saturday?",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "She went ___ university to study medicine.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "The children go ___ church every Sunday.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "I need to go ___ the bank this afternoon.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "We went ___ a beautiful lake in the mountains.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "He's gone ___ the shops. He'll be back soon.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "I always go ___ sleep before midnight.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "Are you going ___ the meeting tomorrow?",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "We went ___ a small village in the south of France.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "I have to go ___ the doctor on Thursday.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "She goes ___ work by bus every day.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "We're going ___ a wedding next weekend.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "He went ___ the airport to pick up his sister.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "I go ___ the library every Saturday morning.",
+    "correct": "to",
+    "options": [
+      "to",
+      "on",
+      "for"
+    ]
+  },
+  {
+    "question": "We're going ___ a day trip to Brighton tomorrow.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "The company went ___ strike last Monday.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "They went ___ a two-week tour of Europe.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "We're going ___ a boat trip this Sunday.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "The students went ___ a field trip to the museum.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "She went ___ a diet to lose weight before the wedding.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "Have you ever gone ___ a safari?",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "We went ___ a guided tour of the old town.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "The bus drivers have gone ___ strike again.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "They're going ___ a camping trip next summer.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "We went ___ a river cruise last summer.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "The class went ___ an excursion to the coast.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "My sister went ___ a business trip to Tokyo.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "They went ___ a road trip across the USA.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "We're planning to go ___ a ski trip in January.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "The whole team went ___ a training camp.",
+    "correct": "on",
+    "options": [
+      "on",
+      "in",
+      "for"
+    ]
+  },
+  {
+    "question": "He went ___ a long walk to clear his head.",
+    "correct": "on",
+    "options": [
+      "on",
+      "at",
+      "to"
+    ]
+  },
+  {
+    "question": "We went ___ an overnight trip to Edinburgh.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "She went ___ a city tour while her husband was at the conference.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "I've never gone ___ a cruise but I'd love to try.",
+    "correct": "on",
+    "options": [
+      "on",
+      "to",
+      "for"
+    ]
+  },
+  {
+    "question": "We went ___ a drive along the coast on Sunday.",
+    "correct": "for",
+    "options": [
+      "for",
+      "at",
+      "to"
+    ]
+  },
+  {
+    "question": "Shall we go out ___ a drink after work?",
+    "correct": "for",
+    "options": [
+      "for",
+      "on",
+      "to"
+    ]
+  },
+  {
+    "question": "I went ___ a jog in the park this morning.",
+    "correct": "for",
+    "options": [
+      "for",
+      "at",
+      "to"
+    ]
+  },
+  {
+    "question": "Let's go ___ a pizza tonight instead of cooking.",
+    "correct": "for",
+    "options": [
+      "for",
+      "on",
+      "to"
+    ]
+  },
+  {
+    "question": "The dog needs to go ___ a walk.",
+    "correct": "for",
+    "options": [
+      "for",
+      "in",
+      "to"
+    ]
+  },
+  {
+    "question": "We went ___ a bike ride along the river yesterday.",
+    "correct": "on",
+    "options": [
+      "for",
+      "on",
+      "to"
+    ]
+  },
+  {
+    "question": "He went ___ a swim in the sea every morning on holiday.",
+    "correct": "for",
+    "options": [
+      "for",
+      "on",
+      "to"
+    ]
+  },
+  {
+    "question": "I'm going ___ a run before dinner.",
+    "correct": "for",
+    "options": [
+      "for",
+      "at",
+      "to"
+    ]
+  },
+  {
+    "question": "They went ___ a picnic in the park on Sunday.",
+    "correct": "on",
+    "options": [
+      "on",
+      "at",
+      "to"
+    ]
+  },
+  {
+    "question": "Would you like to go ___ a coffee after the class?",
+    "correct": "for",
+    "options": [
+      "for",
+      "on",
+      "to"
+    ]
+  },
+  {
+    "question": "We went ___ a long walk in the countryside.",
+    "correct": "for",
+    "options": [
+      "for",
+      "at",
+      "to"
+    ]
+  },
+  {
+    "question": "She went ___ a swim to cool down.",
+    "correct": "for",
+    "options": [
+      "for",
+      "on",
+      "to"
+    ]
+  },
+  {
+    "question": "I need to go ___ a run. I haven't exercised all week.",
+    "correct": "for",
+    "options": [
+      "for",
+      "in",
+      "to"
+    ]
+  },
+  {
+    "question": "Let's go ___ a Chinese meal tonight.",
+    "correct": "for",
+    "options": [
+      "for",
+      "on",
+      "to"
+    ]
+  },
+  {
+    "question": "He went ___ a drive to relax after the stressful day.",
+    "correct": "for",
+    "options": [
+      "for",
+      "on",
+      "to"
+    ]
+  },
+  {
+    "question": "We went ___ a walk along the beach at sunset.",
+    "correct": "for",
+    "options": [
+      "for",
+      "in",
+      "to"
+    ]
+  },
+  {
+    "question": "She's gone ___ a run. She'll be back in 30 minutes.",
+    "correct": "for",
+    "options": [
+      "for",
+      "at",
+      "to"
+    ]
+  },
+  {
+    "question": "I usually go ___ a swim after work on Fridays.",
+    "correct": "for",
+    "options": [
+      "for",
+      "on",
+      "to"
+    ]
+  },
+  {
+    "question": "Shall we go ___ lunch somewhere nice today?",
+    "correct": "for",
+    "options": [
+      "for",
+      "on",
+      "to"
+    ]
+  },
+  {
+    "question": "We went ___ a meal to celebrate his promotion.",
+    "correct": "for",
+    "options": [
+      "for",
+      "on",
+      "to"
+    ]
+  }
+]
