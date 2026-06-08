@@ -9,7 +9,7 @@
     ]
   },
   {
-    "question": "Would you like tea or coffee? You can have ___.",
+    "question": "Would you like tea or coffee? You can have ___ — just one cup though.",
     "correct": "either",
     "options": [
       "either",
@@ -76,7 +76,7 @@
     "correct": "is",
     "options": [
       "is",
-      "are",
+      "was",
       "were"
     ]
   },
@@ -365,7 +365,7 @@
     "options": [
       "Neither",
       "So",
-      "Nor"
+      "Either"
     ]
   },
   {
@@ -464,7 +464,7 @@
     "options": [
       "Neither",
       "So",
-      "Nor"
+      "Either"
     ]
   },
   {
@@ -495,12 +495,12 @@
     ]
   },
   {
-    "question": "I'm not happy. B: ___ am I. (= I'm not happy either)",
+    "question": "A: I'm not married. B: ___ am I. (= I'm not happy either)",
     "correct": "Neither",
     "options": [
       "Neither",
       "So",
-      "Nor"
+      "Either"
     ]
   },
   {
@@ -603,7 +603,7 @@
     ]
   },
   {
-    "question": "I couldn't decide which shirt to buy. I liked ___.",
+    "question": "I couldn't decide which shirt to buy. I liked ___ of them.",
     "correct": "both",
     "options": [
       "both",
@@ -671,7 +671,7 @@
     "options": [
       "either",
       "neither",
-      "both"
+      "any"
     ]
   },
   {
