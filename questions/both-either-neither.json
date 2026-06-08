@@ -1,0 +1,1064 @@
+[
+  {
+    "question": "Rebecca has two children. ___ are married.",
+    "correct": "Both",
+    "options": [
+      "Both",
+      "Either",
+      "Neither"
+    ]
+  },
+  {
+    "question": "Would you like tea or coffee? You can have ___.",
+    "correct": "either",
+    "options": [
+      "either",
+      "both",
+      "neither"
+    ]
+  },
+  {
+    "question": "Do you want to go to the cinema or the theatre? ___. I want to stay at home.",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "Either",
+      "Both"
+    ]
+  },
+  {
+    "question": "'Would you like tea or coffee?' '___, I don't mind.'",
+    "correct": "Either",
+    "options": [
+      "Either",
+      "Neither",
+      "Both"
+    ]
+  },
+  {
+    "question": "'Would you like tea or coffee?' 'I don't want ___.'",
+    "correct": "either",
+    "options": [
+      "either",
+      "neither",
+      "both"
+    ]
+  },
+  {
+    "question": "Last year I went to Paris and Rome. I liked ___ cities very much.",
+    "correct": "both",
+    "options": [
+      "both",
+      "either",
+      "neither"
+    ]
+  },
+  {
+    "question": "First I worked in an office, and later in a shop. ___ job was very interesting.",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "Either",
+      "Both"
+    ]
+  },
+  {
+    "question": "There are two ways from here to the station. You can go ___ way.",
+    "correct": "either",
+    "options": [
+      "either",
+      "neither",
+      "both"
+    ]
+  },
+  {
+    "question": "Neither of my parents ___ British.",
+    "correct": "is",
+    "options": [
+      "is",
+      "are",
+      "were"
+    ]
+  },
+  {
+    "question": "I haven't read ___ of these books.",
+    "correct": "either",
+    "options": [
+      "either",
+      "neither",
+      "both"
+    ]
+  },
+  {
+    "question": "I like ___ of those pictures.",
+    "correct": "both",
+    "options": [
+      "both",
+      "either",
+      "neither"
+    ]
+  },
+  {
+    "question": "___ of Paul's sisters are married.",
+    "correct": "Both",
+    "options": [
+      "Both",
+      "Either",
+      "Neither"
+    ]
+  },
+  {
+    "question": "___ of Paul's sisters is married. (= not one, not the other)",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "Either",
+      "Both"
+    ]
+  },
+  {
+    "question": "Paul has two sisters. ___ of them are married.",
+    "correct": "Both",
+    "options": [
+      "Both",
+      "Either",
+      "Neither"
+    ]
+  },
+  {
+    "question": "Sue and I didn't eat anything. ___ of us was hungry.",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "Either",
+      "Both"
+    ]
+  },
+  {
+    "question": "Who are those two people? I don't know ___ of them.",
+    "correct": "either",
+    "options": [
+      "either",
+      "neither",
+      "both"
+    ]
+  },
+  {
+    "question": "It was a good football match. ___ teams played well.",
+    "correct": "Both",
+    "options": [
+      "Both",
+      "Either",
+      "Neither"
+    ]
+  },
+  {
+    "question": "It wasn't a good football match. ___ team played well.",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "Either",
+      "Both"
+    ]
+  },
+  {
+    "question": "'Is your friend English or American?' '___, she's Australian.'",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "Either",
+      "Both"
+    ]
+  },
+  {
+    "question": "We went away for two days. It rained ___ days.",
+    "correct": "both",
+    "options": [
+      "both",
+      "either",
+      "neither"
+    ]
+  },
+  {
+    "question": "I bought two newspapers. Which one do you want? ___, it doesn't matter.",
+    "correct": "Either",
+    "options": [
+      "Either",
+      "Neither",
+      "Both"
+    ]
+  },
+  {
+    "question": "I invited Sam and Chris to the party, but ___ of them came.",
+    "correct": "neither",
+    "options": [
+      "neither",
+      "either",
+      "both"
+    ]
+  },
+  {
+    "question": "'Do you go to work by car or by bus?' '___, I always walk.'",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "Either",
+      "Both"
+    ]
+  },
+  {
+    "question": "'Which jacket do you prefer, this one or that one?' 'I don't like ___ of them.'",
+    "correct": "either",
+    "options": [
+      "either",
+      "neither",
+      "both"
+    ]
+  },
+  {
+    "question": "'Do you work or are you a student?' '___, I work and I'm a student too.'",
+    "correct": "Both",
+    "options": [
+      "Both",
+      "Either",
+      "Neither"
+    ]
+  },
+  {
+    "question": "My friend and I went to the cinema, but ___ of us liked the film.",
+    "correct": "neither",
+    "options": [
+      "neither",
+      "either",
+      "both"
+    ]
+  },
+  {
+    "question": "Helen has two sisters. ___ sisters are married.",
+    "correct": "Both",
+    "options": [
+      "Both",
+      "Either",
+      "Neither"
+    ]
+  },
+  {
+    "question": "Helen has two sisters. I haven't met ___ of her sisters.",
+    "correct": "either",
+    "options": [
+      "either",
+      "neither",
+      "both"
+    ]
+  },
+  {
+    "question": "A: I'm happy. B: I'm happy ___.",
+    "correct": "too",
+    "options": [
+      "too",
+      "either",
+      "neither"
+    ]
+  },
+  {
+    "question": "A: I'm not happy. B: I'm not happy ___.",
+    "correct": "either",
+    "options": [
+      "either",
+      "too",
+      "neither"
+    ]
+  },
+  {
+    "question": "A: I enjoyed the film. B: I enjoyed it ___.",
+    "correct": "too",
+    "options": [
+      "too",
+      "either",
+      "neither"
+    ]
+  },
+  {
+    "question": "A: I can't cook. B: I can't ___.",
+    "correct": "either",
+    "options": [
+      "either",
+      "too",
+      "neither"
+    ]
+  },
+  {
+    "question": "Jane is a doctor. Her husband is a doctor ___.",
+    "correct": "too",
+    "options": [
+      "too",
+      "either",
+      "neither"
+    ]
+  },
+  {
+    "question": "Ben doesn't watch TV. He doesn't read newspapers ___.",
+    "correct": "either",
+    "options": [
+      "either",
+      "too",
+      "neither"
+    ]
+  },
+  {
+    "question": "A: I'm working. B: ___ am I. (= I'm working too)",
+    "correct": "So",
+    "options": [
+      "So",
+      "Neither",
+      "Nor"
+    ]
+  },
+  {
+    "question": "A: I was late for work today. B: ___ was Sam.",
+    "correct": "So",
+    "options": [
+      "So",
+      "Neither",
+      "Nor"
+    ]
+  },
+  {
+    "question": "A: I work in a bank. B: ___ do I.",
+    "correct": "So",
+    "options": [
+      "So",
+      "Neither",
+      "Nor"
+    ]
+  },
+  {
+    "question": "A: We went to the cinema last night. B: So ___ we.",
+    "correct": "did",
+    "options": [
+      "did",
+      "do",
+      "were"
+    ]
+  },
+  {
+    "question": "A: I'd like to go to Australia. B: ___ would I.",
+    "correct": "So",
+    "options": [
+      "So",
+      "Neither",
+      "Nor"
+    ]
+  },
+  {
+    "question": "A: I haven't got a key. B: ___ have I.",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "So",
+      "Too"
+    ]
+  },
+  {
+    "question": "A: Kate can't cook. B: ___ can Tom.",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "So",
+      "Nor"
+    ]
+  },
+  {
+    "question": "A: I won't be here tomorrow. B: ___ will I.",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "So",
+      "Too"
+    ]
+  },
+  {
+    "question": "A: I never go to the cinema. B: ___ do I.",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "So",
+      "Too"
+    ]
+  },
+  {
+    "question": "A: I'm not married. B: ___ am I.",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "So",
+      "Too"
+    ]
+  },
+  {
+    "question": "A: I went to bed late last night. B: ___ did I.",
+    "correct": "So",
+    "options": [
+      "So",
+      "Neither",
+      "Nor"
+    ]
+  },
+  {
+    "question": "A: I'm thirsty. B: ___ am I.",
+    "correct": "So",
+    "options": [
+      "So",
+      "Neither",
+      "Too"
+    ]
+  },
+  {
+    "question": "A: I've just eaten. B: ___ have I.",
+    "correct": "So",
+    "options": [
+      "So",
+      "Neither",
+      "Nor"
+    ]
+  },
+  {
+    "question": "A: I need a holiday. B: ___ do I.",
+    "correct": "So",
+    "options": [
+      "So",
+      "Neither",
+      "Too"
+    ]
+  },
+  {
+    "question": "A: I'll be late tomorrow. B: ___ will I.",
+    "correct": "So",
+    "options": [
+      "So",
+      "Neither",
+      "Too"
+    ]
+  },
+  {
+    "question": "A: I was very tired this morning. B: ___ was I.",
+    "correct": "So",
+    "options": [
+      "So",
+      "Neither",
+      "Nor"
+    ]
+  },
+  {
+    "question": "A: I can't go to the party. B: ___ can I.",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "So",
+      "Too"
+    ]
+  },
+  {
+    "question": "A: I didn't phone Alex last night. B: ___ did I.",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "So",
+      "Nor"
+    ]
+  },
+  {
+    "question": "A: I haven't got any money. B: ___ have I.",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "So",
+      "Too"
+    ]
+  },
+  {
+    "question": "A: I'm not going out tomorrow. B: ___ am I.",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "So",
+      "Too"
+    ]
+  },
+  {
+    "question": "A: I don't know what to do. B: ___ do I.",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "So",
+      "Too"
+    ]
+  },
+  {
+    "question": "I'm not happy. B: ___ am I. (= I'm not happy either)",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "So",
+      "Nor"
+    ]
+  },
+  {
+    "question": "Remember: So ___ I (not So I am).",
+    "correct": "am",
+    "options": [
+      "am",
+      "I am",
+      "do"
+    ]
+  },
+  {
+    "question": "Remember: Neither ___ I (not Neither I have).",
+    "correct": "have",
+    "options": [
+      "have",
+      "I have",
+      "do"
+    ]
+  },
+  {
+    "question": "I'm not hungry ___.",
+    "correct": "either",
+    "options": [
+      "either",
+      "too",
+      "neither"
+    ]
+  },
+  {
+    "question": "I'm going out ___. (agreeing with a positive statement)",
+    "correct": "too",
+    "options": [
+      "too",
+      "either",
+      "neither"
+    ]
+  },
+  {
+    "question": "It rained on Saturday. It rained on Sunday ___.",
+    "correct": "too",
+    "options": [
+      "too",
+      "either",
+      "neither"
+    ]
+  },
+  {
+    "question": "Rachel can't drive a car. She can't ride a bike ___.",
+    "correct": "either",
+    "options": [
+      "either",
+      "too",
+      "neither"
+    ]
+  },
+  {
+    "question": "I don't like shopping ___.",
+    "correct": "either",
+    "options": [
+      "either",
+      "too",
+      "neither"
+    ]
+  },
+  {
+    "question": "Emma's mother is a teacher. Her father is a teacher ___.",
+    "correct": "too",
+    "options": [
+      "too",
+      "either",
+      "neither"
+    ]
+  },
+  {
+    "question": "___ restaurants are very good.",
+    "correct": "Both",
+    "options": [
+      "Both",
+      "Either",
+      "Neither"
+    ]
+  },
+  {
+    "question": "___ restaurant is expensive. (= not one, not the other)",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "Either",
+      "Both"
+    ]
+  },
+  {
+    "question": "We can go to ___ restaurant. I don't mind.",
+    "correct": "either",
+    "options": [
+      "either",
+      "neither",
+      "both"
+    ]
+  },
+  {
+    "question": "I couldn't decide which shirt to buy. I liked ___.",
+    "correct": "both",
+    "options": [
+      "both",
+      "either",
+      "neither"
+    ]
+  },
+  {
+    "question": "'Is your friend British or American?' '___, she's Australian.'",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "Either",
+      "Both"
+    ]
+  },
+  {
+    "question": "'Do you want tea or coffee?' '___, I don't mind.'",
+    "correct": "Either",
+    "options": [
+      "Either",
+      "Neither",
+      "Both"
+    ]
+  },
+  {
+    "question": "___ of these restaurants are very good.",
+    "correct": "Both",
+    "options": [
+      "Both",
+      "Either",
+      "Neither"
+    ]
+  },
+  {
+    "question": "___ of the restaurants we went to was expensive.",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "Either",
+      "Both"
+    ]
+  },
+  {
+    "question": "I haven't been to ___ of those restaurants.",
+    "correct": "either",
+    "options": [
+      "either",
+      "neither",
+      "both"
+    ]
+  },
+  {
+    "question": "___ my parents are from Egypt.",
+    "correct": "Both",
+    "options": [
+      "Both",
+      "Either",
+      "Neither"
+    ]
+  },
+  {
+    "question": "Can ___ of you speak Russian?",
+    "correct": "either",
+    "options": [
+      "either",
+      "neither",
+      "both"
+    ]
+  },
+  {
+    "question": "I asked two people the way, but ___ of them could help me.",
+    "correct": "neither",
+    "options": [
+      "neither",
+      "either",
+      "both"
+    ]
+  },
+  {
+    "question": "___ of us were very tired.",
+    "correct": "Both",
+    "options": [
+      "Both",
+      "Either",
+      "Neither"
+    ]
+  },
+  {
+    "question": "___ Chris and Paul were late.",
+    "correct": "Both",
+    "options": [
+      "Both",
+      "Either",
+      "Neither"
+    ]
+  },
+  {
+    "question": "I was ___ tired and hungry when I arrived home.",
+    "correct": "both",
+    "options": [
+      "both",
+      "either",
+      "neither"
+    ]
+  },
+  {
+    "question": "___ Chris nor Paul came to the party.",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "Either",
+      "Both"
+    ]
+  },
+  {
+    "question": "We ___ saw nor heard anything.",
+    "correct": "neither",
+    "options": [
+      "neither",
+      "either",
+      "both"
+    ]
+  },
+  {
+    "question": "She's ___ Spanish or Italian.",
+    "correct": "either",
+    "options": [
+      "either",
+      "neither",
+      "both"
+    ]
+  },
+  {
+    "question": "___ you apologise, or I'll never speak to you again.",
+    "correct": "Either",
+    "options": [
+      "Either",
+      "Neither",
+      "Both"
+    ]
+  },
+  {
+    "question": "There are two good hotels. You could stay at ___ of them.",
+    "correct": "either",
+    "options": [
+      "either",
+      "neither",
+      "any"
+    ]
+  },
+  {
+    "question": "There are many good hotels. You could stay at ___ of them.",
+    "correct": "any",
+    "options": [
+      "any",
+      "either",
+      "both"
+    ]
+  },
+  {
+    "question": "We tried two hotels. ___ of them had any rooms.",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "None",
+      "Either"
+    ]
+  },
+  {
+    "question": "We tried a lot of hotels. ___ of them had any rooms.",
+    "correct": "None",
+    "options": [
+      "None",
+      "Neither",
+      "Either"
+    ]
+  },
+  {
+    "question": "We tried two hotels. ___ of them were full.",
+    "correct": "Both",
+    "options": [
+      "Both",
+      "All",
+      "Either"
+    ]
+  },
+  {
+    "question": "We tried a lot of hotels. ___ of them were full.",
+    "correct": "All",
+    "options": [
+      "All",
+      "Both",
+      "Either"
+    ]
+  },
+  {
+    "question": "'Do you want tea or coffee?' '___, I really don't mind.'",
+    "correct": "Either",
+    "options": [
+      "Either",
+      "Neither",
+      "Both"
+    ]
+  },
+  {
+    "question": "'What day is it — the 18th or the 19th?' '___, it's the 20th.'",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "Either",
+      "Both"
+    ]
+  },
+  {
+    "question": "We went to ___ Korea and Japan.",
+    "correct": "both",
+    "options": [
+      "both",
+      "either",
+      "neither"
+    ]
+  },
+  {
+    "question": "'Shall we sit in the corner or by the window?' '___, I don't mind.'",
+    "correct": "Either",
+    "options": [
+      "Either",
+      "Neither",
+      "Both"
+    ]
+  },
+  {
+    "question": "'Where's Lisa? Is she at work or at home?' '___, she's away on holiday.'",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "Either",
+      "Both"
+    ]
+  },
+  {
+    "question": "___ my parents are from London.",
+    "correct": "Both",
+    "options": [
+      "Both",
+      "Either",
+      "Neither"
+    ]
+  },
+  {
+    "question": "To get to the town centre, you can go ___ way.",
+    "correct": "either",
+    "options": [
+      "either",
+      "neither",
+      "both"
+    ]
+  },
+  {
+    "question": "I tried twice to phone Carl, but ___ times he was out.",
+    "correct": "both",
+    "options": [
+      "both",
+      "either",
+      "neither"
+    ]
+  },
+  {
+    "question": "___ of Tom's parents is English. His father is Polish and his mother is Italian.",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "Either",
+      "Both"
+    ]
+  },
+  {
+    "question": "I saw an accident. Fortunately ___ driver was injured.",
+    "correct": "neither",
+    "options": [
+      "neither",
+      "either",
+      "both"
+    ]
+  },
+  {
+    "question": "I saw an accident. ___ cars were badly damaged.",
+    "correct": "both",
+    "options": [
+      "both",
+      "either",
+      "neither"
+    ]
+  },
+  {
+    "question": "My brother is working, but ___ my sisters are still at school.",
+    "correct": "both",
+    "options": [
+      "both",
+      "either",
+      "neither"
+    ]
+  },
+  {
+    "question": "I was invited to two parties, but I couldn't go to ___ of them.",
+    "correct": "either",
+    "options": [
+      "either",
+      "neither",
+      "both"
+    ]
+  },
+  {
+    "question": "There were two windows. It was very warm, so I opened ___ of them.",
+    "correct": "both",
+    "options": [
+      "both",
+      "either",
+      "neither"
+    ]
+  },
+  {
+    "question": "Sarah and I play tennis, but ___ of us can play very well.",
+    "correct": "neither",
+    "options": [
+      "neither",
+      "either",
+      "both"
+    ]
+  },
+  {
+    "question": "I tried two bookshops for the book, but ___ of them had it.",
+    "correct": "neither",
+    "options": [
+      "neither",
+      "either",
+      "both"
+    ]
+  },
+  {
+    "question": "Joe is on holiday and ___ is Sam.",
+    "correct": "so",
+    "options": [
+      "so",
+      "neither",
+      "nor"
+    ]
+  },
+  {
+    "question": "Joe doesn't have a car. ___ does Sam.",
+    "correct": "Neither",
+    "options": [
+      "Neither",
+      "So",
+      "Nor"
+    ]
+  },
+  {
+    "question": "Brian doesn't watch TV and he doesn't read newspapers. He ___ watches TV nor reads newspapers.",
+    "correct": "neither",
+    "options": [
+      "neither",
+      "either",
+      "both"
+    ]
+  },
+  {
+    "question": "The movie was ___ boring and long.",
+    "correct": "both",
+    "options": [
+      "both",
+      "either",
+      "neither"
+    ]
+  },
+  {
+    "question": "That man's name is ___ Richard or Robert.",
+    "correct": "either",
+    "options": [
+      "either",
+      "neither",
+      "both"
+    ]
+  },
+  {
+    "question": "I have ___ the time nor the money to go on holiday.",
+    "correct": "neither",
+    "options": [
+      "neither",
+      "either",
+      "both"
+    ]
+  },
+  {
+    "question": "We can leave ___ today or tomorrow — whichever you prefer.",
+    "correct": "either",
+    "options": [
+      "either",
+      "neither",
+      "both"
+    ]
+  },
+  {
+    "question": "We tried a lot of hotels, but ___ of them had any rooms.",
+    "correct": "none",
+    "options": [
+      "none",
+      "neither",
+      "either"
+    ]
+  },
+  {
+    "question": "I took two books on holiday, but I didn't read ___ of them.",
+    "correct": "either",
+    "options": [
+      "either",
+      "neither",
+      "none"
+    ]
+  },
+  {
+    "question": "I took five books on holiday, but I didn't read ___ of them.",
+    "correct": "any",
+    "options": [
+      "any",
+      "either",
+      "none"
+    ]
+  },
+  {
+    "question": "There are a few shops at the end of the street, but ___ of them sells newspapers.",
+    "correct": "none",
+    "options": [
+      "none",
+      "neither",
+      "either"
+    ]
+  },
+  {
+    "question": "I can meet you next Monday or Friday. Would ___ of those days suit you?",
+    "correct": "either",
+    "options": [
+      "either",
+      "neither",
+      "any"
+    ]
+  },
+  {
+    "question": "John and I couldn't get into the house because ___ of us had a key.",
+    "correct": "neither",
+    "options": [
+      "neither",
+      "either",
+      "none"
+    ]
+  }
+]
