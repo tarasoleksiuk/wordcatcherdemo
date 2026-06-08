@@ -203,16 +203,31 @@
       .then(topics => {
         const grid = document.getElementById('grid');
         grid.innerHTML = '';
+
         topics.forEach(t => {
+          // Create card immediately with loading count
           const card = document.createElement('a');
           card.className = 'card';
           card.href = `game.html?topic=${t.file}`;
+          const countEl = document.createElement('div');
+          countEl.className = 'card-count';
+          countEl.textContent = '...';
           card.innerHTML = `
         <div class="card-title">${formatName(t.file)}</div>
         ${t.subtitle ? `<div class="card-subtitle">${t.subtitle}</div>` : ''}
-        <div class="card-count">${t.count ? t.count + ' questions' : 'coming soon'}</div>
       `;
+          card.appendChild(countEl);
           grid.appendChild(card);
+
+          // Load actual count from JSON file
+          fetch(`questions/${t.file}.json`)
+            .then(r => r.json())
+            .then(questions => {
+              countEl.textContent = questions.length + ' questions';
+            })
+            .catch(() => {
+              countEl.textContent = 'coming soon';
+            });
         });
       })
       .catch(() => {
